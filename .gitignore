@@ -1,0 +1,11 @@
+﻿# Sensitive files
+.env
+*.jsonl
+*.bak
+agents/*/sessions/
+credentials/
+identity/
+
+# Large files
+node_modules/
+*.log

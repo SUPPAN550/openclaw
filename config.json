@@ -1,0 +1,72 @@
+{
+  "sandbox": {
+    "enabled": true
+  },
+  "agents": {
+    "main": {
+      "name": "Main",
+      "description": "核心主代理",
+      "model": "moonshot/kimi-k2.5"
+    },
+    "coder": {
+      "name": "Coder",
+      "description": "编程助手",
+      "model": "deepseek/deepseek-coder",
+      "agentDir": "~/.openclaw/agents/coder/agent"
+    },
+    "researcher": {
+      "name": "Researcher",
+      "description": "研究助手",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/researcher/agent"
+    },
+    "evolution": {
+      "name": "Evolution",
+      "description": "进化学习",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/evolution/agent"
+    },
+    "sysadmin": {
+      "name": "SysAdmin",
+      "description": "系统管理",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/sysadmin/agent"
+    },
+    "coordinator": {
+      "name": "Coordinator",
+      "description": "任务协调器",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/coordinator/agent"
+    },
+    "security": {
+      "name": "Security",
+      "description": "安全审计",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/security/agent"
+    },
+    "wechat": {
+      "name": "WeChat",
+      "description": "微信集成",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/wechat/agent"
+    },
+    "analyst": {
+      "name": "Analyst",
+      "description": "数据分析",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/analyst/agent"
+    },
+    "ppt-writer": {
+      "name": "PPT Writer",
+      "description": "PPT生成",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/ppt-writer/agent"
+    },
+    "vision": {
+      "name": "Vision",
+      "description": "视觉分析",
+      "model": "moonshot/kimi-k2.5",
+      "agentDir": "~/.openclaw/agents/vision/agent"
+    }
+  }
+}

@@ -132,6 +132,14 @@
     "memory-tiering": {
       "version": "1.0.0",
       "installedAt": 1773935281472
+    },
+    "memory-manager": {
+      "version": "1.0.0",
+      "installedAt": 1773935587008
+    },
+    "context-budgeting": {
+      "version": "1.0.0",
+      "installedAt": 1773935589157
     }
   }
 }

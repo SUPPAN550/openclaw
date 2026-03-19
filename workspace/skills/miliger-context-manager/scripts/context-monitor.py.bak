@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""
+Context Monitor for Windows
+Monitors OpenClaw session context usage and alerts when threshold is reached
+"""
+
+import subprocess
+import json
+import os
+from datetime import datetime
+
+# Configuration
+THRESHOLD = 60
+LOG_DIR = os.path.expanduser("~/.openclaw/workspace/logs")
+LOG_FILE = os.path.join(LOG_DIR, "context-monitor.log")
+
+def log(message):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_line = f"{timestamp} - {message}"
+    print(log_line)
+    
+    # Ensure log directory exists
+    os.makedirs(LOG_DIR, exist_ok=True)
+    
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(log_line + "\n")
+
+def main():
+    try:
+        # Find openclaw command path
+        openclaw_cmd = "openclaw"
+        
+        # Try to find openclaw in common locations
+        possible_paths = [
+            os.path.expanduser("~/AppData/Roaming/npm/openclaw.cmd"),
+            os.path.expanduser("~/AppData/Roaming/npm/openclaw.ps1"),
+            "openclaw"
+        ]
+        
+        for path in possible_paths:
+            if os.path.exists(path):
+                openclaw_cmd = path
+                break
+        
+        # Run openclaw sessions command
+        result = subprocess.run(
+            [openclaw_cmd, "sessions", "--json"],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="ignore",
+            shell=True
+        )
+        
+        # Extract JSON from stdout (find content between first { and last })
+        output = result.stdout
+        json_start = output.find('{')
+        json_end = output.rfind('}')
+        
+        if json_start == -1 or json_end == -1 or json_end <= json_start:
+            log("Could not find JSON content in output")
+            return
+        
+        json_content = output[json_start:json_end + 1]
+        data = json.loads(json_content)
+        
+        if data and "sessions" in data:
+            # Find main session
+            main_session = None
+            for session in data["sessions"]:
+                if session.get("key") == "agent:main:main":
+                    main_session = session
+                    break
+            
+            if main_session:
+                total_tokens = main_session.get("totalTokens")
+                context_tokens = main_session.get("contextTokens")
+                
+                if total_tokens and context_tokens:
+                    usage = round((total_tokens / context_tokens) * 100)
+                    
+                    log(f"Context usage: {usage}% ({total_tokens}/{context_tokens} tokens)")
+                    
+                    if usage >= THRESHOLD:
+                        log(f"WARNING: Context usage {usage}% exceeds threshold {THRESHOLD}%")
+                        
+                        # Check memory files
+                        memory_lite = os.path.expanduser("~/.openclaw/workspace/memory/MEMORY-LITE.md")
+                        if os.path.exists(memory_lite):
+                            with open(memory_lite, "r", encoding="utf-8") as f:
+                                content = f.read()
+                                word_count = len(content.split())
+                                log(f"MEMORY-LITE.md: {word_count} words")
+                        
+                        log("ALERT: Consider starting a new session to reset context")
+                    else:
+                        log(f"Context usage normal: {usage}%")
+                else:
+                    log("Main session found but no token info available")
+            else:
+                log("Main session not found")
+        else:
+            log("No sessions data found in JSON")
+            
+    except json.JSONDecodeError as e:
+        log(f"Error parsing JSON: {e}")
+    except Exception as e:
+        log(f"Error checking context: {e}")
+
+if __name__ == "__main__":
+    main()

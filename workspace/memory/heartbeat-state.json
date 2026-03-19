@@ -1,0 +1,15 @@
+{
+  "lastChecks": {
+    "context": 1773841314,
+    "email": null,
+    "calendar": null
+  },
+  "lastContextCheck": {
+    "timestamp": 1773841314,
+    "usage": 62,
+    "usedTokens": 123641,
+    "totalTokens": 200000,
+    "threshold": 60,
+    "action": "monitoring"
+  }
+}

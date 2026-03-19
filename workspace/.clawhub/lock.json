@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-finder-cn": {
+      "version": "1.0.0",
+      "installedAt": 1773676178372
+    },
+    "multi-search-engine": {
+      "version": "2.0.1",
+      "installedAt": 1773676976123
+    },
+    "office-automation-test": {
+      "version": "1.0.0",
+      "installedAt": 1773677117045
+    },
+    "cron-mastery": {
+      "version": "1.0.3",
+      "installedAt": 1773677357286
+    },
+    "news-summary": {
+      "version": "1.0.1",
+      "installedAt": 1773677433379
+    },
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1773677882010
+    },
+    "desktop-control-win": {
+      "version": "1.0.1",
+      "installedAt": 1773678333491
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1773678396338
+    },
+    "proactivity": {
+      "version": "1.0.1",
+      "installedAt": 1773678494542
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1773679214151
+    },
+    "memory-setup": {
+      "version": "1.0.0",
+      "installedAt": 1773679315012
+    },
+    "miliger-context-manager": {
+      "version": "2.2.4",
+      "installedAt": 1773735454080
+    },
+    "tushare-data": {
+      "version": "1.0.7",
+      "installedAt": 1773735479960
+    }
+  }
+}

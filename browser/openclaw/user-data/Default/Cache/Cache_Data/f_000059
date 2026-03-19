@@ -1,0 +1,1316 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/Settings.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=5277905a"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=5277905a"; const useState = __vite__cjsImport3_react["useState"];
+import {
+  Settings,
+  Bell,
+  Shield,
+  Database,
+  Globe,
+  Moon,
+  Sun,
+  User,
+  Key,
+  Save,
+  RefreshCw,
+  CheckCircle,
+  AlertTriangle,
+  Info
+} from "/node_modules/.vite/deps/lucide-react.js?v=5277905a";
+const sections = [
+  { id: "general", title: "常规设置", icon: /* @__PURE__ */ jsxDEV(Settings, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 46,
+    columnNumber: 39
+  }, this), description: "基本系统配置" },
+  { id: "notifications", title: "通知", icon: /* @__PURE__ */ jsxDEV(Bell, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 47,
+    columnNumber: 43
+  }, this), description: "消息提醒设置" },
+  { id: "security", title: "安全", icon: /* @__PURE__ */ jsxDEV(Shield, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 48,
+    columnNumber: 38
+  }, this), description: "安全与隐私" },
+  { id: "storage", title: "存储", icon: /* @__PURE__ */ jsxDEV(Database, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 49,
+    columnNumber: 37
+  }, this), description: "数据存储管理" },
+  { id: "network", title: "网络", icon: /* @__PURE__ */ jsxDEV(Globe, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 50,
+    columnNumber: 37
+  }, this), description: "连接配置" },
+  { id: "account", title: "账户", icon: /* @__PURE__ */ jsxDEV(User, { size: 20 }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 51,
+    columnNumber: 37
+  }, this), description: "个人信息" }
+];
+export default function SettingsPage() {
+  _s();
+  const [activeSection, setActiveSection] = useState("general");
+  const [darkMode, setDarkMode] = useState(true);
+  const [autoStart, setAutoStart] = useState(true);
+  const [notifications, setNotifications] = useState({
+    email: true,
+    push: true,
+    desktop: false,
+    sound: true
+  });
+  const [saved, setSaved] = useState(false);
+  const handleSave = () => {
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2e3);
+  };
+  const renderGeneralSettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "外观" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-3 border-b border-slate-700/50", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+          darkMode ? /* @__PURE__ */ jsxDEV(Moon, { size: 20, className: "text-indigo-400" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 77,
+            columnNumber: 25
+          }, this) : /* @__PURE__ */ jsxDEV(Sun, { size: 20, className: "text-amber-400" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 77,
+            columnNumber: 74
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-200 font-medium", children: "深色模式" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 79,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-500 text-sm", children: "使用深色主题" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 80,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 78,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 76,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => setDarkMode(!darkMode),
+            className: `relative w-14 h-7 rounded-full transition-colors ${darkMode ? "bg-indigo-600" : "bg-slate-600"}`,
+            children: /* @__PURE__ */ jsxDEV("span", { className: `absolute top-1 w-5 h-5 bg-white rounded-full transition-transform ${darkMode ? "left-8" : "left-1"}` }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 87,
+              columnNumber: 13
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 83,
+            columnNumber: 11
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 75,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-3", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxDEV(RefreshCw, { size: 20, className: "text-emerald-400" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 92,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-200 font-medium", children: "开机自启" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 94,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-500 text-sm", children: "系统启动时自动运行" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 95,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 93,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 91,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => setAutoStart(!autoStart),
+            className: `relative w-14 h-7 rounded-full transition-colors ${autoStart ? "bg-emerald-600" : "bg-slate-600"}`,
+            children: /* @__PURE__ */ jsxDEV("span", { className: `absolute top-1 w-5 h-5 bg-white rounded-full transition-transform ${autoStart ? "left-8" : "left-1"}` }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 102,
+              columnNumber: 13
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 98,
+            columnNumber: 11
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 90,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "语言与区域" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 108,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-2 gap-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "界面语言" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 111,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500", children: [
+            /* @__PURE__ */ jsxDEV("option", { children: "简体中文" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 113,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "繁體中文" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 114,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "English" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 115,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "日本語" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 116,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 112,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 110,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "时区" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 120,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500", children: [
+            /* @__PURE__ */ jsxDEV("option", { children: "Asia/Shanghai (GMT+8)" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 122,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "Asia/Tokyo (GMT+9)" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 123,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "UTC" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 124,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "America/New_York (EST)" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 125,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 121,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 119,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 109,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 107,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 72,
+    columnNumber: 3
+  }, this);
+  const renderNotificationSettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+    /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "通知渠道" }, void 0, false, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 136,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+      { key: "email", label: "邮件通知", desc: "接收重要事件的邮件提醒", icon: /* @__PURE__ */ jsxDEV(Info, { size: 18 }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 139,
+        columnNumber: 67
+      }, this) },
+      { key: "push", label: "推送通知", desc: "浏览器推送消息", icon: /* @__PURE__ */ jsxDEV(Bell, { size: 18 }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 140,
+        columnNumber: 62
+      }, this) },
+      { key: "desktop", label: "桌面通知", desc: "系统桌面弹窗", icon: /* @__PURE__ */ jsxDEV(AlertTriangle, { size: 18 }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 141,
+        columnNumber: 64
+      }, this) },
+      { key: "sound", label: "声音提醒", desc: "播放提示音", icon: /* @__PURE__ */ jsxDEV(CheckCircle, { size: 18 }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 142,
+        columnNumber: 61
+      }, this) }
+    ].map(
+      (item) => /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: item.icon }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 146,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-200 font-medium", children: item.label }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 148,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-slate-500 text-sm", children: item.desc }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 149,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 147,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 145,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => setNotifications({ ...notifications, [item.key]: !notifications[item.key] }),
+            className: `relative w-12 h-6 rounded-full transition-colors ${notifications[item.key] ? "bg-indigo-600" : "bg-slate-600"}`,
+            children: /* @__PURE__ */ jsxDEV("span", { className: `absolute top-0.5 w-5 h-5 bg-white rounded-full transition-transform ${notifications[item.key] ? "left-6" : "left-0.5"}` }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 156,
+              columnNumber: 17
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 152,
+            columnNumber: 15
+          },
+          this
+        )
+      ] }, item.key, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 144,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 137,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 135,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 134,
+    columnNumber: 3
+  }, this);
+  const renderSecuritySettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4 flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxDEV(Key, { size: 20, className: "text-amber-400" }, void 0, false, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 169,
+          columnNumber: 11
+        }, this),
+        "API 密钥管理"
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 168,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "OpenAI API Key" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 174,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex gap-2", children: [
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "password",
+                value: "sk-••••••••••••••••••••••••••••••",
+                readOnly: true,
+                className: "flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 176,
+                columnNumber: 15
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("button", { className: "px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-slate-200 transition-colors", children: "更新" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 182,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 175,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 173,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "Feishu Webhook" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 188,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex gap-2", children: [
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "password",
+                value: "https://••••••••••••••••••••••••••••••",
+                readOnly: true,
+                className: "flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 190,
+                columnNumber: 15
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("button", { className: "px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-slate-200 transition-colors", children: "更新" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 196,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 189,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 187,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 172,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 167,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4 flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxDEV(Shield, { size: 20, className: "text-emerald-400" }, void 0, false, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 206,
+          columnNumber: 11
+        }, this),
+        "访问控制"
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 205,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-3", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "双因素认证" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 211,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm", children: "已启用" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 212,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 210,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "登录通知" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 215,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm", children: "已启用" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 216,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 214,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "会话超时" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 219,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { className: "bg-slate-900 border border-slate-700 rounded px-3 py-1 text-slate-200 text-sm", children: [
+            /* @__PURE__ */ jsxDEV("option", { children: "30 分钟" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 221,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "1 小时" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 222,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "4 小时" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 223,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "永不" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 224,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 220,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 218,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 209,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 204,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 166,
+    columnNumber: 3
+  }, this);
+  const renderStorageSettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "存储使用情况" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 235,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "flex justify-between text-sm mb-2", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "文档存储" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 239,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "2.4 GB / 10 GB" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 240,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 238,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "h-2 bg-slate-700 rounded-full overflow-hidden", children: /* @__PURE__ */ jsxDEV("div", { className: "h-full w-[24%] bg-indigo-500 rounded-full" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 243,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 242,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 237,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "flex justify-between text-sm mb-2", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "记忆数据" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 248,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "156 MB / 1 GB" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 249,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 247,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "h-2 bg-slate-700 rounded-full overflow-hidden", children: /* @__PURE__ */ jsxDEV("div", { className: "h-full w-[15%] bg-emerald-500 rounded-full" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 252,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 251,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 246,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "flex justify-between text-sm mb-2", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "日志文件" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 257,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "890 MB / 2 GB" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 258,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 256,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "h-2 bg-slate-700 rounded-full overflow-hidden", children: /* @__PURE__ */ jsxDEV("div", { className: "h-full w-[45%] bg-amber-500 rounded-full" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 261,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 260,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 255,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 236,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 234,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "数据管理" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 268,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-3", children: [
+        /* @__PURE__ */ jsxDEV("button", { className: "w-full flex items-center justify-between p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "导出所有数据" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 271,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-500 text-sm", children: "JSON" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 272,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 270,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "w-full flex items-center justify-between p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "清理缓存" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 275,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-500 text-sm", children: "128 MB" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 276,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 274,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "w-full flex items-center justify-between p-3 bg-red-900/20 rounded-lg hover:bg-red-900/30 transition-colors", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-red-400", children: "清除所有记忆" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 279,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-red-500 text-sm", children: "危险" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 280,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 278,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 269,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 267,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 233,
+    columnNumber: 3
+  }, this);
+  const renderNetworkSettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "代理设置" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 290,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-200", children: "使用代理" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 293,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("button", { className: "relative w-12 h-6 rounded-full bg-slate-600", children: /* @__PURE__ */ jsxDEV("span", { className: "absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 295,
+            columnNumber: 15
+          }, this) }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 294,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 292,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-2 gap-4", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "代理地址" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 300,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "text",
+                placeholder: "127.0.0.1",
+                className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 301,
+                columnNumber: 15
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 299,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "端口" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 308,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "text",
+                placeholder: "7890",
+                className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 309,
+                columnNumber: 15
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 307,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 298,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 291,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 289,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "连接状态" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 320,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-3", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "OpenClaw Gateway" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 323,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "flex items-center gap-2 text-emerald-400", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 bg-emerald-400 rounded-full animate-pulse" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 325,
+              columnNumber: 15
+            }, this),
+            "已连接"
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 324,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 322,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "Feishu API" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 330,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "flex items-center gap-2 text-emerald-400", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 bg-emerald-400 rounded-full animate-pulse" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 332,
+              columnNumber: 15
+            }, this),
+            "正常"
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 331,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 329,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between py-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-slate-400", children: "WebSocket" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 337,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "flex items-center gap-2 text-emerald-400", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 bg-emerald-400 rounded-full animate-pulse" }, void 0, false, {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 339,
+              columnNumber: 15
+            }, this),
+            "在线"
+          ] }, void 0, true, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 338,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 336,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 321,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 319,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 288,
+    columnNumber: 3
+  }, this);
+  const renderAccountSettings = () => /* @__PURE__ */ jsxDEV("div", { className: "space-y-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "个人信息" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 351,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-4 mb-6", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-3xl font-bold text-white", children: "S" }, void 0, false, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 353,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("p", { className: "text-xl font-semibold text-slate-100", children: "Sir" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 357,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-slate-400", children: "Administrator" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 358,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-slate-500 text-sm", children: "admin@openclaw.local" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 359,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 356,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 352,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "显示名称" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 364,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "input",
+            {
+              type: "text",
+              defaultValue: "Sir",
+              className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 365,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 363,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "邮箱" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 372,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "input",
+            {
+              type: "email",
+              defaultValue: "admin@openclaw.local",
+              className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 373,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 371,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 362,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 350,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-slate-800/50 rounded-xl p-6 border border-slate-700", children: [
+      /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-semibold text-slate-100 mb-4", children: "密码" }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 383,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "当前密码" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 386,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "input",
+            {
+              type: "password",
+              className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 387,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 385,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-sm font-medium text-slate-400 mb-2", children: "新密码" }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 393,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "input",
+            {
+              type: "password",
+              className: "w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-200 focus:outline-none focus:border-indigo-500"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+              lineNumber: 394,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 392,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white transition-colors", children: "更新密码" }, void 0, false, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 399,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 384,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 382,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 349,
+    columnNumber: 3
+  }, this);
+  const renderContent = () => {
+    switch (activeSection) {
+      case "general":
+        return renderGeneralSettings();
+      case "notifications":
+        return renderNotificationSettings();
+      case "security":
+        return renderSecuritySettings();
+      case "storage":
+        return renderStorageSettings();
+      case "network":
+        return renderNetworkSettings();
+      case "account":
+        return renderAccountSettings();
+      default:
+        return renderGeneralSettings();
+    }
+  };
+  return /* @__PURE__ */ jsxDEV("div", { className: "h-full flex", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "w-64 border-r border-slate-700/50 bg-slate-900/30", children: /* @__PURE__ */ jsxDEV("div", { className: "p-4", children: [
+      /* @__PURE__ */ jsxDEV("h2", { className: "text-lg font-semibold text-slate-100 mb-4 flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxDEV(Settings, { size: 20, className: "text-indigo-400" }, void 0, false, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 425,
+          columnNumber: 13
+        }, this),
+        "设置"
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 424,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("nav", { className: "space-y-1", children: sections.map(
+        (section) => /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => setActiveSection(section.id),
+            className: `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-colors ${activeSection === section.id ? "bg-indigo-600/20 text-indigo-400 border border-indigo-500/30" : "text-slate-400 hover:bg-slate-800 hover:text-slate-200"}`,
+            children: [
+              section.icon,
+              /* @__PURE__ */ jsxDEV("div", { className: "flex-1 min-w-0", children: [
+                /* @__PURE__ */ jsxDEV("p", { className: "font-medium text-sm", children: section.title }, void 0, false, {
+                  fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                  lineNumber: 441,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("p", { className: "text-xs opacity-70 truncate", children: section.description }, void 0, false, {
+                  fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                  lineNumber: 442,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 440,
+                columnNumber: 17
+              }, this)
+            ]
+          },
+          section.id,
+          true,
+          {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 430,
+            columnNumber: 13
+          },
+          this
+        )
+      ) }, void 0, false, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 428,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 423,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 422,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "flex-1 overflow-auto", children: /* @__PURE__ */ jsxDEV("div", { className: "p-6", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between mb-6", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("h1", { className: "text-2xl font-bold text-slate-100", children: sections.find((s) => s.id === activeSection)?.title }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 455,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-slate-500 mt-1", children: sections.find((s) => s.id === activeSection)?.description }, void 0, false, {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 458,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+          lineNumber: 454,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: handleSave,
+            className: `flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${saved ? "bg-emerald-600 text-white" : "bg-indigo-600 hover:bg-indigo-500 text-white"}`,
+            children: [
+              saved ? /* @__PURE__ */ jsxDEV(CheckCircle, { size: 18 }, void 0, false, {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 470,
+                columnNumber: 24
+              }, this) : /* @__PURE__ */ jsxDEV(Save, { size: 18 }, void 0, false, {
+                fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+                lineNumber: 470,
+                columnNumber: 52
+              }, this),
+              saved ? "已保存" : "保存更改"
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+            lineNumber: 462,
+            columnNumber: 13
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+        lineNumber: 453,
+        columnNumber: 11
+      }, this),
+      renderContent()
+    ] }, void 0, true, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 452,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+      lineNumber: 451,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx",
+    lineNumber: 420,
+    columnNumber: 5
+  }, this);
+}
+_s(SettingsPage, "DgAC5MDZmPlT+Td1KeuPB+UxxDU=");
+_c = SettingsPage;
+var _c;
+$RefreshReg$(_c, "SettingsPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Administrator/.openclaw/workspace/control-center/src/pages/Settings.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFzQixJQUFNLHVCQUFDLFFBQUssTUFBTSxNQUFaO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQWU7QUFBQSxjQUNuREEsUUFBUSxRQUFRO0FBQUE7QUFBQTtBQUFBLFVBVG5CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQVVBO0FBQUEsV0FuQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQW9CQTtBQUFBLE1BQ0NlLGNBQWM7QUFBQSxTQXRCakI7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQXVCQSxLQXhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBeUJBO0FBQUEsT0F4REY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQXlEQTtBQUVKO0FBQUM1QixHQXphdUJELGNBQVk7QUFBQSxLQUFaQTtBQUFZLElBQUFpQztBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJ1c2VTdGF0ZSIsIlNldHRpbmdzIiwiQmVsbCIsIlNoaWVsZCIsIkRhdGFiYXNlIiwiR2xvYmUiLCJNb29uIiwiU3VuIiwiVXNlciIsIktleSIsIlNhdmUiLCJSZWZyZXNoQ3ciLCJDaGVja0NpcmNsZSIsIkFsZXJ0VHJpYW5nbGUiLCJJbmZvIiwic2VjdGlvbnMiLCJpZCIsInRpdGxlIiwiaWNvbiIsImRlc2NyaXB0aW9uIiwiU2V0dGluZ3NQYWdlIiwiX3MiLCJhY3RpdmVTZWN0aW9uIiwic2V0QWN0aXZlU2VjdGlvbiIsImRhcmtNb2RlIiwic2V0RGFya01vZGUiLCJhdXRvU3RhcnQiLCJzZXRBdXRvU3RhcnQiLCJub3RpZmljYXRpb25zIiwic2V0Tm90aWZpY2F0aW9ucyIsImVtYWlsIiwicHVzaCIsImRlc2t0b3AiLCJzb3VuZCIsInNhdmVkIiwic2V0U2F2ZWQiLCJoYW5kbGVTYXZlIiwic2V0VGltZW91dCIsInJlbmRlckdlbmVyYWxTZXR0aW5ncyIsInJlbmRlck5vdGlmaWNhdGlvblNldHRpbmdzIiwia2V5IiwibGFiZWwiLCJkZXNjIiwibWFwIiwiaXRlbSIsInJlbmRlclNlY3VyaXR5U2V0dGluZ3MiLCJyZW5kZXJTdG9yYWdlU2V0dGluZ3MiLCJyZW5kZXJOZXR3b3JrU2V0dGluZ3MiLCJyZW5kZXJBY2NvdW50U2V0dGluZ3MiLCJyZW5kZXJDb250ZW50Iiwic2VjdGlvbiIsImZpbmQiLCJzIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU2V0dGluZ3MudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgXG4gIFNldHRpbmdzLCBcbiAgQmVsbCwgXG4gIFNoaWVsZCwgXG4gIERhdGFiYXNlLCBcbiAgR2xvYmUsIFxuICBNb29uLCBcbiAgU3VuLCBcbiAgVXNlciwgXG4gIEtleSxcbiAgU2F2ZSxcbiAgUmVmcmVzaEN3LFxuICBDaGVja0NpcmNsZSxcbiAgQWxlcnRUcmlhbmdsZSxcbiAgSW5mb1xufSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuXG5pbnRlcmZhY2UgU2V0dGluZ1NlY3Rpb24ge1xuICBpZDogc3RyaW5nO1xuICB0aXRsZTogc3RyaW5nO1xuICBpY29uOiBSZWFjdC5SZWFjdE5vZGU7XG4gIGRlc2NyaXB0aW9uOiBzdHJpbmc7XG59XG5cbmNvbnN0IHNlY3Rpb25zOiBTZXR0aW5nU2VjdGlvbltdID0gW1xuICB7IGlkOiAnZ2VuZXJhbCcsIHRpdGxlOiAn5bi46KeE6K6+572uJywgaWNvbjogPFNldHRpbmdzIHNpemU9ezIwfSAvPiwgZGVzY3JpcHRpb246ICfln7rmnKzns7vnu5/phY3nva4nIH0sXG4gIHsgaWQ6ICdub3RpZmljYXRpb25zJywgdGl0bGU6ICfpgJrnn6UnLCBpY29uOiA8QmVsbCBzaXplPXsyMH0gLz4sIGRlc2NyaXB0aW9uOiAn5raI5oGv5o+Q6YaS6K6+572uJyB9LFxuICB7IGlkOiAnc2VjdXJpdHknLCB0aXRsZTogJ+WuieWFqCcsIGljb246IDxTaGllbGQgc2l6ZT17MjB9IC8+LCBkZXNjcmlwdGlvbjogJ+WuieWFqOS4jumakOengScgfSxcbiAgeyBpZDogJ3N0b3JhZ2UnLCB0aXRsZTogJ+WtmOWCqCcsIGljb246IDxEYXRhYmFzZSBzaXplPXsyMH0gLz4sIGRlc2NyaXB0aW9uOiAn5pWw5o2u5a2Y5YKo566h55CGJyB9LFxuICB7IGlkOiAnbmV0d29yaycsIHRpdGxlOiAn572R57ucJywgaWNvbjogPEdsb2JlIHNpemU9ezIwfSAvPiwgZGVzY3JpcHRpb246ICfov57mjqXphY3nva4nIH0sXG4gIHsgaWQ6ICdhY2NvdW50JywgdGl0bGU6ICfotKbmiLcnLCBpY29uOiA8VXNlciBzaXplPXsyMH0gLz4sIGRlc2NyaXB0aW9uOiAn5Liq5Lq65L+h5oGvJyB9LFxuXTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gU2V0dGluZ3NQYWdlKCkge1xuICBjb25zdCBbYWN0aXZlU2VjdGlvbiwgc2V0QWN0aXZlU2VjdGlvbl0gPSB1c2VTdGF0ZSgnZ2VuZXJhbCcpO1xuICBjb25zdCBbZGFya01vZGUsIHNldERhcmtNb2RlXSA9IHVzZVN0YXRlKHRydWUpO1xuICBjb25zdCBbYXV0b1N0YXJ0LCBzZXRBdXRvU3RhcnRdID0gdXNlU3RhdGUodHJ1ZSk7XG4gIGNvbnN0IFtub3RpZmljYXRpb25zLCBzZXROb3RpZmljYXRpb25zXSA9IHVzZVN0YXRlKHtcbiAgICBlbWFpbDogdHJ1ZSxcbiAgICBwdXNoOiB0cnVlLFxuICAgIGRlc2t0b3A6IGZhbHNlLFxuICAgIHNvdW5kOiB0cnVlLFxuICB9KTtcbiAgY29uc3QgW3NhdmVkLCBzZXRTYXZlZF0gPSB1c2VTdGF0ZShmYWxzZSk7XG5cbiAgY29uc3QgaGFuZGxlU2F2ZSA9ICgpID0+IHtcbiAgICBzZXRTYXZlZCh0cnVlKTtcbiAgICBzZXRUaW1lb3V0KCgpID0+IHNldFNhdmVkKGZhbHNlKSwgMjAwMCk7XG4gIH07XG5cbiAgY29uc3QgcmVuZGVyR2VuZXJhbFNldHRpbmdzID0gKCkgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTRcIj7lpJbop4I8L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweS0zIGJvcmRlci1iIGJvcmRlci1zbGF0ZS03MDAvNTBcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zXCI+XG4gICAgICAgICAgICB7ZGFya01vZGUgPyA8TW9vbiBzaXplPXsyMH0gY2xhc3NOYW1lPVwidGV4dC1pbmRpZ28tNDAwXCIgLz4gOiA8U3VuIHNpemU9ezIwfSBjbGFzc05hbWU9XCJ0ZXh0LWFtYmVyLTQwMFwiIC8+fVxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS0yMDAgZm9udC1tZWRpdW1cIj7mt7HoibLmqKHlvI88L3A+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNTAwIHRleHQtc21cIj7kvb/nlKjmt7HoibLkuLvpopg8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXREYXJrTW9kZSghZGFya01vZGUpfVxuICAgICAgICAgICAgY2xhc3NOYW1lPXtgcmVsYXRpdmUgdy0xNCBoLTcgcm91bmRlZC1mdWxsIHRyYW5zaXRpb24tY29sb3JzICR7ZGFya01vZGUgPyAnYmctaW5kaWdvLTYwMCcgOiAnYmctc2xhdGUtNjAwJ31gfVxuICAgICAgICAgID5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT17YGFic29sdXRlIHRvcC0xIHctNSBoLTUgYmctd2hpdGUgcm91bmRlZC1mdWxsIHRyYW5zaXRpb24tdHJhbnNmb3JtICR7ZGFya01vZGUgPyAnbGVmdC04JyA6ICdsZWZ0LTEnfWB9IC8+XG4gICAgICAgICAgPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweS0zXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtM1wiPlxuICAgICAgICAgICAgPFJlZnJlc2hDdyBzaXplPXsyMH0gY2xhc3NOYW1lPVwidGV4dC1lbWVyYWxkLTQwMFwiIC8+XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMCBmb250LW1lZGl1bVwiPuW8gOacuuiHquWQrzwvcD5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS01MDAgdGV4dC1zbVwiPuezu+e7n+WQr+WKqOaXtuiHquWKqOi/kOihjDwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEF1dG9TdGFydCghYXV0b1N0YXJ0KX1cbiAgICAgICAgICAgIGNsYXNzTmFtZT17YHJlbGF0aXZlIHctMTQgaC03IHJvdW5kZWQtZnVsbCB0cmFuc2l0aW9uLWNvbG9ycyAke2F1dG9TdGFydCA/ICdiZy1lbWVyYWxkLTYwMCcgOiAnYmctc2xhdGUtNjAwJ31gfVxuICAgICAgICAgID5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT17YGFic29sdXRlIHRvcC0xIHctNSBoLTUgYmctd2hpdGUgcm91bmRlZC1mdWxsIHRyYW5zaXRpb24tdHJhbnNmb3JtICR7YXV0b1N0YXJ0ID8gJ2xlZnQtOCcgOiAnbGVmdC0xJ31gfSAvPlxuICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTRcIj7or63oqIDkuI7ljLrln588L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTIgZ2FwLTRcIj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImJsb2NrIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1zbGF0ZS00MDAgbWItMlwiPueVjOmdouivreiogDwvbGFiZWw+XG4gICAgICAgICAgICA8c2VsZWN0IGNsYXNzTmFtZT1cInctZnVsbCBiZy1zbGF0ZS05MDAgYm9yZGVyIGJvcmRlci1zbGF0ZS03MDAgcm91bmRlZC1sZyBweC00IHB5LTIgdGV4dC1zbGF0ZS0yMDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1pbmRpZ28tNTAwXCI+XG4gICAgICAgICAgICAgIDxvcHRpb24+566A5L2T5Lit5paHPC9vcHRpb24+XG4gICAgICAgICAgICAgIDxvcHRpb24+57mB6auU5Lit5paHPC9vcHRpb24+XG4gICAgICAgICAgICAgIDxvcHRpb24+RW5nbGlzaDwvb3B0aW9uPlxuICAgICAgICAgICAgICA8b3B0aW9uPuaXpeacrOiqnjwvb3B0aW9uPlxuICAgICAgICAgICAgPC9zZWxlY3Q+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtc2xhdGUtNDAwIG1iLTJcIj7ml7bljLo8L2xhYmVsPlxuICAgICAgICAgICAgPHNlbGVjdCBjbGFzc05hbWU9XCJ3LWZ1bGwgYmctc2xhdGUtOTAwIGJvcmRlciBib3JkZXItc2xhdGUtNzAwIHJvdW5kZWQtbGcgcHgtNCBweS0yIHRleHQtc2xhdGUtMjAwIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpib3JkZXItaW5kaWdvLTUwMFwiPlxuICAgICAgICAgICAgICA8b3B0aW9uPkFzaWEvU2hhbmdoYWkgKEdNVCs4KTwvb3B0aW9uPlxuICAgICAgICAgICAgICA8b3B0aW9uPkFzaWEvVG9reW8gKEdNVCs5KTwvb3B0aW9uPlxuICAgICAgICAgICAgICA8b3B0aW9uPlVUQzwvb3B0aW9uPlxuICAgICAgICAgICAgICA8b3B0aW9uPkFtZXJpY2EvTmV3X1lvcmsgKEVTVCk8L29wdGlvbj5cbiAgICAgICAgICAgIDwvc2VsZWN0PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApO1xuXG4gIGNvbnN0IHJlbmRlck5vdGlmaWNhdGlvblNldHRpbmdzID0gKCkgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTRcIj7pgJrnn6XmuKDpgZM8L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNFwiPlxuICAgICAgICAgIHtbXG4gICAgICAgICAgICB7IGtleTogJ2VtYWlsJywgbGFiZWw6ICfpgq7ku7bpgJrnn6UnLCBkZXNjOiAn5o6l5pS26YeN6KaB5LqL5Lu255qE6YKu5Lu25o+Q6YaSJywgaWNvbjogPEluZm8gc2l6ZT17MTh9IC8+IH0sXG4gICAgICAgICAgICB7IGtleTogJ3B1c2gnLCBsYWJlbDogJ+aOqOmAgemAmuefpScsIGRlc2M6ICfmtY/op4jlmajmjqjpgIHmtojmga8nLCBpY29uOiA8QmVsbCBzaXplPXsxOH0gLz4gfSxcbiAgICAgICAgICAgIHsga2V5OiAnZGVza3RvcCcsIGxhYmVsOiAn5qGM6Z2i6YCa55+lJywgZGVzYzogJ+ezu+e7n+ahjOmdouW8ueeqlycsIGljb246IDxBbGVydFRyaWFuZ2xlIHNpemU9ezE4fSAvPiB9LFxuICAgICAgICAgICAgeyBrZXk6ICdzb3VuZCcsIGxhYmVsOiAn5aOw6Z+z5o+Q6YaSJywgZGVzYzogJ+aSreaUvuaPkOekuumfsycsIGljb246IDxDaGVja0NpcmNsZSBzaXplPXsxOH0gLz4gfSxcbiAgICAgICAgICBdLm1hcCgoaXRlbSkgPT4gKFxuICAgICAgICAgICAgPGRpdiBrZXk9e2l0ZW0ua2V5fSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktMlwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIj57aXRlbS5pY29ufTwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS0yMDAgZm9udC1tZWRpdW1cIj57aXRlbS5sYWJlbH08L3A+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTUwMCB0ZXh0LXNtXCI+e2l0ZW0uZGVzY308L3A+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0Tm90aWZpY2F0aW9ucyh7IC4uLm5vdGlmaWNhdGlvbnMsIFtpdGVtLmtleV06ICFub3RpZmljYXRpb25zW2l0ZW0ua2V5IGFzIGtleW9mIHR5cGVvZiBub3RpZmljYXRpb25zXSB9KX1cbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2ByZWxhdGl2ZSB3LTEyIGgtNiByb3VuZGVkLWZ1bGwgdHJhbnNpdGlvbi1jb2xvcnMgJHtub3RpZmljYXRpb25zW2l0ZW0ua2V5IGFzIGtleW9mIHR5cGVvZiBub3RpZmljYXRpb25zXSA/ICdiZy1pbmRpZ28tNjAwJyA6ICdiZy1zbGF0ZS02MDAnfWB9XG4gICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e2BhYnNvbHV0ZSB0b3AtMC41IHctNSBoLTUgYmctd2hpdGUgcm91bmRlZC1mdWxsIHRyYW5zaXRpb24tdHJhbnNmb3JtICR7bm90aWZpY2F0aW9uc1tpdGVtLmtleSBhcyBrZXlvZiB0eXBlb2Ygbm90aWZpY2F0aW9uc10gPyAnbGVmdC02JyA6ICdsZWZ0LTAuNSd9YH0gLz5cbiAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICApKX1cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgKTtcblxuICBjb25zdCByZW5kZXJTZWN1cml0eVNldHRpbmdzID0gKCkgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTQgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICA8S2V5IHNpemU9ezIwfSBjbGFzc05hbWU9XCJ0ZXh0LWFtYmVyLTQwMFwiIC8+XG4gICAgICAgICAgQVBJIOWvhumSpeeuoeeQhlxuICAgICAgICA8L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNFwiPlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXNsYXRlLTQwMCBtYi0yXCI+T3BlbkFJIEFQSSBLZXk8L2xhYmVsPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGdhcC0yXCI+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJwYXNzd29yZFwiXG4gICAgICAgICAgICAgICAgdmFsdWU9XCJzay3igKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKLigKJcIlxuICAgICAgICAgICAgICAgIHJlYWRPbmx5XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiZmxleC0xIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTQwMFwiXG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwicHgtNCBweS0yIGJnLXNsYXRlLTcwMCBob3ZlcjpiZy1zbGF0ZS02MDAgcm91bmRlZC1sZyB0ZXh0LXNsYXRlLTIwMCB0cmFuc2l0aW9uLWNvbG9yc1wiPlxuICAgICAgICAgICAgICAgIOabtOaWsFxuICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXNsYXRlLTQwMCBtYi0yXCI+RmVpc2h1IFdlYmhvb2s8L2xhYmVsPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGdhcC0yXCI+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJwYXNzd29yZFwiXG4gICAgICAgICAgICAgICAgdmFsdWU9XCJodHRwczovL+KAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAouKAolwiXG4gICAgICAgICAgICAgICAgcmVhZE9ubHlcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJmbGV4LTEgYmctc2xhdGUtOTAwIGJvcmRlciBib3JkZXItc2xhdGUtNzAwIHJvdW5kZWQtbGcgcHgtNCBweS0yIHRleHQtc2xhdGUtNDAwXCJcbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJweC00IHB5LTIgYmctc2xhdGUtNzAwIGhvdmVyOmJnLXNsYXRlLTYwMCByb3VuZGVkLWxnIHRleHQtc2xhdGUtMjAwIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAg5pu05pawXG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctc2xhdGUtODAwLzUwIHJvdW5kZWQteGwgcC02IGJvcmRlciBib3JkZXItc2xhdGUtNzAwXCI+XG4gICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItNCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgIDxTaGllbGQgc2l6ZT17MjB9IGNsYXNzTmFtZT1cInRleHQtZW1lcmFsZC00MDBcIiAvPlxuICAgICAgICAgIOiuv+mXruaOp+WItlxuICAgICAgICA8L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktM1wiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIHB5LTJcIj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtMjAwXCI+5Y+M5Zug57Sg6K6k6K+BPC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwicHgtMyBweS0xIGJnLWVtZXJhbGQtNTAwLzIwIHRleHQtZW1lcmFsZC00MDAgcm91bmRlZC1mdWxsIHRleHQtc21cIj7lt7LlkK/nlKg8L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktMlwiPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS0yMDBcIj7nmbvlvZXpgJrnn6U8L3NwYW4+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJweC0zIHB5LTEgYmctZW1lcmFsZC01MDAvMjAgdGV4dC1lbWVyYWxkLTQwMCByb3VuZGVkLWZ1bGwgdGV4dC1zbVwiPuW3suWQr+eUqDwvc3Bhbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweS0yXCI+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMFwiPuS8muivnei2heaXtjwvc3Bhbj5cbiAgICAgICAgICAgIDxzZWxlY3QgY2xhc3NOYW1lPVwiYmctc2xhdGUtOTAwIGJvcmRlciBib3JkZXItc2xhdGUtNzAwIHJvdW5kZWQgcHgtMyBweS0xIHRleHQtc2xhdGUtMjAwIHRleHQtc21cIj5cbiAgICAgICAgICAgICAgPG9wdGlvbj4zMCDliIbpkp88L29wdGlvbj5cbiAgICAgICAgICAgICAgPG9wdGlvbj4xIOWwj+aXtjwvb3B0aW9uPlxuICAgICAgICAgICAgICA8b3B0aW9uPjQg5bCP5pe2PC9vcHRpb24+XG4gICAgICAgICAgICAgIDxvcHRpb24+5rC45LiNPC9vcHRpb24+XG4gICAgICAgICAgICA8L3NlbGVjdD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgKTtcblxuICBjb25zdCByZW5kZXJTdG9yYWdlU2V0dGluZ3MgPSAoKSA9PiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTZcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctc2xhdGUtODAwLzUwIHJvdW5kZWQteGwgcC02IGJvcmRlciBib3JkZXItc2xhdGUtNzAwXCI+XG4gICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItNFwiPuWtmOWCqOS9v+eUqOaDheWGtTwvaDM+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS00XCI+XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBqdXN0aWZ5LWJldHdlZW4gdGV4dC1zbSBtYi0yXCI+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNDAwXCI+5paH5qGj5a2Y5YKoPC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMFwiPjIuNCBHQiAvIDEwIEdCPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtMiBiZy1zbGF0ZS03MDAgcm91bmRlZC1mdWxsIG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtZnVsbCB3LVsyNCVdIGJnLWluZGlnby01MDAgcm91bmRlZC1mdWxsXCIgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1iZXR3ZWVuIHRleHQtc20gbWItMlwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTQwMFwiPuiusOW/huaVsOaNrjwvc3Bhbj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS0yMDBcIj4xNTYgTUIgLyAxIEdCPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtMiBiZy1zbGF0ZS03MDAgcm91bmRlZC1mdWxsIG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtZnVsbCB3LVsxNSVdIGJnLWVtZXJhbGQtNTAwIHJvdW5kZWQtZnVsbFwiIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGp1c3RpZnktYmV0d2VlbiB0ZXh0LXNtIG1iLTJcIj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIj7ml6Xlv5fmlofku7Y8L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtMjAwXCI+ODkwIE1CIC8gMiBHQjwvc3Bhbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoLTIgYmctc2xhdGUtNzAwIHJvdW5kZWQtZnVsbCBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoLWZ1bGwgdy1bNDUlXSBiZy1hbWJlci01MDAgcm91bmRlZC1mdWxsXCIgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTRcIj7mlbDmja7nrqHnkIY8L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktM1wiPlxuICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwidy1mdWxsIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBwLTMgYmctc2xhdGUtOTAwLzUwIHJvdW5kZWQtbGcgaG92ZXI6Ymctc2xhdGUtOTAwIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMFwiPuWvvOWHuuaJgOacieaVsOaNrjwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNTAwIHRleHQtc21cIj5KU09OPC9zcGFuPlxuICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwidy1mdWxsIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBwLTMgYmctc2xhdGUtOTAwLzUwIHJvdW5kZWQtbGcgaG92ZXI6Ymctc2xhdGUtOTAwIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMFwiPua4heeQhue8k+WtmDwvc3Bhbj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNTAwIHRleHQtc21cIj4xMjggTUI8L3NwYW4+XG4gICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJ3LWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIHAtMyBiZy1yZWQtOTAwLzIwIHJvdW5kZWQtbGcgaG92ZXI6YmctcmVkLTkwMC8zMCB0cmFuc2l0aW9uLWNvbG9yc1wiPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1yZWQtNDAwXCI+5riF6Zmk5omA5pyJ6K6w5b+GPC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1yZWQtNTAwIHRleHQtc21cIj7ljbHpmak8L3NwYW4+XG4gICAgICAgICAgPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gICk7XG5cbiAgY29uc3QgcmVuZGVyTmV0d29ya1NldHRpbmdzID0gKCkgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMC81MCByb3VuZGVkLXhsIHAtNiBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMFwiPlxuICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtc2xhdGUtMTAwIG1iLTRcIj7ku6PnkIborr7nva48L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuXCI+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTIwMFwiPuS9v+eUqOS7o+eQhjwvc3Bhbj5cbiAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwicmVsYXRpdmUgdy0xMiBoLTYgcm91bmRlZC1mdWxsIGJnLXNsYXRlLTYwMFwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJhYnNvbHV0ZSB0b3AtMC41IGxlZnQtMC41IHctNSBoLTUgYmctd2hpdGUgcm91bmRlZC1mdWxsXCIgLz5cbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMiBnYXAtNFwiPlxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImJsb2NrIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1zbGF0ZS00MDAgbWItMlwiPuS7o+eQhuWcsOWdgDwvbGFiZWw+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIjEyNy4wLjAuMVwiXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTIwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby01MDBcIlxuICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXNsYXRlLTQwMCBtYi0yXCI+56uv5Y+jPC9sYWJlbD5cbiAgICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiNzg5MFwiXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTIwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby01MDBcIlxuICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctc2xhdGUtODAwLzUwIHJvdW5kZWQteGwgcC02IGJvcmRlciBib3JkZXItc2xhdGUtNzAwXCI+XG4gICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItNFwiPui/nuaOpeeKtuaAgTwvaDM+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0zXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktMlwiPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIj5PcGVuQ2xhdyBHYXRld2F5PC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC1lbWVyYWxkLTQwMFwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTIgaC0yIGJnLWVtZXJhbGQtNDAwIHJvdW5kZWQtZnVsbCBhbmltYXRlLXB1bHNlXCIgLz5cbiAgICAgICAgICAgICAg5bey6L+e5o6lXG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktMlwiPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIj5GZWlzaHUgQVBJPC9zcGFuPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC1lbWVyYWxkLTQwMFwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTIgaC0yIGJnLWVtZXJhbGQtNDAwIHJvdW5kZWQtZnVsbCBhbmltYXRlLXB1bHNlXCIgLz5cbiAgICAgICAgICAgICAg5q2j5bi4XG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktMlwiPlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDBcIj5XZWJTb2NrZXQ8L3NwYW4+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiB0ZXh0LWVtZXJhbGQtNDAwXCI+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInctMiBoLTIgYmctZW1lcmFsZC00MDAgcm91bmRlZC1mdWxsIGFuaW1hdGUtcHVsc2VcIiAvPlxuICAgICAgICAgICAgICDlnKjnur9cbiAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgKTtcblxuICBjb25zdCByZW5kZXJBY2NvdW50U2V0dGluZ3MgPSAoKSA9PiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTZcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctc2xhdGUtODAwLzUwIHJvdW5kZWQteGwgcC02IGJvcmRlciBib3JkZXItc2xhdGUtNzAwXCI+XG4gICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItNFwiPuS4quS6uuS/oeaBrzwvaDM+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTQgbWItNlwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0yMCBoLTIwIHJvdW5kZWQtZnVsbCBiZy1ncmFkaWVudC10by1iciBmcm9tLWluZGlnby01MDAgdG8tcHVycGxlLTYwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LTN4bCBmb250LWJvbGQgdGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgU1xuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDBcIj5TaXI8L3A+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTQwMFwiPkFkbWluaXN0cmF0b3I8L3A+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTUwMCB0ZXh0LXNtXCI+YWRtaW5Ab3BlbmNsYXcubG9jYWw8L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNFwiPlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXNsYXRlLTQwMCBtYi0yXCI+5pi+56S65ZCN56ewPC9sYWJlbD5cbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXG4gICAgICAgICAgICAgIGRlZmF1bHRWYWx1ZT1cIlNpclwiXG4gICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBiZy1zbGF0ZS05MDAgYm9yZGVyIGJvcmRlci1zbGF0ZS03MDAgcm91bmRlZC1sZyBweC00IHB5LTIgdGV4dC1zbGF0ZS0yMDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1pbmRpZ28tNTAwXCJcbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtc2xhdGUtNDAwIG1iLTJcIj7pgq7nrrE8L2xhYmVsPlxuICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgIHR5cGU9XCJlbWFpbFwiXG4gICAgICAgICAgICAgIGRlZmF1bHRWYWx1ZT1cImFkbWluQG9wZW5jbGF3LmxvY2FsXCJcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTIwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby01MDBcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy1zbGF0ZS04MDAvNTAgcm91bmRlZC14bCBwLTYgYm9yZGVyIGJvcmRlci1zbGF0ZS03MDBcIj5cbiAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtbGcgZm9udC1zZW1pYm9sZCB0ZXh0LXNsYXRlLTEwMCBtYi00XCI+5a+G56CBPC9oMz5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTRcIj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImJsb2NrIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1zbGF0ZS00MDAgbWItMlwiPuW9k+WJjeWvhueggTwvbGFiZWw+XG4gICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgdHlwZT1cInBhc3N3b3JkXCJcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTIwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby01MDBcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImJsb2NrIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1zbGF0ZS00MDAgbWItMlwiPuaWsOWvhueggTwvbGFiZWw+XG4gICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgdHlwZT1cInBhc3N3b3JkXCJcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLXNsYXRlLTkwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLWxnIHB4LTQgcHktMiB0ZXh0LXNsYXRlLTIwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWluZGlnby01MDBcIlxuICAgICAgICAgICAgLz5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cInB4LTQgcHktMiBiZy1pbmRpZ28tNjAwIGhvdmVyOmJnLWluZGlnby01MDAgcm91bmRlZC1sZyB0ZXh0LXdoaXRlIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICDmm7TmlrDlr4bnoIFcbiAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgKTtcblxuICBjb25zdCByZW5kZXJDb250ZW50ID0gKCkgPT4ge1xuICAgIHN3aXRjaCAoYWN0aXZlU2VjdGlvbikge1xuICAgICAgY2FzZSAnZ2VuZXJhbCc6IHJldHVybiByZW5kZXJHZW5lcmFsU2V0dGluZ3MoKTtcbiAgICAgIGNhc2UgJ25vdGlmaWNhdGlvbnMnOiByZXR1cm4gcmVuZGVyTm90aWZpY2F0aW9uU2V0dGluZ3MoKTtcbiAgICAgIGNhc2UgJ3NlY3VyaXR5JzogcmV0dXJuIHJlbmRlclNlY3VyaXR5U2V0dGluZ3MoKTtcbiAgICAgIGNhc2UgJ3N0b3JhZ2UnOiByZXR1cm4gcmVuZGVyU3RvcmFnZVNldHRpbmdzKCk7XG4gICAgICBjYXNlICduZXR3b3JrJzogcmV0dXJuIHJlbmRlck5ldHdvcmtTZXR0aW5ncygpO1xuICAgICAgY2FzZSAnYWNjb3VudCc6IHJldHVybiByZW5kZXJBY2NvdW50U2V0dGluZ3MoKTtcbiAgICAgIGRlZmF1bHQ6IHJldHVybiByZW5kZXJHZW5lcmFsU2V0dGluZ3MoKTtcbiAgICB9XG4gIH07XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImgtZnVsbCBmbGV4XCI+XG4gICAgICB7LyogU2lkZWJhciAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy02NCBib3JkZXItciBib3JkZXItc2xhdGUtNzAwLzUwIGJnLXNsYXRlLTkwMC8zMFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNFwiPlxuICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItNCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgPFNldHRpbmdzIHNpemU9ezIwfSBjbGFzc05hbWU9XCJ0ZXh0LWluZGlnby00MDBcIiAvPlxuICAgICAgICAgICAg6K6+572uXG4gICAgICAgICAgPC9oMj5cbiAgICAgICAgICA8bmF2IGNsYXNzTmFtZT1cInNwYWNlLXktMVwiPlxuICAgICAgICAgICAge3NlY3Rpb25zLm1hcCgoc2VjdGlvbikgPT4gKFxuICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAga2V5PXtzZWN0aW9uLmlkfVxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEFjdGl2ZVNlY3Rpb24oc2VjdGlvbi5pZCl9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgdy1mdWxsIGZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHB4LTMgcHktMi41IHJvdW5kZWQtbGcgdGV4dC1sZWZ0IHRyYW5zaXRpb24tY29sb3JzICR7XG4gICAgICAgICAgICAgICAgICBhY3RpdmVTZWN0aW9uID09PSBzZWN0aW9uLmlkXG4gICAgICAgICAgICAgICAgICAgID8gJ2JnLWluZGlnby02MDAvMjAgdGV4dC1pbmRpZ28tNDAwIGJvcmRlciBib3JkZXItaW5kaWdvLTUwMC8zMCdcbiAgICAgICAgICAgICAgICAgICAgOiAndGV4dC1zbGF0ZS00MDAgaG92ZXI6Ymctc2xhdGUtODAwIGhvdmVyOnRleHQtc2xhdGUtMjAwJ1xuICAgICAgICAgICAgICAgIH1gfVxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAge3NlY3Rpb24uaWNvbn1cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtMSBtaW4tdy0wXCI+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LW1lZGl1bSB0ZXh0LXNtXCI+e3NlY3Rpb24udGl0bGV9PC9wPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14cyBvcGFjaXR5LTcwIHRydW5jYXRlXCI+e3NlY3Rpb24uZGVzY3JpcHRpb259PC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICkpfVxuICAgICAgICAgIDwvbmF2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICB7LyogQ29udGVudCAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC0xIG92ZXJmbG93LWF1dG9cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTZcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBtYi02XCI+XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwidGV4dC0yeGwgZm9udC1ib2xkIHRleHQtc2xhdGUtMTAwXCI+XG4gICAgICAgICAgICAgICAge3NlY3Rpb25zLmZpbmQocyA9PiBzLmlkID09PSBhY3RpdmVTZWN0aW9uKT8udGl0bGV9XG4gICAgICAgICAgICAgIDwvaDE+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNTAwIG10LTFcIj5cbiAgICAgICAgICAgICAgICB7c2VjdGlvbnMuZmluZChzID0+IHMuaWQgPT09IGFjdGl2ZVNlY3Rpb24pPy5kZXNjcmlwdGlvbn1cbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIG9uQ2xpY2s9e2hhbmRsZVNhdmV9XG4gICAgICAgICAgICAgIGNsYXNzTmFtZT17YGZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHB4LTQgcHktMiByb3VuZGVkLWxnIHRyYW5zaXRpb24tYWxsICR7XG4gICAgICAgICAgICAgICAgc2F2ZWRcbiAgICAgICAgICAgICAgICAgID8gJ2JnLWVtZXJhbGQtNjAwIHRleHQtd2hpdGUnXG4gICAgICAgICAgICAgICAgICA6ICdiZy1pbmRpZ28tNjAwIGhvdmVyOmJnLWluZGlnby01MDAgdGV4dC13aGl0ZSdcbiAgICAgICAgICAgICAgfWB9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIHtzYXZlZCA/IDxDaGVja0NpcmNsZSBzaXplPXsxOH0gLz4gOiA8U2F2ZSBzaXplPXsxOH0gLz59XG4gICAgICAgICAgICAgIHtzYXZlZCA/ICflt7Lkv53lrZgnIDogJ+S/neWtmOabtOaUuSd9XG4gICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICB7cmVuZGVyQ29udGVudCgpfVxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApO1xufVxuIl0sImZpbGUiOiJDOi9Vc2Vycy9BZG1pbmlzdHJhdG9yLy5vcGVuY2xhdy93b3Jrc3BhY2UvY29udHJvbC1jZW50ZXIvc3JjL3BhZ2VzL1NldHRpbmdzLnRzeCJ9

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "profiles": {
+    "moonshot:default": {
+      "type": "api_key",
+      "provider": "moonshot",
+      "key": "sk-RdbLsz4iBpEjWgxZTCGQSFEcBCPrRScAnfLgIb68ItxY8mBV"
+    },
+    "minimax:cn": {
+      "type": "api_key",
+      "provider": "minimax",
+      "key": "sk-cp-jf-xvaAR8Z2f1Ss3QxhjvxLn8r37dHwajQAdMfyhV1aK21iuvM3mFyR7ZG_Fk4vxZQIqnJwGxhBGMpGulJ_1kziDfqs3Yopv8NahFDHv-CS8GH17corNE74"
+    }
+  },
+  "usageStats": {
+    "moonshot:default": {
+      "errorCount": 0,
+      "lastUsed": 1773830550817
+    },
+    "openrouter:default": {
+      "errorCount": 0,
+      "lastUsed": 1773734348490
+    },
+    "minimax:cn": {
+      "errorCount": 0,
+      "lastUsed": 1773846555267
+    }
+  }
+}

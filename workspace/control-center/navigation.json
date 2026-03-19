@@ -1,0 +1,166 @@
+{
+  "version": "1.0",
+  "agents": [
+    {
+      "id": "may",
+      "name": "May",
+      "title": "核心主控",
+      "description": "系统核心控制中枢",
+      "icon": "🎯",
+      "color": "#4A90D9",
+      "status": "active",
+      "features": [
+        {
+          "name": "系统状态",
+          "action": "check_system_health",
+          "icon": "📊"
+        },
+        {
+          "name": "每日报告",
+          "action": "generate_daily_report",
+          "icon": "📋"
+        },
+        {
+          "name": "智能体协调",
+          "action": "coordinate_agents",
+          "icon": "🎛️"
+        }
+      ]
+    },
+    {
+      "id": "gock",
+      "name": "Gock",
+      "title": "每日新闻",
+      "description": "新闻聚合与摘要",
+      "icon": "📰",
+      "color": "#E74C3C",
+      "status": "active",
+      "features": [
+        {
+          "name": "早间简报",
+          "action": "morning_briefing",
+          "icon": "🌅"
+        },
+        {
+          "name": "晚间汇总",
+          "action": "evening_summary",
+          "icon": "🌙"
+        },
+        {
+          "name": "热点追踪",
+          "action": "trending_topics",
+          "icon": "🔥"
+        }
+      ]
+    },
+    {
+      "id": "otter",
+      "name": "Otter",
+      "title": "私人助理",
+      "description": "个人事务与日程管理",
+      "icon": "🦦",
+      "color": "#27AE60",
+      "status": "active",
+      "features": [
+        {
+          "name": "今日日程",
+          "action": "today_schedule",
+          "icon": "📅"
+        },
+        {
+          "name": "待办事项",
+          "action": "todo_list",
+          "icon": "✅"
+        },
+        {
+          "name": "设置提醒",
+          "action": "set_reminder",
+          "icon": "⏰"
+        }
+      ]
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "title": "开发测试",
+      "description": "代码开发与自动化",
+      "icon": "🐼",
+      "color": "#9B59B6",
+      "status": "active",
+      "features": [
+        {
+          "name": "运行脚本",
+          "action": "run_script",
+          "icon": "▶️"
+        },
+        {
+          "name": "技能测试",
+          "action": "test_skills",
+          "icon": "🧪"
+        },
+        {
+          "name": "代码助手",
+          "action": "code_assist",
+          "icon": "💻"
+        }
+      ]
+    },
+    {
+      "id": "monkey",
+      "name": "Monkey",
+      "title": "内容创作",
+      "description": "文案与创意生成",
+      "icon": "🐵",
+      "color": "#F39C12",
+      "status": "active",
+      "features": [
+        {
+          "name": "撰写文章",
+          "action": "write_article",
+          "icon": "✍️"
+        },
+        {
+          "name": "创意生成",
+          "action": "generate_ideas",
+          "icon": "💡"
+        },
+        {
+          "name": "编辑润色",
+          "action": "edit_text",
+          "icon": "📝"
+        }
+      ]
+    },
+    {
+      "id": "tiger",
+      "name": "Tiger",
+      "title": "安全更新",
+      "description": "安全监控与备份",
+      "icon": "🐯",
+      "color": "#E67E22",
+      "status": "active",
+      "features": [
+        {
+          "name": "安全扫描",
+          "action": "security_scan",
+          "icon": "🔒"
+        },
+        {
+          "name": "检查更新",
+          "action": "check_updates",
+          "icon": "⬆️"
+        },
+        {
+          "name": "备份状态",
+          "action": "backup_status",
+          "icon": "💾"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "refreshInterval": 30,
+    "showNotifications": true,
+    "theme": "auto"
+  }
+}

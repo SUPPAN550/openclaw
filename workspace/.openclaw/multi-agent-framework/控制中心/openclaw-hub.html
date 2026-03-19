@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Control Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 左侧导航 */
+        .sidebar {
+            width: 240px;
+            background: #111;
+            border-right: 1px solid #222;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .logo .subtitle {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .nav-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-item:hover {
+            background: #1a1a1a;
+        }
+        
+        .nav-item.active {
+            background: #1a1a1a;
+            border-left: 3px solid #22c55e;
+        }
+        
+        .nav-item .icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-item .label {
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        .nav-item.active .label {
+            color: #fff;
+        }
+        
+        /* 主内容区 */
+        .main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .header .desc {
+            font-size: 14px;
+            color: #888;
+        }
+        
+        /* Agent 卡片网格 */
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .agent-card {
+            background: #151515;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            transition: all 0.2s;
+        }
+        
+        .agent-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .agent-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            background: #1a1a1a;
+        }
+        
+        .agent-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .agent-info .role {
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .status-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+        
+        .status-indicator.idle {
+            background: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+        
+        .status-indicator.offline {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+        
+        .agent-status {
+            margin-bottom: 15px;
+        }
+        
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .status-label {
+            color: #666;
+        }
+        
+        .status-value {
+            color: #ccc;
+        }
+        
+        .status-value.working {
+            color: #22c55e;
+        }
+        
+        .agent-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #22c55e;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background: #16a34a;
+        }
+        
+        .btn-secondary {
+            background: #222;
+            color: #ccc;
+        }
+        
+        .btn-secondary:hover {
+            background: #333;
+        }
+        
+        /* 右侧面板 */
+        .right-panel {
+            width: 300px;
+            background: #111;
+            border-left: 1px solid #222;
+            padding: 20px;
+        }
+        
+        .panel-section {
+            margin-bottom: 25px;
+        }
+        
+        .panel-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        
+        .stat-label {
+            color: #666;
+        }
+        
+        .stat-value {
+            color: #ccc;
+        }
+        
+        .resource-bar {
+            margin-bottom: 15px;
+        }
+        
+        .resource-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .resource-label span:first-child {
+            color: #888;
+        }
+        
+        .resource-label span:last-child {
+            color: #22c55e;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #222;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .quick-btn {
+            padding: 10px;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .quick-btn:hover {
+            background: #222;
+            border-color: #333;
+        }
+        
+        .quick-btn.primary {
+            background: #22c55e;
+            border-color: #22c55e;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .quick-btn.primary:hover {
+            background: #16a34a;
+        }
+        
+        .agent-list {
+            list-style: none;
+        }
+        
+        .agent-list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 13px;
+        }
+        
+        .agent-list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .agent-list-avatar {
+            font-size: 18px;
+        }
+        
+        .agent-list-name {
+            flex: 1;
+            color: #ccc;
+        }
+        
+        .agent-list-status {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: #1a1a1a;
+            color: #888;
+        }
+        
+        .agent-list-status.online {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>OPENCLAW</h1>
+                <div class="subtitle">OpenClaw Control Center</div>
+            </div>
+            <nav>
+                <div class="nav-item">
+                    <span class="icon">📊</span>
+                    <span class="label">总览</span>
+                </div>
+                <div class="nav-item active">
+                    <span class="icon">👥</span>
+                    <span class="label">员工</span>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">🧠</span>
+                    <span class="label">记忆</span>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">📄</span>
+                    <span class="label">文档</span>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">📈</span>
+                    <span class="label">用量</span>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">✅</span>
+                    <span class="label">任务</span>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">⚙️</span>
+                    <span class="label">设置</span>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main">
+            <div class="header">
+                <h2>员工</h2>
+                <div class="desc">员工、分工与职责</div>
+            </div>
+
+            <div class="agent-grid">
+                <!-- May -->
+                <div class="agent-card">
+                    <div class="status-indicator"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🦁</div>
+                        <div class="agent-info">
+                            <h3>May</h3>
+                            <div class="role">核心主控</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value working">待命</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">模型</span>
+                            <span class="status-value">deepseek-chat</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">HEARTBEAT_OK</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+
+                <!-- Gock -->
+                <div class="agent-card">
+                    <div class="status-indicator"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🐓</div>
+                        <div class="agent-info">
+                            <h3>Gock</h3>
+                            <div class="role">每日新闻</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value">工作中</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">定时任务</span>
+                            <span class="status-value">每日 09:00</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">AI Trend Report</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+
+                <!-- Otter -->
+                <div class="agent-card">
+                    <div class="status-indicator"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🦦</div>
+                        <div class="agent-info">
+                            <h3>Otter</h3>
+                            <div class="role">私人助理</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value working">待命</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">定时任务</span>
+                            <span class="status-value">每日 07:30</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">晨报推送</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+
+                <!-- Pandas -->
+                <div class="agent-card">
+                    <div class="status-indicator"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🐼</div>
+                        <div class="agent-info">
+                            <h3>Pandas</h3>
+                            <div class="role">开发测试</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value working">工作中</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">工作模式</span>
+                            <span class="status-value">24/7 不间断</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">代码审查</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+
+                <!-- Monkey -->
+                <div class="agent-card">
+                    <div class="status-indicator idle"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🐵</div>
+                        <div class="agent-info">
+                            <h3>Monkey</h3>
+                            <div class="role">内容创作</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value">空闲</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">触发方式</span>
+                            <span class="status-value">任务触发</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">视频转文章</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+
+                <!-- Tiger -->
+                <div class="agent-card">
+                    <div class="status-indicator"></div>
+                    <div class="agent-header">
+                        <div class="agent-avatar">🐯</div>
+                        <div class="agent-info">
+                            <h3>Tiger</h3>
+                            <div class="role">安全更新</div>
+                        </div>
+                    </div>
+                    <div class="agent-status">
+                        <div class="status-row">
+                            <span class="status-label">当前状态</span>
+                            <span class="status-value working">待命</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">定时任务</span>
+                            <span class="status-value">每周日 02:00</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">最近产出</span>
+                            <span class="status-value">安全扫描报告</span>
+                        </div>
+                    </div>
+                    <div class="agent-actions">
+                        <button class="btn btn-primary">启动</button>
+                        <button class="btn btn-secondary">配置</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 右侧面板 -->
+        <aside class="right-panel">
+            <div class="panel-section">
+                <h4>当前状态</h4>
+                <div class="stat-item">
+                    <span class="stat-label">活跃会话</span>
+                    <span class="stat-value">5</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">推进中任务</span>
+                    <span class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">待审批</span>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>资源监控</h4>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>CPU</span>
+                        <span>37%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 37%"></div>
+                    </div>
+                </div>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>Memory</span>
+                        <span>42%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 42%"></div>
+                    </div>
+                </div>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>Storage</span>
+                        <span>28%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 28%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>快捷操作</h4>
+                <div class="quick-actions">
+                    <button class="quick-btn primary">进入 WebUI</button>
+                    <button class="quick-btn">重启服务</button>
+                    <button class="quick-btn">版本检查</button>
+                    <button class="quick-btn">故障修复</button>
+                    <button class="quick-btn">沙箱模式</button>
+                    <button class="quick-btn">停止服务</button>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>当前活跃智能体</h4>
+                <ul class="agent-list">
+                    <li class="agent-list-item">
+                        <span class="agent-list-avatar">🦁</span>
+                        <span class="agent-list-name">May</span>
+                        <span class="agent-list-status online">在线</span>
+                    </li>
+                    <li class="agent-list-item">
+                        <span class="agent-list-avatar">🐓</span>
+                        <span class="agent-list-name">Gock</span>
+                        <span class="agent-list-status online">在线</span>
+                    </li>
+                    <li class="agent-list-item">
+                        <span class="agent-list-avatar">🦦</span>
+                        <span class="agent-list-name">Otter</span>
+                        <span class="agent-list-status online">在线</span>
+                    </li>
+                    <li class="agent-list-item">
+                        <span class="agent-list-avatar">🐼</span>
+                        <span class="agent-list-name">Pandas</span>
+                        <span class="agent-list-status online">在线</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

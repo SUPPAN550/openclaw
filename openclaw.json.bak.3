@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-18T09:41:51.565Z"
+  },
+  "env": {},
+  "wizard": {
+    "lastRunAt": "2026-03-18T02:22:54.141Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "minimax:cn": {
+        "provider": "minimax",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.03,
+              "cacheWrite": 0.12
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "minimax/MiniMax-M2.5",
+        "fallbacks": []
+      },
+      "models": {
+        "minimax/MiniMax-M2.5": {
+          "alias": "Minimax"
+        }
+      },
+      "workspace": "C:\\Users\\Administrator\\.openclaw\\workspace",
+      "compaction": {
+        "mode": "safeguard"
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "coder",
+        "name": "coder",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\workspace",
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "NewsFact",
+        "name": "NewsFact",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\workspace",
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\NewsFact\\agent",
+        "model": "minimax/MiniMax-M2.5"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "feishu",
+        "accountId": "main"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "coder",
+      "match": {
+        "channel": "feishu",
+        "accountId": "coder"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "NewsFact",
+      "match": {
+        "channel": "feishu",
+        "accountId": "NewsFact"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "defaultAccount": "main",
+      "accounts": {
+        "main": {
+          "appId": "cli_a9329dd432791bd7",
+          "appSecret": "OhsgviT7KdSMHIwbib26xfrDfFbVHB4v"
+        },
+        "coder": {
+          "appId": "cli_a930e5a091badbd7",
+          "appSecret": "4R90qgVplc9hEpM8gRXy7c1xO3T16I1a"
+        },
+        "NewsFact": {
+          "appId": "cli_a9303f8ff2b99bdb",
+          "appSecret": "FXXHSIr1lLjqzmyjbr3SugR6sHe4oQQI"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "1ca22fc3c887278ffd577a3da231b3de7fd152e2e94b1d07"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}

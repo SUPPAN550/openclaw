@@ -1,0 +1,535 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Windows 的可靠文件复制                              
+-------------------------------------------------------------------------------
+
+  开始时间: 2026年3月19日 12:06:48
+        源: C:\Users\Administrator\.openclaw\
+      目标: D:\openclaw-backup-2026-03-19\
+
+      文件: *.*
+	    
+  执行目录: node_modules
+	    .git
+	    
+      选项: *.* /TEE /S /E /DCOPY:DA /COPY:DAT /R:3 /W:5 
+
+------------------------------------------------------------------------------
+
+	                  15	C:\Users\Administrator\.openclaw\
+	  *多余文件   		       0	.gitignore
+	                   0	C:\Users\Administrator\.openclaw\agents\
+	                   0	C:\Users\Administrator\.openclaw\agents\analyst\
+	                   4	C:\Users\Administrator\.openclaw\agents\analyst\agent\
+	                   1	C:\Users\Administrator\.openclaw\agents\coder\
+	                   5	C:\Users\Administrator\.openclaw\agents\coder\agent\
+	                   3	C:\Users\Administrator\.openclaw\agents\coder\sessions\
+	                   0	C:\Users\Administrator\.openclaw\agents\coordinator\
+	                   2	C:\Users\Administrator\.openclaw\agents\coordinator\agent\
+	                   2	C:\Users\Administrator\.openclaw\agents\coordinator\sessions\
+	                   0	C:\Users\Administrator\.openclaw\agents\evolution\
+	                   4	C:\Users\Administrator\.openclaw\agents\evolution\agent\
+	                   0	C:\Users\Administrator\.openclaw\agents\main\
+	                   9	C:\Users\Administrator\.openclaw\agents\main\agent\
+	    较新的    		     698	auth-profiles.json100%  
+	                 160	C:\Users\Administrator\.openclaw\agents\main\sessions\
+	  *多余文件   		      61	2836181f-9049-479c-a959-e3179e82ce76.jsonl.lock
+	  *多余文件   		      61	9b8b60b2-5784-4657-b4c7-7e09c84636fa.jsonl.lock
+	    较新的    		    3493	2836181f-9049-479c-a959-e3179e82ce76.jsonl100%  
+	    新文件    		    3614	4c52d05b-37b1-4ccf-838a-5db4da9bb79b.jsonl100%  
+	    新文件    		    3161	92304290-e313-4d80-a7d5-b405785a0ffe.jsonl100%  
+	    新文件    		       0	92304290-e313-4d80-a7d5-b405785a0ffe.jsonl.lock100%  
+	    新文件    		    9114	a2805044-7799-4b0b-829a-9d00bd0cb8ce.jsonl100%  
+	    较新的    		  265087	b206aa9d-96ca-4f78-96e5-43352b053b58.jsonl 49%   98%  100%  
+	    较新的    		       0	b206aa9d-96ca-4f78-96e5-43352b053b58.jsonl.lock100%  
+	    新文件    		  108845	dd100c8c-b966-4247-9324-903baf8bd1ab.jsonl100%  
+	    新文件    		   21241	dea16abf-2401-461a-b7db-0893cad0cdda.jsonl100%  
+	    较新的    		   7.3 m	sessions.json  6.8% 13.6% 20.5% 27.3% 34.1% 41.0% 47.8% 54.6% 61.5% 68.3% 75.1% 82.0% 88.8% 95.6%100%  
+	                   2	C:\Users\Administrator\.openclaw\agents\newsai\
+	                   2	C:\Users\Administrator\.openclaw\agents\newsai\agent\
+	                   4	C:\Users\Administrator\.openclaw\agents\newsai\sessions\
+	                   0	C:\Users\Administrator\.openclaw\agents\newsfact\
+	                   5	C:\Users\Administrator\.openclaw\agents\newsfact\agent\
+	                   2	C:\Users\Administrator\.openclaw\agents\newsfact\sessions\
+	                   2	C:\Users\Administrator\.openclaw\agents\pm\
+	                   2	C:\Users\Administrator\.openclaw\agents\pm\agent\
+	                   3	C:\Users\Administrator\.openclaw\agents\pm\sessions\
+	                   0	C:\Users\Administrator\.openclaw\agents\ppt-writer\
+	                   4	C:\Users\Administrator\.openclaw\agents\ppt-writer\agent\
+	                   1	C:\Users\Administrator\.openclaw\agents\researcher\
+	                   4	C:\Users\Administrator\.openclaw\agents\researcher\agent\
+	                   0	C:\Users\Administrator\.openclaw\agents\security\
+	                   4	C:\Users\Administrator\.openclaw\agents\security\agent\
+	                   0	C:\Users\Administrator\.openclaw\agents\sysadmin\
+	                   4	C:\Users\Administrator\.openclaw\agents\sysadmin\agent\
+	                   0	C:\Users\Administrator\.openclaw\agents\vision\
+	                   4	C:\Users\Administrator\.openclaw\agents\vision\agent\
+	                   0	C:\Users\Administrator\.openclaw\agents\wechat\
+	                   4	C:\Users\Administrator\.openclaw\agents\wechat\agent\
+	                   0	C:\Users\Administrator\.openclaw\browser\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\
+	                   9	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\
+	    较新的    		   4.0 m	BrowserMetrics-spare.pma 12%   25%   37%   50%   62%   75%   87%  100%  
+	    较新的    		   1.0 m	CrashpadMetrics-active.pma 25%   50%   75%  100%  
+	    较新的    		   49152	first_party_sets.db100%  
+	    较新的    		       0	first_party_sets.db-journal
+	    较新的    		     106	Last Browser100%  
+	    较新的    		      13	Last Version100%  
+	    较新的    		    5671	Local State100%  
+	    较新的    		      86	Variations100%  
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Avatars\
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\BrowserMetrics\
+	  *多余文件   		   4.0 m	BrowserMetrics-69BB7245-1A50.pma
+	  *多余文件   		   4.0 m	BrowserMetrics-69BB7394-2928.pma
+	    较新的    		   4.0 m	BrowserMetrics-69BABC29-415C.pma 12%   25%   37%   50%   62%   75%   87%  100%  
+	    新文件    		   4.0 m	BrowserMetrics-69BB74AA-3CF8.pma 12%   25%   37%   50%   62%   75%   87%  100%  
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\component_crx_cache\
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Crashpad\
+	    较新的    		      40	settings.dat100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Crashpad\attachments\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Crashpad\reports\
+	                  39	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\
+	    较新的    		       6	BookmarkMergedSurfaceOrdering100%  
+	    较新的    		     414	BrowsingTopicsState100%  
+	    较新的    		   65952	DIPS-wal100%  
+	    较新的    		  163840	History 80%  100%  
+	    较新的    		    8720	History-journal100%  
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	    较新的    		   53248	Network Action Predictor100%  
+	    较新的    		       0	Network Action Predictor-journal
+	    较新的    		   10916	Preferences100%  
+	    较新的    		   18516	Secure Preferences100%  
+	    较新的    		   20480	Top Sites100%  
+	    较新的    		       0	Top Sites-journal
+	    较新的    		  157696	Web Data 83%  100%  
+	    较新的    		       0	Web Data-journal
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\AutofillAiModelCache\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\AutofillStrikeDatabase\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\blob_storage\
+	*多余目录         -1	D:\openclaw-backup-2026-03-19\browser\openclaw\user-data\Default\blob_storage\4efd9af2-65ab-403c-b92a-48d62df57dad\
+	*多余目录         -1	D:\openclaw-backup-2026-03-19\browser\openclaw\user-data\Default\blob_storage\913a6c73-2082-4c16-8e03-7c0dbe2fde85\
+	  新目录           0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\blob_storage\6337b3a6-fa00-4265-9cfe-73394ed8d8c7\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\BudgetDatabase\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Cache\
+	                 221	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Cache\Cache_Data\
+	  *多余文件   		  106014	f_00007e
+	  *多余文件   		   40669	f_0000a1
+	  *多余文件   		   79980	f_0000af
+	  *多余文件   		   89814	f_0000b2
+	  *多余文件   		  135441	f_0000b3
+	  *多余文件   		  148956	f_0000b7
+	    较新的    		   45056	data_0100%  
+	    较新的    		  794624	data_1 32%   65%   98%  100%  
+	    较新的    		   1.0 m	data_2 24%   49%   74%   99%  100%  
+	    较新的    		  12.0 m	data_3  8.3% 16.6% 24.9% 33.3% 41.6% 49.9% 58.2% 66.6% 74.9% 83.2% 91.6% 99.9%100%  
+	    新文件    		  106046	f_0000dd100%  
+	    新文件    		   24116	f_0000de100%  
+	    新文件    		  234271	f_0000df 55%  100%  
+	    新文件    		   40669	f_0000e0100%  
+	    新文件    		   19499	f_0000e1100%  
+	    新文件    		   19488	f_0000e2100%  
+	    新文件    		   19283	f_0000e3100%  
+	    新文件    		   18951	f_0000e4100%  
+	    新文件    		   19463	f_0000e5100%  
+	    新文件    		   57749	f_0000e6100%  
+	    新文件    		   19301	f_0000e7100%  
+	    新文件    		   19469	f_0000e8100%  
+	    新文件    		   24264	f_0000e9100%  
+	    新文件    		   37744	f_0000ea100%  
+	    新文件    		   40877	f_0000eb100%  
+	    新文件    		   79980	f_0000ec100%  
+	    新文件    		  148956	f_0000ed 87%  100%  
+	    新文件    		  135441	f_0000ee 96%  100%  
+	    新文件    		   89814	f_0000ef100%  
+	    新文件    		   47180	f_0000f0100%  
+	    新文件    		   25331	f_0000f1100%  
+	    新文件    		   89862	f_0000f2100%  
+	    新文件    		   61467	f_0000f3100%  
+	    新文件    		   92724	f_0000f4100%  
+	    新文件    		  128415	f_0000f5100%  
+	    新文件    		  133632	f_0000f6 98%  100%  
+	    新文件    		   23836	f_0000f7100%  
+	    新文件    		   53310	f_0000f8100%  
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Cache\No_Vary_Search\
+	    较新的    		       4	journal.baj100%  
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\chrome_cart_db\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\ClientCertificates\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Code Cache\
+	                 398	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Code Cache\js\
+	    较新的    		     359	00c7426a966351bd_0100%  
+	    新文件    		     392	02a17d289e2f5488_0100%  
+	    较新的    		     360	049c7a31ae777ffb_0100%  
+	    较新的    		    4331	04c2892bbef5f37f_0100%  
+	    新文件    		   59792	08663bdffd214d79_0100%  
+	    新文件    		    1414	0b7e290f3d4d591a_0100%  
+	    新文件    		    1414	0d4e33c73b06a3c7_0100%  
+	    较新的    		    3802	0e5b6d92042dfeec_0100%  
+	    较新的    		    6201	0e6ff7db51421b0e_0100%  
+	    较新的    		    3469	11e7c43886a7d454_0100%  
+	    新文件    		   26832	1437591e79fb6935_0100%  
+	    较新的    		     362	1cbd6b7f209a419d_0100%  
+	    新文件    		     392	207457988bc819fb_0100%  
+	    较新的    		     361	246fc80301de3294_0100%  
+	    较新的    		     390	26a7809cf200005e_0100%  
+	    较新的    		     241	27d79e28c4ced2d5_0100%  
+	    新文件    		     392	2dd7bfad6747b388_0100%  
+	    新文件    		     392	2f1014158a77b79b_0100%  
+	    较新的    		     344	3144f1a141a90275_0100%  
+	    新文件    		     392	32e9477c3d3c90c0_0100%  
+	    较新的    		   11938	3504560401989bc8_0100%  
+	    新文件    		     392	35c70217df21c7e4_0100%  
+	    较新的    		    2273	376484801a1f5d74_0100%  
+	    较新的    		     269	3793f1a4bad50407_0100%  
+	    新文件    		   28720	37c8118f4d6af8d9_0100%  
+	    较新的    		     358	38e8bbe3b37a2c16_0100%  
+	    新文件    		     229	3a1ceeb7f3f867ab_0100%  
+	    较新的    		     393	3a831ad78f72e191_0100%  
+	    较新的    		    5641	4044fb469d1dbd10_0100%  
+	    较新的    		     342	43b3bb53ffb0b023_0100%  
+	    新文件    		     272	4536d7e11565a93f_0100%  
+	    较新的    		   14829	45deb940a6307216_0100%  
+	    新文件    		     392	4632fa9502838d5b_0100%  
+	    新文件    		   51536	48983deb4dd4d719_0100%  
+	    新文件    		     392	4f251df91e29b3e8_0100%  
+	    较新的    		    2736	507e73493c4da82b_0100%  
+	    较新的    		     247	5152cdf77767a5dd_0100%  
+	    较新的    		    4399	534c54197b14d028_0100%  
+	    较新的    		    8863	5a71fcf6a7cb5983_0100%  
+	    新文件    		     392	5fb40a7a09a9eaeb_0100%  
+	    新文件    		     392	5fc9f30e8aa377d2_0100%  
+	    新文件    		     219	62d47fd5a9048242_0100%  
+	    较新的    		    1677	643324dec78020c9_0100%  
+	    较新的    		     269	64870871b93014b5_0100%  
+	    新文件    		     392	65024e6e2438c440_0100%  
+	    新文件    		     392	66a7a3e9cf9adbb0_0100%  
+	    新文件    		     392	6a5962692be4a9f5_0100%  
+	    新文件    		     392	6d2b950c30015455_0100%  
+	    较新的    		    1861	6dc77ccc23eaa905_0100%  
+	    新文件    		     392	6eb53e99c99512bd_0100%  
+	    新文件    		    1415	6fcd109f9fc5140d_0100%  
+	    较新的    		    2196	70c20dfd4c4eece5_0100%  
+	    较新的    		    3796	70ffd87054827bd0_0100%  
+	    较新的    		     257	72ed2cea1833639e_0100%  
+	    较新的    		     247	7339dd7b3d26966d_0100%  
+	    新文件    		     203	743f4a0a297ba2c8_0100%  
+	    新文件    		     392	78e2b6ffedec005b_0100%  
+	    较新的    		     255	7b21235da0ba255c_0100%  
+	    较新的    		    3799	7e0cbdc0730cdd15_0100%  
+	    较新的    		    1159	7e1ff44fad346d72_0100%  
+	    新文件    		   40368	7fc44deb66dffdfd_0100%  
+	    较新的    		    4562	80f2617b42e643ee_0100%  
+	    较新的    		     252	8ad80cf1434a88eb_0100%  
+	    新文件    		     219	8ee532f292b17455_0100%  
+	    较新的    		    4331	90249335414c532b_0100%  
+	    新文件    		     392	90261e196d6a1978_0100%  
+	    较新的    		    4994	903133c225d49b4d_0100%  
+	    较新的    		   13558	90689071e9d5dd31_0100%  
+	    较新的    		   13428	90f401fa6c9b08f4_0100%  
+	    新文件    		     251	91ab1aaa2888ef53_0100%  
+	    较新的    		    3549	94163be8ce0471df_0100%  
+	    较新的    		    1640	974683392d135573_0100%  
+	    新文件    		     392	9d4e680c55a2682f_0100%  
+	    较新的    		    2643	a0690259aa9d1258_0100%  
+	    较新的    		     357	a1d8cbbee2806ba8_0100%  
+	    较新的    		     859	a6f051ee2c9fbd3d_0100%  
+	    新文件    		   31488	a73627debce52648_0100%  
+	    较新的    		    1001	a94484b020a9f181_0100%  
+	    新文件    		  157080	a9c80de805635a03_0 83%  100%  
+	    较新的    		    8295	aa071393fbd09117_0100%  
+	    新文件    		   82824	ad7b30dafd2a5c3f_0100%  
+	    较新的    		     359	b397f8dd83b3ada4_0100%  
+	    较新的    		     340	b6f09cf443b97fc9_0100%  
+	    较新的    		    6964	b8620779a5642c43_0100%  
+	    新文件    		    1414	bc9e8100886aa720_0100%  
+	    较新的    		    3813	bcd2455c5e8e7733_0100%  
+	    较新的    		     257	bd617a9ba43272c3_0100%  
+	    较新的    		     341	bd7fb5a6780def08_0100%  
+	    新文件    		     226	bf4b327ceeea4564_0100%  
+	    新文件    		  114336	bf820cd7aede4ebf_0100%  
+	    较新的    		     246	c28e795f3002b170_0100%  
+	    新文件    		     392	c50220d5b5f16fc0_0100%  
+	    新文件    		     392	c7e8b056acc6a4a1_0100%  
+	    新文件    		  101400	cb35f8a70ce6f7b1_0100%  
+	    较新的    		    1546	cba4b8c2bf08d032_0100%  
+	    较新的    		     261	cd0bd8c6a3d664cb_0100%  
+	    较新的    		   11698	cf9e4e0455c17fdb_0100%  
+	    新文件    		    1415	d0b250f858b22ff3_0100%  
+	    新文件    		     392	d86ec0db5eb3de58_0100%  
+	    较新的    		    2798	def957a4db3c9c1d_0100%  
+	    较新的    		    4036	e085fea5a2ccb6ec_0100%  
+	    较新的    		    3776	e087026c3485f2a8_0100%  
+	    新文件    		     219	e200db6ffb16a020_0100%  
+	    新文件    		  114336	e326ed614bbef932_0100%  
+	    较新的    		     391	e90f611f9a909a94_0100%  
+	    新文件    		  110456	ea76c2ca4af28124_0100%  
+	    新文件    		     392	efce37b0197ed319_0100%  
+	    较新的    		     360	f1deac3a7a423429_0100%  
+	    较新的    		     358	f22ed9cb4fad971a_0100%  
+	    较新的    		     248	f65183e3895dd30b_0100%  
+	    较新的    		     379	f70e70cbf0c291e0_0100%  
+	    新文件    		     262	f72cda21821e2c79_0100%  
+	    新文件    		   21560	fa510843d73f4d64_0100%  
+	    新文件    		     392	fb3549f37e8360f9_0100%  
+	    较新的    		    1485	fdc00aa4841f50a5_0100%  
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Code Cache\js\index-dir\
+	    较新的    		    9552	the-real-index100%  
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Code Cache\wasm\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Code Cache\wasm\index-dir\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\commerce_subscription_db\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\DawnGraphiteCache\
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\DawnWebGPUCache\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\discounts_db\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\discount_infos_db\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Download Service\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Download Service\EntryDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Download Service\Files\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extension Rules\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extension Scripts\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extension State\
+	    较新的    		     334	LOG100%  
+	    较新的    		     334	LOG.old100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\
+	                  30	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\assets\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\_locales\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\_locales\zh_CN\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\_locales\zh_TW\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Extensions\ncennffkjdiamlpmcbajkmaiiiddgioo\3.52.14_0\_metadata\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Feature Engagement Tracker\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Feature Engagement Tracker\AvailabilityDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Feature Engagement Tracker\EventDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\GCM Store\
+	    较新的    		     322	LOG100%  
+	    较新的    		     322	LOG.old100%  
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\GPUCache\
+	    较新的    		   45056	data_0100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\IndexedDB\
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\IndexedDB\https_zhuanlan.zhihu.com_0.indexeddb.leveldb\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Local Storage\
+	                   8	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Local Storage\leveldb\
+	  *多余文件   		    9987	000142.ldb
+	  *多余文件   		   18485	000144.ldb
+	  *多余文件   		   18518	000146.ldb
+	  *多余文件   		   41854	000147.log
+	  *多余文件   		   18532	000148.ldb
+	    较新的    		   23248	000150.log100%  
+	    较新的    		     348	LOG100%  
+	    较新的    		     345	LOG.old100%  
+	                   9	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Network\
+	    较新的    		   28672	Cookies100%  
+	    较新的    		       0	Cookies-journal
+	    较新的    		    8419	Network Persistent State100%  
+	    较新的    		   36864	Reporting and NEL100%  
+	    较新的    		       0	Reporting and NEL-journal
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\optimization_guide_hint_cache_store\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\parcel_tracking_db\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\PersistentOriginTrials\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Safe Browsing Network\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Segmentation Platform\
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Segmentation Platform\SegmentInfoDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Segmentation Platform\SignalDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Segmentation Platform\SignalStorageConfigDB\
+	    较新的    		       0	LOG
+	    较新的    		       0	LOG.old
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Service Worker\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Service Worker\Database\
+	    较新的    		     350	LOG100%  
+	    较新的    		     350	LOG.old100%  
+	                   4	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Service Worker\ScriptCache\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Service Worker\ScriptCache\index-dir\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Session Storage\
+	    较新的    		    6762	000003.log100%  
+	    较新的    		     334	LOG100%  
+	    较新的    		     331	LOG.old100%  
+	                   3	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Sessions\
+	  *多余文件   		   18856	Tabs_13418236065953756
+	  *多余文件   		   21127	Tabs_13418319148159314
+	  *多余文件   		   23398	Tabs_13418365768272531
+	    新文件    		   27940	Tabs_13418366381378024100%  
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Shared Dictionary\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Shared Dictionary\cache\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Shared Dictionary\cache\index-dir\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\shared_proto_db\
+	    较新的    		   51576	000003.log100%  
+	    较新的    		     334	LOG100%  
+	    较新的    		     334	LOG.old100%  
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\shared_proto_db\metadata\
+	    较新的    		    1378	000003.log100%  
+	    较新的    		     352	LOG100%  
+	    较新的    		     352	LOG.old100%  
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Site Characteristics Database\
+	    较新的    		     362	LOG100%  
+	    较新的    		     362	LOG.old100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Sync Data\
+	                   6	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Sync Data\LevelDB\
+	    较新的    		     338	LOG100%  
+	    较新的    		     338	LOG.old100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\aghbiahbpaijignceidepookljebhfak\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\agimnkijcaahngcdmfeangaknmldooml\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fhihpiojkbmbpdjeoajapmgkhlnakfjf\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\fmgjjmmmlfnkbppncabfkddbjimcfncm\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\kefjledonklijopmnomlcbpllchaibag\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mdpkiolbdkhdjpekfbkbmhigcaggjagi\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\
+	                   7	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Trusted Icons\
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Trusted Icons\Icons\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Trusted Icons\Icons Maskable\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Manifest Resources\mpnpojknpmmopombnjdcgaaiekajbnjb\Trusted Icons\Icons Monochrome\
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\Web Applications\Temp\
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\WebStorage\
+	    较新的    		   40960	QuotaManager100%  
+	    较新的    		       0	QuotaManager-journal
+	                   1	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\extensions_crx_cache\
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\GraphiteDawnCache\
+	                  25	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\GrShaderCache\
+	    较新的    		   45056	data_0100%  
+	                   0	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Safe Browsing\
+	                   2	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\segmentation_platform\
+	    较新的    		   49152	ukm_db100%  
+	    较新的    		       0	ukm_db-wal
+	                   5	C:\Users\Administrator\.openclaw\browser\openclaw\user-data\ShaderCache\
+	                   1	C:\Users\Administrator\.openclaw\canvas\
+	                   4	C:\Users\Administrator\.openclaw\completions\
+	                   7	C:\Users\Administrator\.openclaw\credentials\
+	                   2	C:\Users\Administrator\.openclaw\cron\
+	    较新的    		   10399	jobs.json100%  
+	    较新的    		   10209	jobs.json.bak100%  
+	                  12	C:\Users\Administrator\.openclaw\cron\runs\
+	                   0	C:\Users\Administrator\.openclaw\delivery-queue\
+	                   0	C:\Users\Administrator\.openclaw\delivery-queue\failed\
+	                   2	C:\Users\Administrator\.openclaw\devices\
+	    较新的    		    3157	paired.json100%  
+	    较新的    		       2	pending.json100%  
+	                   0	C:\Users\Administrator\.openclaw\extensions\
+	                   7	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\
+	                   0	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-bitable\
+	                   3	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-bitable\references\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-calendar\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-channel-rules\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-channel-rules\references\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-create-doc\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-fetch-doc\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-im-read\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-task\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-troubleshoot\
+	                   1	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\skills\feishu-update-doc\
+	                   0	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\
+	                  20	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\card\
+	                  24	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\channel\
+	                  10	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\commands\
+	                  60	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\core\
+	                   2	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\
+	                  44	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\converters\
+	                  10	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\converters\interactive\
+	                  34	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\inbound\
+	                  22	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\outbound\
+	                   2	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\messaging\shared\
+	                  12	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\
+	                   2	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\mcp\
+	                   8	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\mcp\doc\
+	                   6	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\
+	                  12	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\bitable\
+	                  10	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\calendar\
+	                   6	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\chat\
+	                   6	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\common\
+	                   8	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\drive\
+	                  14	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\im\
+	                   4	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\search\
+	                   4	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\sheets\
+	                  10	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\task\
+	                   6	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\oapi\wiki\
+	                   0	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\tat\
+	                   4	C:\Users\Administrator\.openclaw\extensions\openclaw-lark\src\tools\tat\im\
+	                   0	C:\Users\Administrator\.openclaw\feishu\
+	                   4	C:\Users\Administrator\.openclaw\feishu\dedup\
+	                   2	C:\Users\Administrator\.openclaw\identity\
+	    较新的    		     428	device-auth.json100%  
+	                   1	C:\Users\Administrator\.openclaw\logs\
+	                   0	C:\Users\Administrator\.openclaw\media\
+	                  15	C:\Users\Administrator\.openclaw\media\browser\
+	                   1	C:\Users\Administrator\.openclaw\memory\
+	                   1	C:\Users\Administrator\.openclaw\subagents\
+	                   9	C:\Users\Administrator\.openclaw\workspace\
+	    新文件    		    8596	backup.log

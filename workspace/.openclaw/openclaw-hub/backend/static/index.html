@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 左侧导航 */
+        .sidebar {
+            width: 240px;
+            background: #111;
+            border-right: 1px solid #222;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .logo .subtitle {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .user-info {
+            padding: 15px 20px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .user-info span {
+            color: #22c55e;
+        }
+        
+        .nav-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-item:hover {
+            background: #1a1a1a;
+        }
+        
+        .nav-item.active {
+            background: #1a1a1a;
+            border-left: 3px solid #22c55e;
+        }
+        
+        .nav-item .icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-item .label {
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        .nav-item.active .label {
+            color: #fff;
+        }
+        
+        /* 主内容区 */
+        .main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .header .desc {
+            font-size: 14px;
+            color: #888;
+        }
+        
+        /* Agent 卡片网格 */
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .agent-card {
+            background: #151515;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            transition: all 0.2s;
+        }
+        
+        .agent-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .agent-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            background: #1a1a1a;
+        }
+        
+        .agent-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .agent-info .role {
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .status-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+            animation: pulse 2s infinite;
+        }
+        
+        .status-indicator.idle {
+            background: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+            animation: none;
+        }
+        
+        .status-indicator.offline {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .agent-status {
+            margin-bottom: 15px;
+        }
+        
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .status-label {
+            color: #666;
+        }
+        
+        .status-value {
+            color: #ccc;
+        }
+        
+        .status-value.working {
+            color: #22c55e;
+        }
+        
+        .agent-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #22c55e;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background: #16a34a;
+        }
+        
+        .btn-primary:disabled {
+            background: #1a3a1a;
+            color: #666;
+            cursor: not-allowed;
+        }
+        
+        .btn-secondary {
+            background: #222;
+            color: #ccc;
+        }
+        
+        .btn-secondary:hover {
+            background: #333;
+        }
+        
+        /* 右侧面板 */
+        .right-panel {
+            width: 300px;
+            background: #111;
+            border-left: 1px solid #222;
+            padding: 20px;
+        }
+        
+        .panel-section {
+            margin-bottom: 25px;
+        }
+        
+        .panel-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .refresh-btn {
+            font-size: 11px;
+            padding: 4px 8px;
+            background: #222;
+            border: none;
+            border-radius: 4px;
+            color: #888;
+            cursor: pointer;
+        }
+        
+        .refresh-btn:hover {
+            background: #333;
+            color: #ccc;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        
+        .stat-label {
+            color: #666;
+        }
+        
+        .stat-value {
+            color: #ccc;
+        }
+        
+        .resource-bar {
+            margin-bottom: 15px;
+        }
+        
+        .resource-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .resource-label span:first-child {
+            color: #888;
+        }
+        
+        .resource-label span:last-child {
+            color: #22c55e;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #222;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .quick-btn {
+            padding: 10px;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .quick-btn:hover {
+            background: #222;
+            border-color: #333;
+        }
+        
+        .quick-btn.primary {
+            background: #22c55e;
+            border-color: #22c55e;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .quick-btn.primary:hover {
+            background: #16a34a;
+        }
+        
+        .quick-btn:disabled {
+            background: #1a1a1a;
+            color: #555;
+            cursor: not-allowed;
+            border-color: #222;
+        }
+        
+        .agent-list {
+            list-style: none;
+        }
+        
+        .agent-list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 13px;
+        }
+        
+        .agent-list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .agent-list-avatar {
+            font-size: 18px;
+        }
+        
+        .agent-list-name {
+            flex: 1;
+            color: #ccc;
+        }
+        
+        .agent-list-status {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: #1a1a1a;
+            color: #888;
+        }
+        
+        .agent-list-status.online {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+        
+        .agent-list-status.offline {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        
+        /* 日志区域 */
+        .log-section {
+            margin-top: 30px;
+            background: #151515;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .log-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .log-content {
+            background: #0a0a0a;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #888;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .log-entry {
+            margin-bottom: 5px;
+        }
+        
+        .log-time {
+            color: #555;
+        }
+        
+        .log-info {
+            color: #22c55e;
+        }
+        
+        .log-warn {
+            color: #f59e0b;
+        }
+        
+        .log-error {
+            color: #ef4444;
+        }
+        
+        /* 配置模态框 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 25px;
+            width: 500px;
+            max-width: 90%;
+        }
+        
+        .modal h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 6px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #ccc;
+            font-size: 13px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #22c55e;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #333;
+            border-top-color: #22c55e;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px 20px;
+            color: #ccc;
+            font-size: 13px;
+            z-index: 2000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.success {
+            border-color: #22c55e;
+        }
+        
+        .toast.error {
+            border-color: #ef4444;
+        }
+        
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 1000;
+        }
+        
+        .connection-status.connected {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .connection-status.disconnected {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status disconnected" id="connection-status">
+        未连接
+    </div>
+
+    <div class="container">
+        <!-- 左侧导航 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>OPENCLAW</h1>
+                <div class="subtitle">OpenClaw Control Center</div>
+            </div>
+            <div class="user-info">
+                user: <span id="current-user">admin</span>
+            </div>
+            <nav>
+                <div class="nav-item active" data-page="agents">
+                    <span class="icon">👥</span>
+                    <span class="label">员工</span>
+                </div>
+                <div class="nav-item" data-page="overview">
+                    <span class="icon">📊</span>
+                    <span class="label">总览</span>
+                </div>
+                <div class="nav-item" data-page="memory">
+                    <span class="icon">🧠</span>
+                    <span class="label">记忆</span>
+                </div>
+                <div class="nav-item" data-page="docs">
+                    <span class="icon">📄</span>
+                    <span class="label">文档</span>
+                </div>
+                <div class="nav-item" data-page="usage">
+                    <span class="icon">📈</span>
+                    <span class="label">用量</span>
+                </div>
+                <div class="nav-item" data-page="tasks">
+                    <span class="icon">✅</span>
+                    <span class="label">任务</span>
+                </div>
+                <div class="nav-item" data-page="settings">
+                    <span class="icon">⚙️</span>
+                    <span class="label">设置</span>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main">
+            <div class="header">
+                <h2>员工</h2>
+                <div class="desc">员工、分工与职责</div>
+            </div>
+
+            <div class="agent-grid" id="agent-grid">
+                <!-- Agent 卡片将由 JavaScript 动态生成 -->
+            </div>
+
+            <!-- 日志区域 -->
+            <div class="log-section">
+                <h4>系统日志</h4>
+                <div class="log-content" id="log-content">
+                    <div class="log-entry">
+                        <span class="log-time">[--:--:--]</span>
+                        <span class="log-info">正在连接 OpenClaw 网关...</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 右侧面板 -->
+        <aside class="right-panel">
+            <div class="panel-section">
+                <h4>
+                    当前状态
+                    <button class="refresh-btn" onclick="refreshStatus()">刷新</button>
+                </h4>
+                <div class="stat-item">
+                    <span class="stat-label">活跃会话</span>
+                    <span class="stat-value" id="active-sessions">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">推进中任务</span>
+                    <span class="stat-value" id="pending-tasks">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">待审批</span>
+                    <span class="stat-value" id="pending-approval">-</span>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>
+                    资源监控
+                    <button class="refresh-btn" onclick="refreshResources()">刷新</button>
+                </h4>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>CPU</span>
+                        <span id="cpu-value">--%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="cpu-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>Memory</span>
+                        <span id="memory-value">--%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="memory-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="resource-bar">
+                    <div class="resource-label">
+                        <span>Storage</span>
+                        <span id="storage-value">--%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="storage-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>快捷操作</h4>
+                <div class="quick-actions">
+                    <button class="quick-btn primary" id="btn-webui" onclick="openWebUI()">
+                        进入 WebUI
+                    </button>
+                    <button class="quick-btn" id="btn-restart" onclick="restartService()">
+                        重启服务
+                    </button>
+                    <button class="quick-btn" id="btn-version" onclick="checkVersion()">
+                        版本检查
+                    </button>
+                    <button class="quick-btn" id="btn-fix" onclick="fixIssues()">
+                        故障修复
+                    </button>
+                    <button class="quick-btn" id="btn-sandbox" onclick="toggleSandbox()">
+                        沙箱模式
+                    </button>
+                    <button class="quick-btn" id="btn-stop" onclick="stopService()">
+                        停止服务
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h4>当前活跃智能体</h4>
+                <ul class="agent-list" id="active-agent-list">
+                    <!-- 动态生成 -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 配置模态框 -->
+    <div class="modal-overlay" id="config-modal">
+        <div class="modal">
+            <h3>配置智能体</h3>
+            <div class="form-group">
+                <label>智能体名称</label>
+                <input type="text" id="config-name" readonly>
+            </div>
+            <div class="form-group">
+                <label>模型</label>
+                <select id="config-model">
+                    <option value="deepseek/deepseek-chat">DeepSeek Chat</option>
+                    <option value="moonshot/kimi-k2.5">Moonshot Kimi</option>
+                    <option value="gpt-4">GPT-4</option>
+                    <option value="claude-3-opus">Claude 3 Opus</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Telegram Bot Token</label>
+                <input type="password" id="config-token" placeholder="输入 Bot Token">
+            </div>
+            <div class="form-group">
+                <label>定时任务 (Cron)</label>
+                <input type="text" id="config-schedule" placeholder="如: 0 9 * * *">
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeConfig()">取消</button>
+                <button class="btn btn-primary" onclick="saveConfig()">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast 提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

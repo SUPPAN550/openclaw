@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "bcd5d811-787e-4d9a-852c-8c4555613fc0",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:group:oc_71ff41fed588e906f6fa6b786920c244",
+      "name": "每日新闻推送 - 9:00 AM",
+      "enabled": true,
+      "createdAtMs": 1773679699299,
+      "updatedAtMs": 1773795622464,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "获取今日国际新闻摘要并推送给用户。使用 news-summary 技能从 BBC、Reuters 等 RSS 源获取最新新闻，生成简洁的中文摘要（5-8条重要新闻），按类别分组（国际、商业、科技等），然后直接推送给用户。格式：\n\n📰 今日新闻摘要 [日期]\n\n🌍 国际\n- [新闻1]\n- [新闻2]\n\n💼 商业\n- [新闻1]\n\n💻 科技\n- [新闻1]\n\n来源：BBC、Reuters 等"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "oc_71ff41fed588e906f6fa6b786920c244",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1773882000000,
+        "lastRunAtMs": 1773795600018,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 22446,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 1,
+        "lastErrorReason": "rate_limit"
+      }
+    },
+    {
+      "id": "1dc22710-ba22-49c2-b438-b34ae6829d80",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "OpenClaw Daily Backup",
+      "enabled": true,
+      "createdAtMs": 1773717198868,
+      "updatedAtMs": 1773770476089,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 OpenClaw 自动备份任务：\n1. 备份 C:\\Users\\Administrator\\.openclaw 到 D:\\openclaw-backup-$(Get-Date -Format 'yyyy-MM-dd')\n2. 使用 robocopy 复制文件（排除 node_modules 和 .git）\n3. 初始化 git 仓库并提交\n4. 推送到 GitHub 仓库 https://github.com/SUPPAN550/openclaw 的分支 backups/$(Get-Date -Format 'yyyy-MM-dd')\n5. 使用 Token: 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\n6. 完成后发送确认消息\n\n注意：如果分支已存在，需要先拉取或创建新分支名（可加时间戳）",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat"
+      },
+      "state": {
+        "nextRunAtMs": 1773856800000,
+        "lastRunAtMs": 1773770400007,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 76082,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1773893150100
+      }
+    },
+    {
+      "id": "02249a0e-7ce4-4be3-b1ef-f04f17e0ddb5",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:group:oc_71ff41fed588e906f6fa6b786920c244",
+      "name": "智谱包月服务抢购提醒 - 9:40",
+      "enabled": false,
+      "deleteAfterRun": true,
+      "createdAtMs": 1773721921491,
+      "updatedAtMs": 1773798480063,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-03-18T01:40:00.000Z"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "提醒 Sir：现在是 9:40，智谱包月服务抢购时间到了！请尽快前往智谱平台抢购包月服务。"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "oc_71ff41fed588e906f6fa6b786920c244",
+        "channel": "feishu"
+      },
+      "state": {
+        "lastRunAtMs": 1773798457519,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 22544,
+        "lastErrorReason": "rate_limit",
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 4,
+        "lastError": "⚠️ API rate limit reached. Please try again later."
+      }
+    },
+    {
+      "id": "61e73340-3b1d-4b92-a0ab-21c0e42f4a37",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Daily Gateway Restart - 5:00 AM",
+      "enabled": true,
+      "createdAtMs": 1773736927676,
+      "updatedAtMs": 1773781221898,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 5 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "每日自动重启 Gateway。请执行：openclaw gateway stop && sleep 5 && openclaw gateway start"
+      },
+      "state": {
+        "nextRunAtMs": 1773867600000,
+        "lastRunAtMs": 1773781200019,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 21879,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "runningAtMs": 1773893150100
+      }
+    },
+    {
+      "id": "696799cb-400f-4ac4-9393-6c861584965d",
+      "name": "Context Monitor",
+      "enabled": true,
+      "createdAtMs": 1773739813625,
+      "updatedAtMs": 1773846930926,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "powershell -ExecutionPolicy Bypass -File C:\\Users\\Administrator\\.openclaw\\workspace\\skills\\miliger-context-manager\\scripts\\context-monitor.ps1"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773847200000,
+        "lastRunAtMs": 1773846900010,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 30916,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false,
+        "runningAtMs": 1773893150100
+      }
+    },
+    {
+      "id": "5071638d-65c3-4709-a509-3fddb9b5a2d6",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "May: 系统健康检查",
+      "enabled": true,
+      "createdAtMs": 1773760308048,
+      "updatedAtMs": 1773828210781,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */6 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是 May（核心主控），执行系统健康检查：\n1. 检查 OpenClaw Gateway 状态\n2. 检查已安装技能状态\n3. 检查磁盘空间和系统资源\n4. 生成简明的健康报告发送给用户"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773849746920,
+        "lastRunAtMs": 1773828146928,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 63853,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 4,
+        "runningAtMs": 1773893150100
+      }
+    },
+    {
+      "id": "1be3234d-b25c-4860-94ca-411343a4a3e9",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Gock: 早间新闻简报",
+      "enabled": true,
+      "createdAtMs": 1773760308080,
+      "updatedAtMs": 1773792022609,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是 Gock（每日新闻），使用 news-summary skill 获取今日新闻，生成一份简洁的早间新闻简报（科技、财经、国际要点），发送给用户"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773878400000,
+        "lastRunAtMs": 1773792000012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 22597,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "07780d7d-3430-46aa-8819-9030f1c25cb8",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Otter: 日程提醒检查",
+      "enabled": true,
+      "createdAtMs": 1773760308101,
+      "updatedAtMs": 1773788422054,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是 Otter（私人助理），检查今天的飞书日历和任务：\n1. 获取今日日程\n2. 列出待办事项\n3. 发送今日行程概览给用户"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773874800000,
+        "lastRunAtMs": 1773788400009,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 22045,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "22b11d92-3bbb-442b-b50c-267c1b59104c",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Tiger: 安全扫描",
+      "enabled": true,
+      "createdAtMs": 1773760308124,
+      "updatedAtMs": 1773774022025,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是 Tiger（安全更新），执行每日安全扫描：\n1. 检查 OpenClaw 是否有新版本\n2. 检查已安装技能是否有更新\n3. 确认备份状态\n4. 发送安全状态摘要"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773860400000,
+        "lastRunAtMs": 1773774000007,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 22018,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1773893150100
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "team": {
+    "name": "OpenClaw AI Team",
+    "created": "2026-03-17",
+    "timezone": "Asia/Shanghai"
+  },
+  "agents": [
+    {
+      "id": "may",
+      "name": "May",
+      "animal": "🦁",
+      "role": "core",
+      "type": "primary",
+      "model": "deepseek/deepseek-chat",
+      "priority": 1,
+      "schedule": "always",
+      "channels": ["telegram", "discord", "web"]
+    },
+    {
+      "id": "gock",
+      "name": "Gock",
+      "animal": "🐓",
+      "role": "researcher",
+      "type": "scheduled",
+      "model": "moonshot/kimi-k2.5",
+      "priority": 2,
+      "schedule": "0 9 * * *",
+      "channels": ["telegram"]
+    },
+    {
+      "id": "otter",
+      "name": "Otter",
+      "animal": "🦦",
+      "role": "assistant",
+      "type": "persistent",
+      "model": "moonshot/kimi-k2.5",
+      "priority": 2,
+      "schedule": "always",
+      "channels": ["telegram"]
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "animal": "🐼",
+      "role": "developer",
+      "type": "persistent",
+      "model": "deepseek/deepseek-chat",
+      "priority": 3,
+      "schedule": "always",
+      "channels": ["telegram", "web"]
+    },
+    {
+      "id": "monkey",
+      "name": "Monkey",
+      "animal": "🐵",
+      "role": "content",
+      "type": "triggered",
+      "model": "moonshot/kimi-k2.5",
+      "priority": 3,
+      "schedule": "on-demand",
+      "channels": ["telegram"]
+    },
+    {
+      "id": "tiger",
+      "name": "Tiger",
+      "animal": "🐯",
+      "role": "security",
+      "type": "scheduled",
+      "model": "moonshot/kimi-k2.5",
+      "priority": 4,
+      "schedule": "0 2 * * 0",
+      "channels": ["telegram"]
+    }
+  ],
+  "collaboration": {
+    "workflows": [
+      {
+        "name": "daily-brief",
+        "steps": ["gock", "may", "otter"],
+        "trigger": "cron:0 9 * * *"
+      },
+      {
+        "name": "content-creation",
+        "steps": ["may", "monkey", "pandas"],
+        "trigger": "manual"
+      },
+      {
+        "name": "security-scan",
+        "steps": ["tiger", "may"],
+        "trigger": "cron:0 2 * * 0"
+      }
+    ]
+  }
+}

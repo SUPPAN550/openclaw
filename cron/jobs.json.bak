@@ -140,7 +140,7 @@
       "name": "Context Monitor",
       "enabled": true,
       "createdAtMs": 1773739813625,
-      "updatedAtMs": 1773896527560,
+      "updatedAtMs": 1773897014943,
       "schedule": {
         "kind": "cron",
         "expr": "*/5 * * * *"
@@ -156,11 +156,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773896700000,
-        "lastRunAtMs": 1773896400024,
+        "nextRunAtMs": 1773897300000,
+        "lastRunAtMs": 1773897000020,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 127536,
+        "lastDurationMs": 14923,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -299,6 +299,32 @@
         "consecutiveErrors": 2,
         "nextRunAtMs": 1773946800000,
         "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      }
+    },
+    {
+      "id": "a7f2096b-c4c1-440b-ba46-188bf95e42ef",
+      "name": "Daily News Summary",
+      "enabled": true,
+      "createdAtMs": 1773897083839,
+      "updatedAtMs": 1773897083839,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "获取今日头条最新热点新闻，整理15条重要新闻摘要发给用户"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "ou_e3b34b8c8d58e2d214acbf8067cdc1c9"
+      },
+      "state": {
+        "nextRunAtMs": 1773925200000
       }
     }
   ]

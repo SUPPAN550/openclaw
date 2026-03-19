@@ -1,7 +1,7 @@
 {
   "agent:newsai:main": {
     "sessionId": "c9690157-1234-40b0-91b9-7a9f97f42ae6",
-    "updatedAt": 1773896587684,
+    "updatedAt": 1773897191012,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -371,7 +371,7 @@
     "contextTokens": 200000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773896517692,
+      "generatedAt": 1773897097508,
       "sessionId": "c9690157-1234-40b0-91b9-7a9f97f42ae6",
       "sessionKey": "agent:newsai:main",
       "provider": "minimax",
@@ -925,11 +925,11 @@
         ]
       }
     },
-    "inputTokens": 10518,
-    "outputTokens": 228,
-    "cacheRead": 36689,
-    "cacheWrite": 0,
-    "totalTokens": 47143,
+    "inputTokens": 64,
+    "outputTokens": 36,
+    "cacheRead": 49700,
+    "cacheWrite": 4473,
+    "totalTokens": 54237,
     "totalTokensFresh": true
   },
   "agent:newsai:feishu:group:oc_ccd30fbbfa5e7a5a536f9cb018e16589": {

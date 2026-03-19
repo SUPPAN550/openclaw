@@ -1,104 +1,82 @@
 ---
 name: news-summary
-description: This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news from trusted international RSS feeds and can create voice summaries.
+description: This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news from Chinese news websites and can create voice summaries.
 ---
 
-# News Summary
+# News Summary (国内版)
 
 ## Overview
 
-Fetch and summarize news from trusted international sources via RSS feeds.
+获取并总结国内可访问的新闻源。
 
-## RSS Feeds
+## News Sources
 
-### BBC (Primary)
+### 今日头条 (Primary)
 ```bash
-# World news
-curl -s "https://feeds.bbci.co.uk/news/world/rss.xml"
-
-# Top stories
-curl -s "https://feeds.bbci.co.uk/news/rss.xml"
-
-# Business
-curl -s "https://feeds.bbci.co.uk/news/business/rss.xml"
-
-# Technology
-curl -s "https://feeds.bbci.co.uk/news/technology/rss.xml"
+# 热点新闻 API
+curl -s "https://www.toutiao.com/api/pc/feed/?category=news_hot&utm_source=toutiao&widen=1&max_behot_time=0&max_behot_time_tmp=0&tadrequire=true&as=A1152B8F0C9E0F8&cp=595F8C0E2A0E1"
 ```
 
-### Reuters
+### 网易新闻
 ```bash
-# World news
-curl -s "https://www.reutersagency.com/feed/?best-regions=world&post_type=best"
+# 排行榜
+curl -s "https://news.163.com/special/cm_yaowen20200213/"
 ```
 
-### NPR (US perspective)
+### 新浪新闻
 ```bash
-curl -s "https://feeds.npr.org/1001/rss.xml"
+# 国内新闻
+curl -s "https://news.sina.cn/?vt=1&ws=1"
 ```
 
-### Al Jazeera (Global South perspective)
+### 腾讯新闻
 ```bash
-curl -s "https://www.aljazeera.com/xml/rss/all.xml"
+# 要闻
+curl -s "https://news.qq.com/"
 ```
 
-## Parse RSS
+## Parse News
 
-Extract titles and descriptions:
-```bash
-curl -s "https://feeds.bbci.co.uk/news/world/rss.xml" | \
-  grep -E "<title>|<description>" | \
-  sed 's/<[^>]*>//g' | \
-  sed 's/^[ \t]*//' | \
-  head -30
+使用 PowerShell 解析网页示例：
+```powershell
+$html = Invoke-WebRequest -Uri "https://news.sina.cn/" -UseBasicParsing
+$html.ParsedHtml.getElementsByTagName("a") | Select-Object -First 20 innerText, href
 ```
 
 ## Workflow
 
 ### Text summary
-1. Fetch BBC world headlines
-2. Optionally supplement with Reuters/NPR
-3. Summarize key stories
-4. Group by region or topic
+1. 获取今日头条热点新闻
+2. 补充其他源（网易/腾讯）
+3. 整理关键信息
+4. 按分类展示
 
 ### Voice summary
-1. Create text summary
-2. Generate voice with OpenAI TTS
-3. Send as audio message
+1. 创建文字摘要
+2. 用 OpenAI TTS 生成语音
+3. 发送语音消息
 
-```bash
-curl -s https://api.openai.com/v1/audio/speech \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "tts-1-hd",
-    "input": "<news summary text>",
-    "voice": "onyx",
-    "speed": 0.95
-  }' \
-  --output /tmp/news.mp3
-```
-
-## Example Output Format
+## Output Format
 
 ```
-📰 News Summary [date]
+📰 新闻摘要 [日期]
 
-🌍 WORLD
-- [headline 1]
-- [headline 2]
+🔴 热点
+- 新闻标题1
+- 新闻标题2
 
-💼 BUSINESS
-- [headline 1]
+📌 国内
+- 新闻标题
 
-💻 TECH
-- [headline 1]
+🌍 国际
+- 新闻标题
+
+💰 财经
+- 新闻标题
 ```
 
 ## Best Practices
 
-- Keep summaries concise (5-8 top stories)
-- Prioritize breaking news and major events
-- For voice: ~2 minutes max
-- Balance perspectives (Western + Global South)
-- Cite source if asked
+- 保持简洁，6-10条重点新闻
+- 优先最新和热点新闻
+- 语音版控制在2分钟内

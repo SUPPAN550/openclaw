@@ -8,7 +8,7 @@
       "name": "每日新闻推送 - 9:00 AM",
       "enabled": true,
       "createdAtMs": 1773679699299,
-      "updatedAtMs": 1773795622464,
+      "updatedAtMs": 1773896502656,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -22,19 +22,18 @@
       },
       "delivery": {
         "mode": "announce",
-        "to": "oc_71ff41fed588e906f6fa6b786920c244",
-        "channel": "feishu"
+        "channel": "webchat",
+        "to": "oc_71ff41fed588e906f6fa6b786920c244"
       },
       "state": {
-        "nextRunAtMs": 1773882000000,
-        "lastRunAtMs": 1773795600018,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 22446,
+        "lastRunAtMs": 1773896323715,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 178941,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 1,
-        "lastErrorReason": "rate_limit"
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1773968400000
       }
     },
     {
@@ -44,7 +43,7 @@
       "name": "OpenClaw Daily Backup",
       "enabled": true,
       "createdAtMs": 1773717198868,
-      "updatedAtMs": 1773770476089,
+      "updatedAtMs": 1773895606980,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *",
@@ -62,13 +61,13 @@
         "channel": "webchat"
       },
       "state": {
-        "nextRunAtMs": 1773856800000,
         "lastRunAtMs": 1773770400007,
         "lastRunStatus": "error",
         "lastStatus": "error",
         "lastDurationMs": 76082,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1773943200000
       }
     },
     {
@@ -127,7 +126,7 @@
         "text": "每日自动重启 Gateway。请执行：openclaw gateway stop && sleep 5 && openclaw gateway start"
       },
       "state": {
-        "nextRunAtMs": 1773867600000,
+        "nextRunAtMs": 1773954000000,
         "lastRunAtMs": 1773781200019,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
@@ -141,7 +140,7 @@
       "name": "Context Monitor",
       "enabled": true,
       "createdAtMs": 1773739813625,
-      "updatedAtMs": 1773846930926,
+      "updatedAtMs": 1773896527560,
       "schedule": {
         "kind": "cron",
         "expr": "*/5 * * * *"
@@ -157,11 +156,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1773847200000,
-        "lastRunAtMs": 1773846900010,
+        "nextRunAtMs": 1773896700000,
+        "lastRunAtMs": 1773896400024,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 30916,
+        "lastDurationMs": 127536,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -174,7 +173,7 @@
       "name": "May: 系统健康检查",
       "enabled": true,
       "createdAtMs": 1773760308048,
-      "updatedAtMs": 1773828210781,
+      "updatedAtMs": 1773896036753,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -188,16 +187,18 @@
         "message": "你是 May（核心主控），执行系统健康检查：\n1. 检查 OpenClaw Gateway 状态\n2. 检查已安装技能状态\n3. 检查磁盘空间和系统资源\n4. 生成简明的健康报告发送给用户"
       },
       "delivery": {
-        "mode": "announce"
+        "mode": "announce",
+        "channel": "webchat"
       },
       "state": {
-        "nextRunAtMs": 1773849746920,
-        "lastRunAtMs": 1773828146928,
+        "lastRunAtMs": 1773895978213,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 63853,
+        "lastDurationMs": 58540,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 4
+        "consecutiveErrors": 5,
+        "nextRunAtMs": 1773914546920,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
       }
     },
     {
@@ -205,9 +206,9 @@
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "name": "Gock: 早间新闻简报",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773760308080,
-      "updatedAtMs": 1773792022609,
+      "updatedAtMs": 1773896323699,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * *",
@@ -223,13 +224,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1773878400000,
-        "lastRunAtMs": 1773792000012,
+        "lastRunAtMs": 1773896187512,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 22597,
+        "lastDurationMs": 136187,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "consecutiveErrors": 3,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
       }
     },
     {
@@ -239,7 +240,7 @@
       "name": "Otter: 日程提醒检查",
       "enabled": true,
       "createdAtMs": 1773760308101,
-      "updatedAtMs": 1773788422054,
+      "updatedAtMs": 1773896187409,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -252,16 +253,18 @@
         "message": "你是 Otter（私人助理），检查今天的飞书日历和任务：\n1. 获取今日日程\n2. 列出待办事项\n3. 发送今日行程概览给用户"
       },
       "delivery": {
-        "mode": "announce"
+        "mode": "announce",
+        "channel": "webchat"
       },
       "state": {
-        "nextRunAtMs": 1773874800000,
-        "lastRunAtMs": 1773788400009,
+        "lastRunAtMs": 1773896132395,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 22045,
+        "lastDurationMs": 55014,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "consecutiveErrors": 3,
+        "nextRunAtMs": 1773961200000,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
       }
     },
     {
@@ -271,7 +274,7 @@
       "name": "Tiger: 安全扫描",
       "enabled": true,
       "createdAtMs": 1773760308124,
-      "updatedAtMs": 1773774022025,
+      "updatedAtMs": 1773896132375,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -284,16 +287,18 @@
         "message": "你是 Tiger（安全更新），执行每日安全扫描：\n1. 检查 OpenClaw 是否有新版本\n2. 检查已安装技能是否有更新\n3. 确认备份状态\n4. 发送安全状态摘要"
       },
       "delivery": {
-        "mode": "announce"
+        "mode": "announce",
+        "channel": "webchat"
       },
       "state": {
-        "nextRunAtMs": 1773860400000,
-        "lastRunAtMs": 1773774000007,
+        "lastRunAtMs": 1773896036772,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 22018,
+        "lastDurationMs": 95603,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "consecutiveErrors": 2,
+        "nextRunAtMs": 1773946800000,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
       }
     }
   ]

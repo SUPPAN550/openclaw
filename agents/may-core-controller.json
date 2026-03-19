@@ -1,0 +1,18 @@
+{
+  "name": "May - 核心主控",
+  "role": "core_controller",
+  "description": "系统核心控制中枢，协调所有智能体工作",
+  "responsibilities": [
+    "监控系统整体状态",
+    "协调各智能体之间的任务调度",
+    "处理紧急事务和异常",
+    "生成每日/每周系统报告"
+  ],
+  "schedule": {
+    "system_health_check": "0 */6 * * *",
+    "daily_report": "0 9 * * *",
+    "weekly_summary": "0 10 * * 1"
+  },
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}

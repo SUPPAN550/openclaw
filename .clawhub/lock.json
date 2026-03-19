@@ -5,10 +5,6 @@
       "version": "1.0.0",
       "installedAt": 1773676178372
     },
-    "openclaw-tavily-search": {
-      "version": "0.1.0",
-      "installedAt": 1773676290683
-    },
     "multi-search-engine": {
       "version": "2.0.1",
       "installedAt": 1773676976123
@@ -24,10 +20,6 @@
     "news-summary": {
       "version": "1.0.1",
       "installedAt": 1773677433379
-    },
-    "free-ride": {
-      "version": "1.0.5",
-      "installedAt": 1773677604654
     },
     "browser-automation": {
       "version": "1.0.1",
@@ -52,6 +44,34 @@
     "memory-setup": {
       "version": "1.0.0",
       "installedAt": 1773679315012
+    },
+    "miliger-context-manager": {
+      "version": "2.2.4",
+      "installedAt": 1773735454080
+    },
+    "tushare-data": {
+      "version": "1.0.7",
+      "installedAt": 1773735479960
+    },
+    "eastmoney-stock": {
+      "version": "1.0.0",
+      "installedAt": 1773912587481
+    },
+    "stock": {
+      "version": "1.0.0",
+      "installedAt": 1773912587547
+    },
+    "stock-board": {
+      "version": "1.0.0",
+      "installedAt": 1773912593887
+    },
+    "a-share-pro": {
+      "version": "1.0.0",
+      "installedAt": 1773912594403
+    },
+    "yanpan-finance": {
+      "version": "1.5.0",
+      "installedAt": 1773912599517
     }
   }
 }

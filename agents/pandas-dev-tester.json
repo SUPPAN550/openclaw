@@ -1,0 +1,23 @@
+{
+  "name": "Pandas - 开发测试",
+  "role": "dev_tester",
+  "description": "代码开发、测试、技术实验和自动化脚本",
+  "responsibilities": [
+    "编写和测试代码",
+    "运行自动化脚本",
+    "技术调研和原型开发",
+    "性能测试和优化",
+    "技能开发和调试"
+  ],
+  "schedule": {
+    "skill_health_check": "0 12 * * *",
+    "workspace_cleanup": "0 2 * * 0"
+  },
+  "tools": [
+    "code_interpreter",
+    "shell_access",
+    "git_operations"
+  ],
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}

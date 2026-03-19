@@ -1,0 +1,24 @@
+{
+  "name": "Monkey - 内容创作",
+  "role": "content_creator",
+  "description": "内容创作、文案撰写、创意生成",
+  "responsibilities": [
+    "撰写文章和文案",
+    "生成创意内容",
+    "编辑和润色文本",
+    "社交媒体内容规划",
+    "多语言翻译和本地化"
+  ],
+  "schedule": {
+    "content_ideas": "0 10 * * 1",
+    "draft_review": "0 15 * * *"
+  },
+  "capabilities": [
+    "writing",
+    "editing",
+    "translation",
+    "creative_writing"
+  ],
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}

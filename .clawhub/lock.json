@@ -128,6 +128,10 @@
     "elite-longterm-memory": {
       "version": "1.2.3",
       "installedAt": 1773934802693
+    },
+    "memory-tiering": {
+      "version": "1.0.0",
+      "installedAt": 1773935281472
     }
   }
 }

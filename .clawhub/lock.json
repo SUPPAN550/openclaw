@@ -140,6 +140,10 @@
     "context-budgeting": {
       "version": "1.0.0",
       "installedAt": 1773935589157
+    },
+    "super-websearch-realtime": {
+      "version": "1.0.0",
+      "installedAt": 1773935771562
     }
   }
 }

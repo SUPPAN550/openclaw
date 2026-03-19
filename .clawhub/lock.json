@@ -72,6 +72,62 @@
     "yanpan-finance": {
       "version": "1.5.0",
       "installedAt": 1773912599517
+    },
+    "ac-stock-ultrashort": {
+      "version": "1.0.0",
+      "installedAt": 1773934589140
+    },
+    "a-stock-fundamental-screening": {
+      "version": "1.0.0",
+      "installedAt": 1773934589255
+    },
+    "a-stock-premarket-briefing": {
+      "version": "1.0.1",
+      "installedAt": 1773934589460
+    },
+    "a-stock-market-sentiment": {
+      "version": "1.0.0",
+      "installedAt": 1773934612650
+    },
+    "a-stock-portfolio-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1773934618046
+    },
+    "quant-trading-cn": {
+      "version": "1.0.0",
+      "installedAt": 1773934618459
+    },
+    "stock-recommend": {
+      "version": "1.0.0",
+      "installedAt": 1773934625608
+    },
+    "stock-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1773934630229
+    },
+    "tradingagents-analysis": {
+      "version": "0.4.4",
+      "installedAt": 1773934635582
+    },
+    "deep-thinking": {
+      "version": "1.0.0",
+      "installedAt": 1773934755969
+    },
+    "ai-researcher": {
+      "version": "1.0.0",
+      "installedAt": 1773934758268
+    },
+    "adaptive-reasoning": {
+      "version": "1.0.0",
+      "installedAt": 1773934760492
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1773934762221
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.3",
+      "installedAt": 1773934802693
     }
   }
 }

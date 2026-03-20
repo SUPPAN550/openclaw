@@ -1,0 +1,83 @@
+2026/03/19 19:39:51 [INFO] === Watchdog Started (Watchdog) ===
+2026/03/19 19:39:51 [INFO] Gateway running (startup: Watchdog)
+2026/03/19 19:45:22 [INFO] === Watchdog Started (Watchdog) ===
+2026/03/19 19:45:22 [INFO] Gateway running (startup: Watchdog)
+2026/03/19 19:46:56 [INFO] === Watchdog Started (Watchdog) ===
+2026/03/19 19:46:56 [INFO] Gateway running (startup: Watchdog)
+2026/03/19 19:48:24 [WARN] Gateway down, restart attempt #1
+2026/03/19 19:48:28 [WARN] Gateway down, restart attempt #1
+2026/03/19 19:48:29 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:48:33 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:48:37 [ERROR] Gateway start failed
+2026/03/19 19:48:40 [ERROR] Gateway start failed
+2026/03/19 19:50:39 [WARN] Gateway down, restart attempt #2
+2026/03/19 19:50:42 [WARN] Gateway down, restart attempt #2
+2026/03/19 19:50:44 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:50:47 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:50:51 [ERROR] Gateway start failed
+2026/03/19 19:50:54 [ERROR] Gateway start failed
+2026/03/19 19:51:23 [WARN] Gateway down, restart attempt #3
+2026/03/19 19:51:26 [WARN] Gateway down, restart attempt #3
+2026/03/19 19:51:28 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:51:31 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:51:35 [ERROR] Gateway start failed
+2026/03/19 19:51:38 [ERROR] Gateway start failed
+2026/03/19 19:52:07 [WARN] Gateway down, restart attempt #4
+2026/03/19 19:52:10 [WARN] Gateway down, restart attempt #4
+2026/03/19 19:52:12 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:52:16 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:52:19 [ERROR] Gateway start failed
+2026/03/19 19:52:23 [ERROR] Gateway start failed
+2026/03/19 19:52:51 [WARN] Gateway down, restart attempt #5
+2026/03/19 19:52:55 [WARN] Gateway down, restart attempt #5
+2026/03/19 19:52:56 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:53:00 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:53:03 [INFO] Gateway started OK
+2026/03/19 19:53:05 [INFO] Gateway started OK
+2026/03/19 19:56:50 [INFO] === Watchdog Started (Manual) ===
+2026/03/19 19:56:50 [INFO] Gateway running (startup: Manual)
+2026/03/19 19:57:35 [WARN] Gateway down, restart attempt #1
+2026/03/19 19:57:40 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:57:47 [ERROR] Gateway start failed
+2026/03/19 19:57:53 [WARN] Gateway down, restart attempt #1
+2026/03/19 19:57:58 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:58:05 [ERROR] Gateway start failed
+2026/03/19 19:58:19 [WARN] Gateway down, restart attempt #2
+2026/03/19 19:58:24 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:58:31 [ERROR] Gateway start failed
+2026/03/19 19:58:37 [WARN] Gateway down, restart attempt #2
+2026/03/19 19:58:42 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:58:49 [ERROR] Gateway start failed
+2026/03/19 19:59:03 [WARN] Gateway down, restart attempt #3
+2026/03/19 19:59:08 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:59:15 [ERROR] Gateway start failed
+2026/03/19 19:59:21 [WARN] Gateway down, restart attempt #3
+2026/03/19 19:59:26 [INFO] Starting Gateway (Watchdog)
+2026/03/19 19:59:33 [ERROR] Gateway start failed
+2026/03/19 20:05:35 [WARN] Gateway down, restart attempt #4
+2026/03/19 20:05:40 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:05:47 [WARN] Gateway down, restart attempt #4
+2026/03/19 20:05:48 [ERROR] Gateway start failed
+2026/03/19 20:05:53 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:06:00 [ERROR] Gateway start failed
+2026/03/19 20:09:02 [WARN] Gateway down, restart attempt #5
+2026/03/19 20:09:07 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:09:14 [ERROR] Gateway start failed
+2026/03/19 20:09:20 [WARN] Gateway down, restart attempt #5
+2026/03/19 20:09:25 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:09:30 [INFO] Gateway started OK
+2026/03/19 20:13:32 [WARN] Gateway down, restart attempt #1
+2026/03/19 20:13:37 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:13:44 [ERROR] Gateway start failed
+2026/03/19 20:13:46 [WARN] Gateway down, restart attempt #6
+2026/03/19 20:13:51 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:13:58 [ERROR] Gateway start failed
+2026/03/19 20:20:46 [WARN] Gateway down, restart attempt #2
+2026/03/19 20:20:51 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:20:58 [ERROR] Gateway start failed
+2026/03/19 20:21:00 [WARN] Gateway down, restart attempt #7
+2026/03/19 20:21:05 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:21:10 [INFO] Gateway started OK
+2026/03/19 20:23:13 [WARN] Gateway down, restart attempt #1
+2026/03/19 20:23:18 [INFO] Starting Gateway (Watchdog)
+2026/03/19 20:23:23 [INFO] Gateway started OK

@@ -1,0 +1,1 @@
+{"ts":1773781221904,"jobId":"61e73340-3b1d-4b92-a0ab-21c0e42f4a37","action":"finished","status":"ok","summary":"每日自动重启 Gateway。请执行：openclaw gateway stop && sleep 5 && openclaw gateway start","deliveryStatus":"not-requested","runAtMs":1773781200019,"durationMs":21879,"nextRunAtMs":1773867600000}

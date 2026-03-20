@@ -1,0 +1,372 @@
+{
+  "agents": {
+    "defaults": {
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "model": {
+        "primary": "minimax/MiniMax-M2.7"
+      },
+      "models": {
+        "MiniMax-M2.5": {
+          "alias": "Minimax"
+        },
+        "MiniMax-M2.7": {
+          "alias": "Minimax"
+        }
+      },
+      "workspace": "C:\\Users\\Administrator\\.openclaw\\workspace"
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\agent",
+        "id": "coder",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "coder",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\workspace"
+      },
+      {
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\newsai\\agent",
+        "id": "newsai",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "newsai",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\newsai\\workspace"
+      },
+      {
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\pm\\agent",
+        "id": "pm",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "pm",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\pm\\workspace"
+      },
+      {
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\finance\\agent",
+        "id": "finance",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "finance",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\finance\\workspace"
+      },
+      {
+        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\dacm\\agent",
+        "id": "dacm",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "dacm",
+        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\dacm\\workspace"
+      },
+      {
+        "id": "taizi",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-taizi"
+      },
+      {
+        "id": "zhongshu",
+        "name": "中书省",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-zhongshu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/zhongshu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "menxia",
+        "name": "门下省",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-menxia",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/menxia/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/shangshu/agent",
+        "id": "shangshu",
+        "model": "minimax/MiniMax-M2.5",
+        "name": "尚书省",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-shangshu"
+      },
+      {
+        "id": "hubu",
+        "name": "户部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-hubu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/hubu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "libu",
+        "name": "礼部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-libu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/libu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "bingbu",
+        "name": "兵部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-bingbu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/bingbu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "xingbu",
+        "name": "刑部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-xingbu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/xingbu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "gongbu",
+        "name": "工部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-gongbu",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/gongbu/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "libu_hr",
+        "name": "吏部",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-libu_hr",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/libu_hr/agent",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      {
+        "id": "zaochao",
+        "name": "早朝",
+        "workspace": "C:/Users/Administrator/.openclaw/workspace-zaochao",
+        "agentDir": "C:/Users/Administrator/.openclaw/agents/zaochao/agent",
+        "model": "minimax/MiniMax-M2.5"
+      }
+    ]
+  },
+  "auth": {
+    "profiles": {
+      "minimax:cn": {
+        "mode": "api_key",
+        "provider": "minimax"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "accountId": "main",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "coder",
+      "match": {
+        "accountId": "coder",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "newsai",
+      "match": {
+        "accountId": "newsai",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "pm",
+      "match": {
+        "accountId": "pm",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "finance",
+      "match": {
+        "accountId": "finance",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "dacm",
+      "match": {
+        "accountId": "dacm",
+        "channel": "feishu"
+      },
+      "type": "route"
+    },
+    {
+      "agentId": "taizi",
+      "match": {
+        "accountId": "taizi",
+        "channel": "feishu"
+      },
+      "type": "route"
+    }
+  ],
+  "channels": {
+    "feishu": {
+      "groups": {},
+      "accounts": {
+        "main": {
+          "appId": "cli_a9329dd432791bd7",
+          "appSecret": "OhsgviT7KdSMHIwbib26xfrDfFbVHB4v"
+        },
+        "coder": {
+          "appId": "cli_a930e5a091badbd7",
+          "appSecret": "4R90qgVplc9hEpM8gRXy7c1xO3T16I1a"
+        },
+        "dacm": {
+          "appId": "cli_a9366de690795bd3",
+          "appSecret": "ZxcFPlqdTYibgPGCrPNs0ev8VX15DPfd"
+        },
+        "finance": {
+          "appId": "cli_a93109b4a1791bca",
+          "appSecret": "3dUiDrhR43pmnBNZeVC0dbabdwULIqzW"
+        },
+        "newsai": {
+          "appId": "cli_a9303f8ff2b99bdb",
+          "appSecret": "FXXHSIr1lLjqzmyjbr3SugR6sHe4oQQI"
+        },
+        "pm": {
+          "appId": "cli_a9301e0e64f89bd2",
+          "appSecret": "uQJ0ozDGBSZ2W3PEnIJ2sgPEm2lyt2hy"
+        },
+        "taizi": {
+          "appId": "cli_a9379ce69ca25bcd",
+          "appSecret": "NfpsTVGU1EkmyVQGZfjemetPKTHjnQOD"
+        }
+      },
+      "capabilities": {
+        "inlineButtons": "all"
+      },
+      "connectionMode": "websocket",
+      "defaultAccount": "main",
+      "domain": "feishu",
+      "enabled": true
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "env": {},
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "1ca22fc3c887278ffd577a3da231b3de7fd152e2e94b1d07"
+    },
+    "mode": "local"
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-20T06:27:19.945Z",
+    "lastTouchedVersion": "2026.3.13"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "api": "anthropic-messages",
+        "apiKey": "sk-cp-3DbmMFernV2KyAZE1VplJoIYb4go7QLbK4cT87pxEa1895zJLiPrF1q--TsrTOLZFfaZzyxizWtBTYTk5169UXjDigmbB9INh24yONHWK-DJAH7Ec8Q5fmA",
+        "authHeader": true,
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "models": [
+          {
+            "contextWindow": 200000,
+            "cost": {
+              "cacheRead": 0.03,
+              "cacheWrite": 0.12,
+              "input": 0.3,
+              "output": 1.2
+            },
+            "id": "MiniMax-M2.5",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 8192,
+            "name": "MiniMax M2.5",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 200000,
+            "cost": {
+              "cacheRead": 0.04,
+              "cacheWrite": 0.15,
+              "input": 0.4,
+              "output": 1.5
+            },
+            "id": "MiniMax-M2.7",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 16384,
+            "name": "MiniMax M2.7",
+            "reasoning": true
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "allow": [
+      "openclaw-lark"
+    ],
+    "entries": {
+      "feishu": {
+        "enabled": false
+      },
+      "openclaw-lark": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-lark": {
+        "installPath": "C:\\Users\\Administrator\\.openclaw\\extensions\\openclaw-lark",
+        "installedAt": "2026-03-20T11:50:50Z",
+        "source": "path"
+      }
+    }
+  },
+  "tools": {
+    "agentToAgent": {
+      "allow": [
+        "main",
+        "coder",
+        "newsai",
+        "pm",
+        "finance",
+        "dacm",
+        "taizi",
+        "shangshu",
+        "zhongshu",
+        "menxia",
+        "hubu",
+        "libu",
+        "bingbu",
+        "xingbu",
+        "gongbu",
+        "libu_hr",
+        "zaochao"
+      ],
+      "enabled": true
+    },
+    "profile": "full",
+    "sessions": {
+      "visibility": "all"
+    }
+  },
+  "messages": {
+    "tts": {
+      "auto": "always",
+      "provider": "edge",
+      "edge": {
+        "enabled": true,
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "lang": "zh-CN",
+        "outputFormat": "audio-24khz-48kbitrate-mono-mp3"
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-18T02:22:54.141Z",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.13"
+  }
+}

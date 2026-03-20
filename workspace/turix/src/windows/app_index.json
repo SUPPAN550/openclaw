@@ -1,0 +1,485 @@
+﻿[
+  {
+    "name": "Microsoft Edge",
+    "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "args": "http://hoo2.aijishuyuan.com",
+    "cwd": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Edge.lnk"
+  },
+  {
+    "name": "Speech Recognition",
+    "exe": "C:\\Windows\\Speech\\Common\\sapisvr.exe",
+    "args": "-SpeechUX",
+    "cwd": "%windir%\\system32\\Speech\\SpeechUX",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Speech Recognition.lnk"
+  },
+  {
+    "name": "Remote Desktop Connection",
+    "exe": "C:\\Windows\\system32\\mstsc.exe",
+    "args": "",
+    "cwd": "%windir%\\system32\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Remote Desktop Connection.lnk"
+  },
+  {
+    "name": "Steps Recorder",
+    "exe": "C:\\Windows\\system32\\psr.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Steps Recorder.lnk"
+  },
+  {
+    "name": "Windows Media Player Legacy",
+    "exe": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+    "args": "/prefetch:1",
+    "cwd": "%ProgramFiles(x86)%\\Windows Media Player",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Windows Media Player Legacy.lnk"
+  },
+  {
+    "name": "Wordpad",
+    "exe": "C:\\Program Files\\Windows NT\\Accessories\\wordpad.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Wordpad.lnk"
+  },
+  {
+    "name": "Component Services",
+    "exe": "C:\\Windows\\system32\\comexp.msc",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Component Services.lnk"
+  },
+  {
+    "name": "Computer Management",
+    "exe": "C:\\Windows\\system32\\compmgmt.msc",
+    "args": "/s",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Computer Management.lnk"
+  },
+  {
+    "name": "dfrgui",
+    "exe": "C:\\Windows\\system32\\dfrgui.exe",
+    "args": "",
+    "cwd": "%systemroot%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\dfrgui.lnk"
+  },
+  {
+    "name": "Disk Cleanup",
+    "exe": "C:\\Windows\\system32\\cleanmgr.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Disk Cleanup.lnk"
+  },
+  {
+    "name": "Event Viewer",
+    "exe": "C:\\Windows\\system32\\eventvwr.msc",
+    "args": "/s",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Event Viewer.lnk"
+  },
+  {
+    "name": "Hyper-V Manager",
+    "exe": "C:\\Windows\\System32\\mmc.exe",
+    "args": "\"%windir%\\System32\\virtmgmt.msc\"",
+    "cwd": "%ProgramFiles%\\Hyper-V\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Hyper-V Manager.lnk"
+  },
+  {
+    "name": "iSCSI Initiator",
+    "exe": "C:\\Windows\\system32\\iscsicpl.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\iSCSI Initiator.lnk"
+  },
+  {
+    "name": "Memory Diagnostics Tool",
+    "exe": "C:\\Windows\\system32\\MdSched.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Memory Diagnostics Tool.lnk"
+  },
+  {
+    "name": "ODBC Data Sources (32-bit)",
+    "exe": "C:\\Windows\\syswow64\\odbcad32.exe",
+    "args": "",
+    "cwd": "%windir%\\syswow64",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (32-bit).lnk"
+  },
+  {
+    "name": "ODBC Data Sources (64-bit)",
+    "exe": "C:\\Windows\\system32\\odbcad32.exe",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (64-bit).lnk"
+  },
+  {
+    "name": "Performance Monitor",
+    "exe": "C:\\Windows\\system32\\perfmon.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Performance Monitor.lnk"
+  },
+  {
+    "name": "Print Management",
+    "exe": "C:\\Windows\\system32\\printmanagement.msc",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Print Management.lnk"
+  },
+  {
+    "name": "RecoveryDrive",
+    "exe": "C:\\Windows\\system32\\RecoveryDrive.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\RecoveryDrive.lnk"
+  },
+  {
+    "name": "Registry Editor",
+    "exe": "C:\\Windows\\regedit.exe",
+    "args": "",
+    "cwd": "%windir%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Registry Editor.lnk"
+  },
+  {
+    "name": "Resource Monitor",
+    "exe": "C:\\Windows\\system32\\perfmon.exe",
+    "args": "/res",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Resource Monitor.lnk"
+  },
+  {
+    "name": "Security Configuration Management",
+    "exe": "C:\\Windows\\system32\\secpol.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Security Configuration Management.lnk"
+  },
+  {
+    "name": "services",
+    "exe": "C:\\Windows\\system32\\services.msc",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\services.lnk"
+  },
+  {
+    "name": "System Configuration",
+    "exe": "C:\\Windows\\system32\\msconfig.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Configuration.lnk"
+  },
+  {
+    "name": "System Information",
+    "exe": "C:\\Windows\\system32\\msinfo32.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Information.lnk"
+  },
+  {
+    "name": "Task Scheduler",
+    "exe": "C:\\Windows\\system32\\taskschd.msc",
+    "args": "/s",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Task Scheduler.lnk"
+  },
+  {
+    "name": "VMCreate",
+    "exe": "C:\\Program Files\\Hyper-V\\VMCreate.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\VMCreate.lnk"
+  },
+  {
+    "name": "Windows Defender Firewall with Advanced Security",
+    "exe": "C:\\Windows\\system32\\WF.msc",
+    "args": "",
+    "cwd": "%windir%\\system32",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Windows Defender Firewall with Advanced Security.lnk"
+  },
+  {
+    "name": "Git Bash",
+    "exe": "C:\\Program Files\\Git\\git-bash.exe",
+    "args": "--cd-to-home",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Bash.lnk"
+  },
+  {
+    "name": "Git CMD",
+    "exe": "C:\\Program Files\\Git\\git-cmd.exe",
+    "args": "--cd-to-home",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git CMD.lnk"
+  },
+  {
+    "name": "Git GUI",
+    "exe": "C:\\Program Files\\Git\\cmd\\git-gui.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git GUI.lnk"
+  },
+  {
+    "name": "Git Release Notes",
+    "exe": "C:\\Program Files\\Git\\ReleaseNotes.html",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Release Notes.lnk"
+  },
+  {
+    "name": "Install Additional Tools for Node.js",
+    "exe": "C:\\Windows\\System32\\cmd.exe",
+    "args": "/d /c \"C:\\Program Files\\nodejs\\install_tools.bat\"",
+    "cwd": "C:\\Program Files\\nodejs\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Install Additional Tools for Node.js.lnk"
+  },
+  {
+    "name": "Node.js",
+    "exe": "C:\\Program Files\\nodejs\\node.exe",
+    "args": "",
+    "cwd": "C:\\Program Files\\nodejs\\",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Node.js.lnk"
+  },
+  {
+    "name": "Uninstall Node.js",
+    "exe": "C:\\Windows\\SysWOW64\\msiexec.exe",
+    "args": "/x {47D89795-2EFC-4BC5-BBF4-DE59E1059816}",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Uninstall Node.js.lnk"
+  },
+  {
+    "name": "Task Manager",
+    "exe": "C:\\Windows\\system32\\taskmgr.exe",
+    "args": "/7",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Task Manager.lnk"
+  },
+  {
+    "name": "Windows PowerShell ISE (x86)",
+    "exe": "C:\\Windows\\syswow64\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell ISE (x86).lnk"
+  },
+  {
+    "name": "Windows PowerShell ISE",
+    "exe": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell ISE.lnk"
+  },
+  {
+    "name": "卸载向日葵远程控制",
+    "exe": "C:\\Program Files\\Oray\\AweSun\\AweSun.exe",
+    "args": " --mod=uninstall",
+    "cwd": "C:\\Program Files\\Oray\\AweSun",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\向日葵远程控制\\卸载向日葵远程控制.lnk"
+  },
+  {
+    "name": "安全卫士",
+    "exe": "D:\\360Safe\\360Safe.exe",
+    "args": "",
+    "cwd": "D:\\360Safe",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\安全中心\\安全卫士.lnk"
+  },
+  {
+    "name": "安全防护中心",
+    "exe": "D:\\360Safe\\safemon\\360realpro.exe",
+    "args": "",
+    "cwd": "D:\\360Safe\\safemon",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\安全中心\\安全防护中心.lnk"
+  },
+  {
+    "name": "软件管家",
+    "exe": "D:\\360Safe\\SoftMgr\\SoftMgr.exe",
+    "args": "",
+    "cwd": "D:\\360Safe\\SoftMgr",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\安全中心\\软件管家.lnk"
+  },
+  {
+    "name": "卸载贝锐花生壳",
+    "exe": "C:\\Program Files (x86)\\Oray\\HskDDNS\\HskDDNS.exe",
+    "args": "--mod=uninstall",
+    "cwd": "C:\\Program Files (x86)\\Oray\\HskDDNS",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\贝锐花生壳\\卸载贝锐花生壳.lnk"
+  },
+  {
+    "name": "Character Map",
+    "exe": "C:\\Windows\\system32\\charmap.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\System Tools\\Character Map.lnk"
+  },
+  {
+    "name": "Administrative Tools",
+    "exe": "C:\\Windows\\system32\\control.exe",
+    "args": "/name Microsoft.AdministrativeTools",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools.lnk"
+  },
+  {
+    "name": "Google Chrome",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk"
+  },
+  {
+    "name": "Ollama",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Ollama\\ollama app.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Ollama",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Ollama.lnk"
+  },
+  {
+    "name": "OneDrive",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk"
+  },
+  {
+    "name": "豆包",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Doubao\\Application\\Doubao.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Doubao\\Application",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\豆包.lnk"
+  },
+  {
+    "name": "LiveCaptions",
+    "exe": "C:\\Windows\\system32\\LiveCaptions.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\LiveCaptions.lnk"
+  },
+  {
+    "name": "Magnify",
+    "exe": "C:\\Windows\\system32\\magnify.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Magnify.lnk"
+  },
+  {
+    "name": "Narrator",
+    "exe": "C:\\Windows\\system32\\narrator.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Narrator.lnk"
+  },
+  {
+    "name": "On-Screen Keyboard",
+    "exe": "C:\\Windows\\system32\\osk.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\On-Screen Keyboard.lnk"
+  },
+  {
+    "name": "VoiceAccess",
+    "exe": "C:\\Windows\\system32\\voiceaccess.exe",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\VoiceAccess.lnk"
+  },
+  {
+    "name": "IDLE (Python 3.11 64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe",
+    "args": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\idlelib\\idle.pyw\"",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.11\\IDLE (Python 3.11 64-bit).lnk"
+  },
+  {
+    "name": "Python 3.11 (64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.11\\Python 3.11 (64-bit).lnk"
+  },
+  {
+    "name": "Python 3.11 Manuals (64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\Doc\\html\\index.html",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.11\\Python 3.11 Manuals (64-bit).lnk"
+  },
+  {
+    "name": "IDLE (Python 3.12 64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\pythonw.exe",
+    "args": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\idlelib\\idle.pyw\"",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\IDLE (Python 3.12 64-bit).lnk"
+  },
+  {
+    "name": "Python 3.12 (64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\Python 3.12 (64-bit).lnk"
+  },
+  {
+    "name": "Python 3.12 Manuals (64-bit)",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Doc\\html\\index.html",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\Python 3.12 Manuals (64-bit).lnk"
+  },
+  {
+    "name": "Python for Windows Documentation",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyWin32.chm",
+    "args": "",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\Python for Windows Documentation.lnk"
+  },
+  {
+    "name": "PythonWin",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pythonwin\\Pythonwin.exe",
+    "args": "",
+    "cwd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\PythonWin.lnk"
+  },
+  {
+    "name": "Windows PowerShell (x86)",
+    "exe": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell (x86).lnk"
+  },
+  {
+    "name": "Windows PowerShell",
+    "exe": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": "",
+    "cwd": "%HOMEDRIVE%%HOMEPATH%",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell.lnk"
+  },
+  {
+    "name": "剪映专业版",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\JianyingPro\\Apps\\JianyingPro.exe",
+    "args": "--src3",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\剪映专业版\\剪映专业版.lnk"
+  },
+  {
+    "name": "卸载剪映专业版",
+    "exe": "C:\\Users\\Administrator\\AppData\\Local\\JianyingPro\\Apps\\uninst.exe",
+    "args": "src3",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\剪映专业版\\卸载剪映专业版.lnk"
+  },
+  {
+    "name": "迅雷",
+    "exe": "C:\\Program Files (x86)\\Thunder Network\\Thunder\\Program\\ThunderStart.exe",
+    "args": "-StartType:StartMenu",
+    "cwd": "",
+    "lnk": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\迅雷软件\\迅雷\\迅雷.lnk"
+  },
+  {
+    "name": "notepad",
+    "exe": "C:\\Windows\\System32\\notepad.exe",
+    "args": "",
+    "cwd": "C:\\Windows\\System32",
+    "lnk": null
+  },
+  {
+    "name": "write",
+    "exe": "C:\\Windows\\System32\\write.exe",
+    "args": "",
+    "cwd": "C:\\Windows\\System32",
+    "lnk": null
+  }
+]

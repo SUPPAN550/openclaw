@@ -1,0 +1,22 @@
+# Node modules
+control-center/node_modules/
+buildwithclaude/node_modules/
+buildwithclaude2/node_modules/
+
+# Data directories
+.openclaw/
+.backup/
+logs/
+memory/
+proactivity/
+
+# Backup files
+backup.log
+backup-log.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large temp files
+*.log

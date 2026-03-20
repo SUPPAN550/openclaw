@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-03-20 10:42:00",
+  "officials": [
+    {"id": "taizi", "name": "太子", "label": "太子", "status": "idle"},
+    {"id": "zhongshu", "name": "中书省", "label": "中书省", "status": "idle"},
+    {"id": "menxia", "name": "门下省", "label": "门下省", "status": "idle"},
+    {"id": "shangshu", "name": "尚书省", "label": "尚书省", "status": "idle"},
+    {"id": "hubu", "name": "户部", "label": "户部", "status": "idle"},
+    {"id": "libu", "name": "礼部", "label": "礼部", "status": "idle"},
+    {"id": "bingbu", "name": "兵部", "label": "兵部", "status": "idle"},
+    {"id": "xingbu", "name": "刑部", "label": "刑部", "status": "idle"},
+    {"id": "gongbu", "name": "工部", "label": "工部", "status": "idle"},
+    {"id": "libu_hr", "name": "吏部", "label": "吏部", "status": "idle"},
+    {"id": "zaochao", "name": "钦天监", "label": "钦天监", "status": "idle"}
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-03-20 21:02:04",
+  "taskSource": "manual_test",
+  "officials": [
+    {
+      "id": "taizi",
+      "name": "太子",
+      "label": "太子",
+      "status": "idle"
+    },
+    {
+      "id": "zhongshu",
+      "name": "中书省",
+      "label": "中书省",
+      "status": "idle"
+    },
+    {
+      "id": "menxia",
+      "name": "门下省",
+      "label": "门下省",
+      "status": "idle"
+    },
+    {
+      "id": "shangshu",
+      "name": "尚书省",
+      "label": "尚书省",
+      "status": "active"
+    },
+    {
+      "id": "hubu",
+      "name": "户部",
+      "label": "户部",
+      "status": "idle"
+    },
+    {
+      "id": "libu",
+      "name": "礼部",
+      "label": "礼部",
+      "status": "idle"
+    },
+    {
+      "id": "bingbu",
+      "name": "兵部",
+      "label": "兵部",
+      "status": "idle"
+    },
+    {
+      "id": "xingbu",
+      "name": "刑部",
+      "label": "刑部",
+      "status": "idle"
+    },
+    {
+      "id": "gongbu",
+      "name": "工部",
+      "label": "工部",
+      "status": "idle"
+    },
+    {
+      "id": "libu_hr",
+      "name": "吏部",
+      "label": "吏部",
+      "status": "idle"
+    },
+    {
+      "id": "zaochao",
+      "name": "钦天监",
+      "label": "钦天监",
+      "status": "review"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "OC-shangshu-001",
+      "title": "尚书省处理早朝简报",
+      "official": "尚书省",
+      "org": "尚书省",
+      "state": "Doing",
+      "now": "尚书省正在处理早朝简报",
+      "eta": "2026-03-20 21:02:04",
+      "block": "无",
+      "output": "",
+      "flow": {
+        "draft": "agent=shangshu"
+      },
+      "ac": "尚书省执行中",
+      "activity": [
+        {
+          "at": "2026-03-20 21:02:04",
+          "kind": "thinking",
+          "text": "分析外盘..."
+        }
+      ],
+      "sourceMeta": {
+        "agentId": "shangshu",
+        "sessionKey": "agent:shangshu:main",
+        "updatedAt": 1774011724406,
+        "ageMs": 60000,
+        "inputTokens": 1200,
+        "outputTokens": 800
+      }
+    },
+    {
+      "id": "OC-zaochao-001",
+      "title": "钦天监采编早报",
+      "official": "钦天监",
+      "org": "钦天监",
+      "state": "Review",
+      "now": "钦天监早报待审查",
+      "eta": "2026-03-20 21:02:04",
+      "block": "无",
+      "output": "",
+      "flow": {
+        "review": "agent=zaochao"
+      },
+      "ac": "早报已生成",
+      "activity": [
+        {
+          "at": "2026-03-20 21:02:04",
+          "kind": "tool",
+          "text": "抓取新闻..."
+        }
+      ],
+      "sourceMeta": {
+        "agentId": "zaochao",
+        "sessionKey": "agent:zaochao:cron",
+        "updatedAt": 1774011424406,
+        "ageMs": 300000,
+        "inputTokens": 500,
+        "outputTokens": 1200
+      }
+    }
+  ],
+  "history": [],
+  "metrics": {
+    "officialCount": 11,
+    "todayDone": 0,
+    "totalDone": 0,
+    "inProgress": 2,
+    "blocked": 0
+  },
+  "syncStatus": {
+    "ok": true,
+    "syncLatencyMs": 50
+  },
+  "health": {
+    "syncOk": true,
+    "syncLatencyMs": 50
+  }
+}

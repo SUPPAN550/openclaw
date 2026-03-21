@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "runs": {
+    "452e7f3a-3314-4412-b8ba-17f03e1ef085": {
+      "runId": "452e7f3a-3314-4412-b8ba-17f03e1ef085",
+      "childSessionKey": "agent:finance:subagent:02797778-119e-41bb-bc5c-b8eebf1536d8",
+      "controllerSessionKey": "agent:finance:main",
+      "requesterSessionKey": "agent:finance:main",
+      "requesterOrigin": {
+        "channel": "webchat"
+      },
+      "requesterDisplayKey": "agent:finance:main",
+      "task": "调试并修复 TradingAgents 本地 Docker，使其能够使用全部 15 位分析师。\n\n## 问题\n- 新分析师文件已复制到容器\n- 但 API 调用传入 analysts 参数后仍然只使用 6 位默认分析师\n- 需要修复 API 或配置使新分析师生效\n\n## 需要做的事情\n1. 检查 api/main.py 中 analyze 端点如何处理 analysts 参数\n2. 检查 tradingagents/graph/setup.py 中是否正确处理新分析师\n3. 检查 tradingagents/agents/__init__.py 是否正确导出新分析师\n4. 确保 setup.py 中的 selected_analysts 默认值包含全部 15 位\n5. 重新打包并测试\n\n## 关键\n- 保持容器运行在 localhost:8000\n- 确保 MiniMax API 密钥配置正确\n- 最终目标是调用 /v1/analyze 时能使用全部 15 位分析师\n\n## 输出\n修复完成后验证 15 位分析师可以正常工作。",
+      "cleanup": "keep",
+      "expectsCompletionMessage": true,
+      "spawnMode": "run",
+      "label": "fix-15-analysts",
+      "model": "minimax/MiniMax-M2.5",
+      "workspaceDir": "C:\\Users\\Administrator\\.openclaw\\workspace-finance",
+      "runTimeoutSeconds": 1200,
+      "createdAt": 1774108799168,
+      "startedAt": 1774108800429,
+      "archiveAtMs": 1774112399168,
+      "cleanupHandled": false,
+      "retainAttachmentsOnKeep": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Gock - 每日新闻",
+  "role": "news_curator",
+  "description": "每日新闻聚合与摘要，提供定制化的资讯服务",
+  "responsibilities": [
+    "获取每日科技、财经、国际新闻",
+    "生成新闻摘要和要点",
+    "推送早间新闻简报",
+    "追踪特定话题的最新动态"
+  ],
+  "schedule": {
+    "morning_briefing": "0 8 * * *",
+    "evening_summary": "0 20 * * *",
+    "breaking_news_check": "0 */4 * * *"
+  },
+  "sources": [
+    "RSS feeds",
+    "news-summary skill"
+  ],
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}

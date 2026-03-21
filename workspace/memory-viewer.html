@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Viewer - OpenClaw</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e; 
+            color: #eee;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #00d9ff; margin-bottom: 20px; }
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #0f3460;
+        }
+        .stat-card .label { color: #888; font-size: 14px; }
+        .stat-card .value { color: #00d9ff; font-size: 28px; font-weight: bold; }
+        .memories { background: #16213e; border-radius: 10px; padding: 20px; }
+        .memories h2 { color: #00d9ff; margin-bottom: 15px; }
+        .memory-item {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #00d9ff;
+        }
+        .memory-item.preference { border-left-color: #f39c12; }
+        .memory-item.decision { border-left-color: #27ae60; }
+        .memory-item.fact { border-left-color: #9b59b6; }
+        .memory-meta { 
+            font-size: 12px; 
+            color: #888; 
+            margin-bottom: 8px;
+        }
+        .memory-content { font-size: 15px; line-height: 1.5; }
+        .memory-category {
+            display: inline-block;
+            background: #00d9ff;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-left: 10px;
+        }
+        .refresh-btn {
+            background: #00d9ff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .refresh-btn:hover { background: #00b8d9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Memory Viewer - OpenClaw</h1>
+        <button class="refresh-btn" onclick="loadMemories()">🔄 刷新</button>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="label">总记忆数</div>
+                <div class="value" id="totalMemories">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Scope 数量</div>
+                <div class="value" id="scopeCount">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">检索模式</div>
+                <div class="value" id="retrievalMode">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Embedding 模型</div>
+                <div class="value" id="embeddingModel">-</div>
+            </div>
+        </div>
+        
+        <div class="memories">
+            <h2>📝 记忆列表</h2>
+            <div id="memoryList">加载中...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadMemories() {
+            const listEl = document.getElementById('memoryList');
+            listEl.innerHTML = '加载中...';
+            
+            try {
+                // Fetch stats
+                const statsRes = await fetch('http://127.0.0.1:18789/api/plugins/memory-lancedb-pro/stats');
+                const stats = await statsRes.json();
+                
+                document.getElementById('totalMemories').textContent = stats.totalMemories || 0;
+                document.getElementById('scopeCount').textContent = stats.availableScopes?.length || 0;
+                document.getElementById('retrievalMode').textContent = stats.retrievalMode || 'N/A';
+                document.getElementById('embeddingModel').textContent = stats.embeddingModel || 'N/A';
+                
+                // Fetch memories
+                const listRes = await fetch('http://127.0.0.1:18789/api/plugins/memory-lancedb-pro/list');
+                const data = await listRes.json();
+                
+                const memories = data.memories || [];
+                
+                if (memories.length === 0) {
+                    listEl.innerHTML = '<p style="color:#888">暂无记忆</p>';
+                    return;
+                }
+                
+                listEl.innerHTML = memories.map(m => `
+                    <div class="memory-item ${m.category || ''}">
+                        <div class="memory-meta">
+                            ${formatDate(m.createdAt)} 
+                            <span class="memory-category">${m.scope || 'default'}</span>
+                            ${m.category ? `<span class="memory-category" style="background:${getCategoryColor(m.category)}">${m.category}</span>` : ''}
+                        </div>
+                        <div class="memory-content">${escapeHtml(m.content || m.text || '')}</div>
+                    </div>
+                `).join('');
+                
+            } catch (e) {
+                listEl.innerHTML = `<p style="color:#ff6b6b">加载失败: ${e.message}</p>`;
+            }
+        }
+        
+        function formatDate(ts) {
+            if (!ts) return '';
+            const d = new Date(ts);
+            return d.toLocaleString('zh-CN');
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function getCategoryColor(cat) {
+            const colors = {
+                preference: '#f39c12',
+                decision: '#27ae60',
+                fact: '#9b59b6',
+                entity: '#3498db'
+            };
+            return colors[cat] || '#00d9ff';
+        }
+        
+        loadMemories();
+    </script>
+</body>
+</html>

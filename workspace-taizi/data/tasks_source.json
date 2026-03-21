@@ -1,0 +1,585 @@
+[
+  {
+    "id": "OC-finance-16436391",
+    "title": "ou_496e93f95bd8633b5b7075d94c32e6da",
+    "official": "尚书令",
+    "org": "尚书省",
+    "state": "Doing",
+    "now": "思考中: 鎴戠洰鍓嶆病鏈夊悕涓 `memory-lancedb-pro` 鐨勫伐鍏枫俓n",
+    "eta": "2026-03-21 12:32:59",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\finance\\sessions\\16436391-2d3e-4478-b5b3-7d70bc7574d2.jsonl",
+    "flow": {
+      "draft": "agent=finance",
+      "review": "updatedAt=2026-03-21 12:32:59",
+      "dispatch": "sessionKey=agent:finance:main"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [
+      {
+        "at": "2026-03-21T04:32:59.497Z",
+        "kind": "assistant",
+        "text": "鎴戠洰鍓嶆病鏈夊悕涓 `memory-lancedb-pro` 鐨勫伐鍏枫俓n"
+      },
+      {
+        "at": "2026-03-21T04:32:51.223Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 12:32:50 GMT+8] Feishu[finance] DM | ou_496e93f95bd8633b5b7075d94c32e6da [msg:om..."
+      },
+      {
+        "at": "2026-03-21T03:08:37.787Z",
+        "kind": "assistant",
+        "text": "鎴戠殑鍏ㄩ儴鎶鑳藉備笅锛歕n"
+      },
+      {
+        "at": "2026-03-21T03:08:27.861Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 11:08:27 GMT+8] Feishu[finance] DM | ou_496e93f95bd8633b5b7075d94c32e6da [msg:om..."
+      },
+      {
+        "at": "2026-03-21T03:07:50.030Z",
+        "kind": "assistant",
+        "text": "鎴戜富瑕佹湁杩欎簺鎶鑳斤細"
+      },
+      {
+        "at": "2026-03-21T03:07:26.368Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 11:07:25 GMT+8] Feishu[finance] DM | ou_496e93f95bd8633b5b7075d94c32e6da [msg:om..."
+      },
+      {
+        "at": "2026-03-21T03:06:41.646Z",
+        "kind": "tool",
+        "text": "Tool 'feishu_im_user_get_messages' finished"
+      },
+      {
+        "at": "2026-03-21T03:06:36.198Z",
+        "kind": "tool",
+        "text": "Tool 'feishu_im_user_get_messages' finished"
+      },
+      {
+        "at": "2026-03-21T03:06:19.847Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 11:06:19 GMT+8] Feishu[finance] DM | ou_496e93f95bd8633b5b7075d94c32e6da [msg:om..."
+      }
+    ],
+    "sourceMeta": {
+      "agentId": "finance",
+      "sessionKey": "agent:finance:main",
+      "sessionId": "16436391-2d3e-4478-b5b3-7d70bc7574d2",
+      "updatedAt": 1774067579515,
+      "ageMs": 15291,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 152,
+      "outputTokens": 237,
+      "totalTokens": 39064
+    }
+  },
+  {
+    "id": "OC-coder-c12f5b6b",
+    "title": "ou_2cd4ef0232156052ca2f875d835bb1b9",
+    "official": "尚书令",
+    "org": "尚书省",
+    "state": "Doing",
+    "now": "Tool 'edit' finished",
+    "eta": "2026-03-21 12:32:14",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\sessions\\c12f5b6b-349a-424a-84a5-56ce27fc55cf.jsonl",
+    "flow": {
+      "draft": "agent=coder",
+      "review": "updatedAt=2026-03-21 12:32:14",
+      "dispatch": "sessionKey=agent:coder:main"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [
+      {
+        "at": "2026-03-21T04:33:10.948Z",
+        "kind": "tool",
+        "text": "Tool 'edit' finished"
+      },
+      {
+        "at": "2026-03-21T04:33:07.114Z",
+        "kind": "tool",
+        "text": "Tool 'edit' finished"
+      },
+      {
+        "at": "2026-03-21T04:33:00.325Z",
+        "kind": "tool",
+        "text": "Tool 'edit' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:56.300Z",
+        "kind": "tool",
+        "text": "Tool 'exec' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:51.885Z",
+        "kind": "tool",
+        "text": "Tool 'exec' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:48.056Z",
+        "kind": "tool",
+        "text": "Tool 'exec' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:44.394Z",
+        "kind": "tool",
+        "text": "Tool 'exec' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:25.357Z",
+        "kind": "tool",
+        "text": "Tool 'exec' finished"
+      },
+      {
+        "at": "2026-03-21T04:32:15.199Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 12:32:14 GMT+8] Feishu[coder] DM | ou_2cd4ef0232156052ca2f875d835bb1b9 [msg:om_x..."
+      },
+      {
+        "at": "2026-03-21T04:07:24.763Z",
+        "kind": "assistant",
+        "text": "浣犲ソ鐜嬫澀锛佹垜鏄浣犵殑 AI 鍔╂墜锛屼互涓嬫槸鎴戠殑鎶鑳斤細"
+      }
+    ],
+    "sourceMeta": {
+      "agentId": "coder",
+      "sessionKey": "agent:coder:main",
+      "sessionId": "c12f5b6b-349a-424a-84a5-56ce27fc55cf",
+      "updatedAt": 1774067534122,
+      "ageMs": 60684,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 104789,
+      "outputTokens": 319,
+      "totalTokens": 140382
+    }
+  },
+  {
+    "id": "OC-main-e725ee33",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:30:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:30:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d",
+      "sessionId": "e725ee33-7f6f-407c-ac71-360e50a891be",
+      "updatedAt": 1774067400043,
+      "ageMs": 194763,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 10391,
+      "outputTokens": 286,
+      "totalTokens": 41875
+    }
+  },
+  {
+    "id": "OC-main-367e64b3",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:25:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:25:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:367e64b3-f99f-4e67-920d-3e800da9993c"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:367e64b3-f99f-4e67-920d-3e800da9993c",
+      "sessionId": "367e64b3-f99f-4e67-920d-3e800da9993c",
+      "updatedAt": 1774067100038,
+      "ageMs": 494768,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 1712,
+      "outputTokens": 275,
+      "totalTokens": 38215
+    }
+  },
+  {
+    "id": "OC-main-5802dae4",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:20:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:20:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:5802dae4-49f2-4b8a-8001-133789b73303"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:5802dae4-49f2-4b8a-8001-133789b73303",
+      "sessionId": "5802dae4-49f2-4b8a-8001-133789b73303",
+      "updatedAt": 1774066800021,
+      "ageMs": 794785,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 17747,
+      "outputTokens": 1060,
+      "totalTokens": 41222
+    }
+  },
+  {
+    "id": "OC-main-1b2a1a11",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:15:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:15:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:1b2a1a11-18b1-4ee0-b524-19fe06752f85"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:1b2a1a11-18b1-4ee0-b524-19fe06752f85",
+      "sessionId": "1b2a1a11-18b1-4ee0-b524-19fe06752f85",
+      "updatedAt": 1774066500028,
+      "ageMs": 1094778,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 1106,
+      "outputTokens": 200,
+      "totalTokens": 37784
+    }
+  },
+  {
+    "id": "OC-main-14a602d4",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:10:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:10:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:14a602d4-e006-46ce-bea8-39dc1676fece"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:14a602d4-e006-46ce-bea8-39dc1676fece",
+      "sessionId": "14a602d4-e006-46ce-bea8-39dc1676fece",
+      "updatedAt": 1774066200040,
+      "ageMs": 1394766,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 19290,
+      "outputTokens": 374,
+      "totalTokens": 41685
+    }
+  },
+  {
+    "id": "OC-main-65bb8931",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:05:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:05:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:65bb8931-284e-4d72-a53d-58223cf288c6"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:65bb8931-284e-4d72-a53d-58223cf288c6",
+      "sessionId": "65bb8931-284e-4d72-a53d-58223cf288c6",
+      "updatedAt": 1774065900025,
+      "ageMs": 1694781,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 9446,
+      "outputTokens": 761,
+      "totalTokens": 40213
+    }
+  },
+  {
+    "id": "OC-main-8107433d",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:02:26",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a4f464c5-015a-4c3b-92ea-6cb2fcbb8ecf.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:02:26",
+      "dispatch": "sessionKey=agent:main:cron:5071638d-65c3-4709-a509-3fddb9b5a2d6"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:5071638d-65c3-4709-a509-3fddb9b5a2d6",
+      "sessionId": "8107433d-1045-4750-a3d7-e55e4e8ee623",
+      "updatedAt": 1774065746952,
+      "ageMs": 1847854,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 5927,
+      "outputTokens": 872,
+      "totalTokens": 41354
+    }
+  },
+  {
+    "id": "OC-main-3cb7fe4a",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 12:00:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 12:00:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3cb7fe4a-5548-4477-af89-d03b75d0b100"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3cb7fe4a-5548-4477-af89-d03b75d0b100",
+      "sessionId": "3cb7fe4a-5548-4477-af89-d03b75d0b100",
+      "updatedAt": 1774065600036,
+      "ageMs": 1994770,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 11879,
+      "outputTokens": 769,
+      "totalTokens": 41672
+    }
+  },
+  {
+    "id": "OC-main-3340a235",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 11:55:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 11:55:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3340a235-6249-459c-a222-b03015d83658"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3340a235-6249-459c-a222-b03015d83658",
+      "sessionId": "3340a235-6249-459c-a222-b03015d83658",
+      "updatedAt": 1774065300038,
+      "ageMs": 2294768,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 4102,
+      "outputTokens": 267,
+      "totalTokens": 38691
+    }
+  },
+  {
+    "id": "OC-main-3112dcb7",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 11:50:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 11:50:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3112dcb7-8169-4dd9-acfd-873a23ccfc53"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:3112dcb7-8169-4dd9-acfd-873a23ccfc53",
+      "sessionId": "3112dcb7-8169-4dd9-acfd-873a23ccfc53",
+      "updatedAt": 1774065000022,
+      "ageMs": 2594784,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 4078,
+      "outputTokens": 264,
+      "totalTokens": 38680
+    }
+  },
+  {
+    "id": "OC-main-1a9093b7",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 11:45:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 11:45:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:1a9093b7-3fa9-4392-9f90-1523cd6f4066"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:1a9093b7-3fa9-4392-9f90-1523cd6f4066",
+      "sessionId": "1a9093b7-3fa9-4392-9f90-1523cd6f4066",
+      "updatedAt": 1774064700046,
+      "ageMs": 2894760,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 13495,
+      "outputTokens": 512,
+      "totalTokens": 40861
+    }
+  },
+  {
+    "id": "OC-main-42bfd68a",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 11:40:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 11:40:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:42bfd68a-8026-4d96-a7aa-14b5743ee83d"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:42bfd68a-8026-4d96-a7aa-14b5743ee83d",
+      "sessionId": "42bfd68a-8026-4d96-a7aa-14b5743ee83d",
+      "updatedAt": 1774064400029,
+      "ageMs": 3194777,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 1093,
+      "outputTokens": 181,
+      "totalTokens": 37778
+    }
+  },
+  {
+    "id": "OC-taizi-d9a08a71",
+    "title": "ou_dded110f9a8cfe8db4a22ef85b822738",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "User: System: [2026-03-21 11:39:46 GMT+8] Feishu[taizi] DM |",
+    "eta": "2026-03-21 11:39:57",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\taizi\\sessions\\d9a08a71-70a9-4003-930e-2adbef079d8c.jsonl",
+    "flow": {
+      "draft": "agent=taizi",
+      "review": "updatedAt=2026-03-21 11:39:57",
+      "dispatch": "sessionKey=agent:taizi:main"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [
+      {
+        "at": "2026-03-21T03:39:47.628Z",
+        "kind": "user",
+        "text": "User: System: [2026-03-21 11:39:46 GMT+8] Feishu[taizi] DM | ou_dded110f9a8cfe8db4a22ef85b822738 [msg:om_x..."
+      }
+    ],
+    "sourceMeta": {
+      "agentId": "taizi",
+      "sessionKey": "agent:taizi:main",
+      "sessionId": "d9a08a71-70a9-4003-930e-2adbef079d8c",
+      "updatedAt": 1774064397359,
+      "ageMs": 3197447,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 152,
+      "outputTokens": 214,
+      "totalTokens": 37496
+    }
+  },
+  {
+    "id": "OC-main-09597c42",
+    "title": "heartbeat",
+    "official": "储君",
+    "org": "太子",
+    "state": "Review",
+    "now": "等待指令",
+    "eta": "2026-03-21 11:35:00",
+    "block": "无",
+    "output": "C:\\Users\\Administrator\\.openclaw\\agents\\main\\sessions\\a1fa48d5-5fe4-4c29-9345-a4826d5d475b.jsonl",
+    "flow": {
+      "draft": "agent=main",
+      "review": "updatedAt=2026-03-21 11:35:00",
+      "dispatch": "sessionKey=agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:09597c42-0148-4664-b4b0-a3b609b70f39"
+    },
+    "ac": "来自 OpenClaw runtime sessions 的实时映射",
+    "activity": [],
+    "sourceMeta": {
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:696799cb-400f-4ac4-9393-6c861584965d:run:09597c42-0148-4664-b4b0-a3b609b70f39",
+      "sessionId": "09597c42-0148-4664-b4b0-a3b609b70f39",
+      "updatedAt": 1774064100029,
+      "ageMs": 3494777,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "inputTokens": 4098,
+      "outputTokens": 302,
+      "totalTokens": 38687
+    }
+  }
+]

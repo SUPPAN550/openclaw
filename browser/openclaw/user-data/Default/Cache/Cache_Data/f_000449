@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=240, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>loading...</title>
+<link rel="stylesheet" type="text/css" href="https://passport.baidu.com/static/phoenix/css/passnew/pcnew_5882d51.css">
+<script type="text/javascript" src="https://passport.baidu.com/static/phoenix/js/common/jquery-1.7.1_dc2f643.js"></script>
+<style type="text/css">
+/*登录引导绑定流程*/ 
+.bg_image_success{
+    background:url('https://passport.baidu.com/static/phoenix/img/success.png');
+    width: 300px;
+    height: 200px;
+    margin:0 auto;
+    text-align: center;    
+}
+.bg_image{
+    background:url('https://passport.baidu.com/static/phoenix/img/error.png');
+    width: 300px;
+    height: 200px;
+    margin:0 auto;
+    text-align: center;            
+}
+.prompt-text{
+    margin: 0 auto;
+    width: 500px;
+    margin-top:40px;
+    color:#666;            
+    font-weight: bold;
+}
+.confirm-button{
+    background-color: #2A88FF;
+    border-radius: 5px;
+    color: #fff;
+    height: 20px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top:35px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    cursor:pointer;
+}
+.request-error {
+    color: #fc4343;
+    font-size: 14px;
+    display: none;
+}
+.content-footer{
+    font-size: 14px;
+}
+em.title,em.msg,em.timer{
+    font-style: normal;
+}
+.secs-tip{
+    text-align: center;
+    margin-top: 15px;
+}
+.secs-tip span{
+    color: #2A88FF;
+}
+
+</style>
+</head>
+<body data-site="afterauth">
+<p id="reload_url" >请稍后，如长时间未跳转，请<a href="https://passport.baidu.com/phoenix/account/bind?mkey=3f8673d7916ad67fca252d5622524765352a7ed5658a5af093&amp;from=afterauth&amp;client=&amp;clientfrom=&amp;suppcheck=&amp;tpl=baidu_aigc&amp;thirdType=15&amp;canMessageChannel=0&amp;traceid=">点击此处</a></p>
+<p id="requestError" class="request-error">网络连接失败，请检查您的网络设置并稍后再试。</p>
+<script type="text/javascript" nonce="LecxGUOFezhYM3co">
+    var unloadFlag=0;
+    var osinfo_name = "";
+    var config = {
+        is_xd: ''.length,
+        display: 'page',
+        displayname: '',
+        passport_uname: '***',
+        is_bind: +'0',
+        xd: '' + '&success=1&next=' + encodeURIComponent('https:\/\/passport.baidu.com\/phoenix\/account\/bind?mkey=3f8673d7916ad67fca252d5622524765352a7ed5658a5af093&from=afterauth&client=&clientfrom=&suppcheck=&tpl=baidu_aigc&thirdType=15&canMessageChannel=0&traceid='),
+        next_url: "https:\/\/passport.baidu.com\/phoenix\/account\/bind?mkey=3f8673d7916ad67fca252d5622524765352a7ed5658a5af093&from=afterauth&client=&clientfrom=&suppcheck=&tpl=baidu_aigc&thirdType=15&canMessageChannel=0&traceid=",
+        os_type: "15",
+        act: "login",
+        is_match: "0",
+        bindwidget_token: '',
+        guidebind:"",
+        error_code:"0",
+        securemobil:"",
+        notice_offline:"",
+        wapbind_url:"",
+        ltoken:"",
+        lstr:"",
+        wapguidebind:"",
+        u: "https:\/\/aigc.baidu.com?login_type=qzone",
+        guiderealname: "",
+        realnameurl: "",
+        realnameurl_pc: "",
+        authtoken: "",
+        authid: "",
+        finishbindUrl: "",
+        guidetourist: "",
+        guidetourist_url: "",
+        guidetourist_url_pc: '',
+        guidebindPcUrl: '',
+        // 三方登录后增加回调通知postMessage，且不会自动跳转登录成功跳转的目标地址
+        canMessageChannel: '0',
+        thirdType: '15'
+    };
+
+    config.xd += '&isFirstBind=' + (+!config.is_bind) + '&os_type=' + config.os_type + '&displayname=' + encodeURIComponent(config.displayname)+ '&passport_uname=' + encodeURIComponent(config.passport_uname);
+    window.onbeforeunload = function(){
+        jumpNormal();
+    }
+    document.body.onunload = function(){
+        jumpNormal();
+    }
+    var loginInstance ;
+    function loginWidget(smsMobile){
+        var smsMobile = smsMobile || "" ;
+        var protocol = (window.location.protocol || 'https:');
+    	if(loginInstance){
+            if($(".pass-text-input-smsPhone") && $(".pass-text-input-smsPhone").length>0){
+                $(".pass-text-input-smsPhone").eq(0).val(smsMobile) ;
+            }
+    		loginInstance.show();
+    	}else{
+            var loginJs=document.createElement('script');
+            loginJs.setAttribute('src','https://passport.baidu.com/passApi/js/uni_login_wrapper.js');            
+            document.body.appendChild(loginJs);
+            loginInstance = passport.pop.init({
+		        apiOpt: {
+		            loginType: 1,
+		            u: config.next_url,
+		            safeFlag: 0,
+		            sms:2,
+		            qrcode:0,
+		            hasRegUrl:false,
+		            staticPage: protocol + '//passport.baidu.com/static/phoenix/html/v3Jump.html'
+		        },
+		        tangram: true,
+		        cache: true,
+                onRender:function(){
+                    if($(".pass-text-input-smsPhone") && $(".pass-text-input-smsPhone").length>0){
+                        $(".pass-text-input-smsPhone").eq(0).val(smsMobile) ;
+                    }
+                },
+		        onLoginSuccess:function(args){
+		        	args.returnValue=false;
+		        	var img = new Image()
+                    img.onerror = img.onload = function(){
+                        img = null
+                    };
+                    img.src = "https://nsclick.baidu.com/v.gif&?phoenix=pass_pc_bind_login_success&pid=111&tt="+(new Date()).getTime();
+		        	jumpNormal();
+		        },
+		        onSubmitedErr:function(){
+		        	var img = new Image()
+                    img.onerror = img.onload = function(){
+                        img = null
+                    };
+                    img.src = "https://nsclick.baidu.com/v.gif&?phoenix=pass_pc_bind_login_error&pid=111&tt="+(new Date()).getTime();
+		        }
+		    });
+		    loginInstance.show();
+    	}
+    	
+    }
+
+    function secDownTime(){
+        var _secDom = document.getElementById('sec') ;
+        if(!_secDom){
+            return ;
+        }
+        var secs = 3;
+        function countdown() {
+            _secDom.innerHTML = secs;
+            if (secs == 0) {
+                jumpNormal();
+            } else {
+                secs--;
+                setTimeout(countdown, 1000);
+            }
+        }
+        countdown();
+    }
+    // 三方登录后增加回调通知postMessage，且不会自动跳转登录成功跳转的目标地址
+    function postMessageLoginAfter(options, channelHttp) {
+        // 三方登录(扫码) -> 命中验证控件验证 -> 登录成功跳转
+        try {
+            options = options || {};
+            channelHttp = channelHttp || '';
+            var postTarget = window.opener ?
+            (window.opener.top === window.opener.self ? window.opener.top : window.opener.self) : window;
+            var protocolAndDomainRegex = /^(https?):\/\/([a-zA-Z0-9-]+\.){1,}([a-zA-Z]{2,})(:\d+)?/;
+            var match = options.backUrl.match(protocolAndDomainRegex);
+            if (match) {
+                var protocol = match[1];
+                var domain = match[0];
+                var port = match[4] ? match[4].slice(1) : null; // 提取端口号，如果存在的话
+                domain && (channelHttp = domain);
+            } else {
+                console.log("URL 不匹配");
+            }
+            if (+config.canMessageChannel && postTarget.postMessage) {
+                var messageData = {
+                    backUrl: options.backUrl || '',
+                    thirdType: config.thirdType || '',
+                    channelHttp: channelHttp || ''
+                };
+                postTarget.postMessage({
+                    type: 'thirdlogin',
+                    data: messageData
+                }, channelHttp);
+                setTimeout(function() {
+                    window.close();
+                }, 1000);
+                return true;
+            };
+            return false;
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    function jumpNormal() {
+        if(unloadFlag==0){
+            unloadFlag=1;
+            if (config.is_xd) {
+                window.document.location.replace(config.xd);
+            } else {
+                var target = window.opener ? window.opener.top : window;
+                var tpl = 'baidu_aigc' || 'pp'
+                if (tpl === 'yylive') {
+                    $.ajax({
+                        url: 'https://passport.baidu.com/v2/api/?getapi',
+                        data: {
+                            apiType: 'login',
+                            gid: '',
+                            apiver: 'v3'
+                        },
+                        dataType:'jsonp',
+                        success: function(rsp) {
+                            var data = {
+                                client: '',
+                                clientfrom: '',
+                                tpl: 'yylive',
+                                client_id: 'Bxr73Efet8HjR5Tr0HqcgDKr',
+                                token: rsp.data.token
+                            }
+                            $.post('https://passport.baidu.com/v3/login/api/getoauthtoken', data, function (rsp, status) {
+                                var queryParams = '?accesstoken=' + rsp.data.access_token + '&expire=' + rsp.data.expires_in
+                                var nextHref = config.next_url  + queryParams
+                                try{
+                                    target.document.location.replace(nextHref);
+                                }catch(e){
+                                    target.location.replace(nextHref);
+                                }
+                                if(target!== window){
+                                    window.open('', '_parent', '');
+                                    window.close();
+                                }
+                            })
+                        }
+                    });
+                    return
+                }
+                var fnRes = postMessageLoginAfter({
+                    backUrl: config.next_url
+                });
+                if (fnRes) {
+                    return;
+                };
+                try{
+                    target.document.location.replace(config.next_url);
+                }catch(e){
+                    target.location.replace(config.next_url);
+                }
+                if(target!== window){
+                    window.open('', '_parent', '');
+                    window.close();
+                }
+            }
+        }
+    }
+    var count = 0;
+    function suc(flag,bolFlag){
+        count++;
+        if (count < 4 && !bolFlag){
+            return;
+        }
+        if (config.display == 'popup'||config.display=='page'||config.display=='iframe'||config.display=='pc'||config.display=='pc_new') {
+            window.resizeTo(800,550);
+            var implicitNotMatch = ("implicit" == config.act && !config.is_match);
+            //if (config.is_bind || implicitNotMatch ) {
+            if (config.is_bind) {
+                if(config.guidetourist) {
+                    unloadFlag = 1;
+                    window.document.location.replace(config.guidetourist_url_pc);
+                } else if (config.guidebind != '' || config.notice_offline != '') {
+                    var bindWidget = null;
+                    if(document.getElementById('warn-dialog')){
+                        document.getElementById('warn-dialog').style.display="block";                                
+                    }else{
+                        var guidebind="";
+                        var errorno=0;
+                        var ul = document.createElement('div');
+                        ul.setAttribute('id','warn-dialog');  
+                        if(guidebind==1){
+                            window.document.location.replace(decodeURIComponent(config.guidebindPcUrl));
+                        }else if(config.notice_offline==1){
+                            var mobileNo=config.securemobil;
+                            var hidMobile=mobileNo.substring(0,3)+"****"+mobileNo.substring(8,11);                                        
+                            ul.innerHTML="<div class='bg_image_success'></div>"
+                            +"<div><div class='prompt-text'>登录成功！建议您再次登录使用已绑定的手机号："+hidMobile+"来进行登录。<p class='secs-tip'><span id='sec'>3</span>秒后将为您关闭此提示页</p></div>"
+                            +"<div class='confirm-button' id='confirm-mobile'><span>确定</span></div></div>";
+                            document.body.appendChild(ul);
+                            if(document.getElementById('reload_url')!=null){
+                                document.getElementById('reload_url').style.display='none';
+                            }
+                            secDownTime();
+                            document.getElementById('confirm-mobile').onclick=(function(e) {
+                                document.getElementById('warn-dialog').style.display='none';              
+                                jumpNormal();
+                            });
+                        }
+                    }
+                }else{
+                    jumpNormal();
+                }
+            } else if(config.guiderealname) {
+                unloadFlag = 1;
+                // 无绑定手机接入风控 出验证控件
+                if (config.authid && window.PassApi && window.PassApi.authwidget) {
+                    var authwidgetPc = document.getElementById('managePcAuthwidget') || '';
+                    if (!authwidgetPc) {
+                        var odiv = document.createElement('div');
+                        odiv.id = 'managePcAuthwidget';
+                        odiv.className = 'pass-auth-widget-wrapper';
+                        document.body.append(odiv);
+                    };
+                    var removeFn = function() {
+                        var removeAuth = document.getElementById('managePcAuthwidget');
+                        if (removeAuth) {
+                            document.body.removeChild(removeAuth);
+                        }
+                    };
+                    var PassAuthwidget = window.PassApi.authwidget;
+                    var wrapper = new PassAuthwidget({
+                        id: 'managePcAuthwidget',
+                        mode: 'dialog',
+                        authid:  config.authid || '',
+                        pageType: 'authType',
+                        scene: 'realname_cert',
+                        clientfrom: 'pc',
+                        staticPage: '',
+                        verifySuccess: function (authid) {
+                            removeFn();
+                            window.document.location.replace(decodeURIComponent(config.realnameurl_pc));
+                        },
+                        verifyFail: function (error) {},
+                        closeAuthwidget: function () {
+                            removeFn();
+                            window.close();
+                        }
+                    });
+                    return;
+                }
+                window.document.location.replace(decodeURIComponent(config.realnameurl_pc));
+            } else if(config.guidetourist) {
+                unloadFlag = 1;
+                window.document.location.replace(decodeURIComponent(config.guidetourist_url_pc));
+            } else if (config.authtoken) {
+                $('#reload_url').css('display', 'none');
+                var forceverify = passport.pop.initForceverify({
+                    token: config.authtoken,
+                    curType: 'mobile',
+                    title: '安全验证',
+                    msg: '绑定第三方账号前，需先进行安全验证',
+                    tpl: 'baidu_aigc' || 'pp',
+                    onSubmitSuccess: function (self, result) {
+                        var u = config.finishbindUrl;
+                        if (result.authsid !== '') {
+                            u += '&authsid=' + result.authsid;
+                        }
+
+                        $.ajax({
+                            url: u,
+                            dataType:'json',                  
+                            success: function(rsp) {                            
+                                window.location.href = 'https://passport.baidu.com/phoenix/account/bindsuccess?mkey=3f8673d7916ad67fca252d5622524765352a7ed5658a5af093&isPassNewBind=passnewbind&type=bind';
+                            },
+                            error: function () {
+                                $('#requestError').show();
+                            }
+                        });
+                    }
+                });
+                forceverify.show();
+            } else {
+                unloadFlag=1;
+                window.document.location.replace(config.next_url);
+            }
+        } else if (config.display != 'dialog') {
+            if(config.wapguidebind == 1){
+                window.document.location.replace(decodeURIComponent(config.wapbind_url));
+            } else if(config.guiderealname) {
+                window.document.location.replace(decodeURIComponent(config.realnameurl));
+            } else if(config.guidetourist) {
+                window.document.location.replace(decodeURIComponent(config.guidetourist_url)); 
+            } else{
+                jumpNormal();
+            }
+            
+        }
+    }
+            suc(true,true);
+    </script><!--ignore--> 
+<script type="text/javascript" nonce="LecxGUOFezhYM3co">
+    var reload_url=(""!="")||(""!="");
+    if(reload_url==true){
+        var a =document.getElementById('reload_url');
+        document.body.removeChild(a);
+    }
+</script><!--ignore-->
+</body>
+</html>

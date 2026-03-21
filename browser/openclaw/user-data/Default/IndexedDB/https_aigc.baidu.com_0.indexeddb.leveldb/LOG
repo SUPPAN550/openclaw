@@ -1,0 +1,15 @@
+2026/03/20-13:25:07.309 bb0 Reusing MANIFEST C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\IndexedDB\https_aigc.baidu.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/20-13:25:07.309 bb0 Recovering log #3
+2026/03/20-13:25:07.309 bb0 Reusing old log C:\Users\Administrator\.openclaw\browser\openclaw\user-data\Default\IndexedDB\https_aigc.baidu.com_0.indexeddb.leveldb/000003.log 
+2026/03/20-13:27:05.378 4b30 Level-0 table #5: started
+2026/03/20-13:27:05.390 4b30 Level-0 table #5: 1594335 bytes OK
+2026/03/20-13:27:05.392 4b30 Delete type=0 #3
+2026/03/20-13:28:35.765 bb0 Level-0 table #7: started
+2026/03/20-13:28:35.773 bb0 Level-0 table #7: 1764176 bytes OK
+2026/03/20-13:28:35.774 bb0 Delete type=0 #4
+2026/03/20-13:30:25.643 23d4 Compacting 1@1 + 1@2 files
+2026/03/20-13:30:25.652 23d4 Generated table #8@1: 954 keys, 483989 bytes
+2026/03/20-13:30:25.652 23d4 Compacted 1@1 + 1@2 files => 483989 bytes
+2026/03/20-13:30:25.653 23d4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/03/20-13:30:25.653 23d4 Delete type=2 #5
+2026/03/20-13:30:25.653 23d4 Delete type=2 #7

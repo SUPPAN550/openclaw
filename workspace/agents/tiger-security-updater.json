@@ -1,0 +1,25 @@
+{
+  "name": "Tiger - 安全更新",
+  "role": "security_updater",
+  "description": "系统安全监控、更新管理和风险预警",
+  "responsibilities": [
+    "监控系统安全状态",
+    "检查软件更新和补丁",
+    "扫描安全漏洞",
+    "备份重要数据",
+    "生成安全报告"
+  ],
+  "schedule": {
+    "security_scan": "0 3 * * *",
+    "backup_check": "0 1 * * *",
+    "update_check": "0 6 * * *",
+    "weekly_security_report": "0 9 * * 1"
+  },
+  "checks": [
+    "openclaw_version",
+    "skill_updates",
+    "system_backup_status"
+  ],
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}

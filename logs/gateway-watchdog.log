@@ -1,0 +1,213 @@
+2026/03/19 19:03:30 === Gateway Watchdog Started ===
+2026/03/19 19:03:30 Gateway not responding, trying to start...
+2026/03/19 19:04:00 === Gateway Watchdog Started ===
+2026/03/19 19:04:00 Gateway not responding, trying to start...
+2026/03/19 19:04:40 === Gateway Watchdog Started ===
+2026/03/19 19:04:40 Gateway is running (port 18789)
+2026/03/19 19:05:50 === Gateway Watchdog Started ===
+2026/03/19 19:05:50 Gateway is running (port 18789)
+2026/03/19 19:32:55 === Gateway Watchdog Started ===
+2026/03/19 19:32:55 Gateway is running (port 18789)
+2026/03/19 19:33:25 Gateway is running (port 18789)
+2026/03/19 19:33:55 Gateway is running (port 18789)
+2026/03/19 19:34:25 Gateway is running (port 18789)
+2026/03/19 19:34:36 === Gateway Watchdog Started ===
+2026/03/19 19:34:36 Gateway is running (port 18789)
+2026/03/19 19:34:55 Gateway is running (port 18789)
+2026/03/19 19:35:06 Gateway is running (port 18789)
+2026/03/19 19:35:25 Gateway is running (port 18789)
+2026/03/19 19:35:36 Gateway is running (port 18789)
+2026/03/19 19:35:55 Gateway is running (port 18789)
+2026/03/19 19:36:06 Gateway is running (port 18789)
+2026/03/19 19:36:25 Gateway is running (port 18789)
+2026/03/19 19:36:36 Gateway is running (port 18789)
+2026/03/19 19:36:55 Gateway is running (port 18789)
+2026/03/19 19:37:06 Gateway is running (port 18789)
+2026/03/19 19:37:25 Gateway is running (port 18789)
+2026/03/19 19:37:36 Gateway is running (port 18789)
+2026/03/19 19:37:55 Gateway is running (port 18789)
+2026/03/19 19:38:06 Gateway is running (port 18789)
+2026/03/19 19:38:25 Gateway is running (port 18789)
+2026/03/19 19:38:36 Gateway is running (port 18789)
+2026/03/19 19:38:55 Gateway is running (port 18789)
+2026/03/19 19:39:06 Gateway is running (port 18789)
+2026/03/19 19:39:25 Gateway is running (port 18789)
+2026/03/19 19:39:36 Gateway is running (port 18789)
+2026/03/19 19:39:55 Gateway is running (port 18789)
+2026/03/19 19:40:06 Gateway is running (port 18789)
+2026/03/19 19:40:25 Gateway is running (port 18789)
+2026/03/19 19:40:36 Gateway is running (port 18789)
+2026/03/19 19:40:55 Gateway is running (port 18789)
+2026/03/19 19:41:08 Gateway not responding, attempting restart...
+2026/03/19 19:41:12 Port 18789 is free
+2026/03/19 19:41:12 Starting gateway...
+2026/03/19 19:41:20 Gateway failed to start
+2026/03/19 19:41:27 Gateway not responding, attempting restart...
+2026/03/19 19:41:31 Port 18789 is free
+2026/03/19 19:41:31 Starting gateway...
+2026/03/19 19:41:38 Gateway failed to start
+2026/03/19 19:41:50 Gateway is running (port 18789)
+2026/03/19 19:42:08 Gateway is running (port 18789)
+2026/03/19 19:42:20 Gateway is running (port 18789)
+2026/03/19 19:42:38 Gateway is running (port 18789)
+2026/03/19 19:42:50 Gateway is running (port 18789)
+2026/03/19 19:43:08 Gateway is running (port 18789)
+2026/03/19 19:43:20 Gateway is running (port 18789)
+2026/03/19 19:43:38 Gateway is running (port 18789)
+2026/03/19 19:43:50 Gateway is running (port 18789)
+2026/03/19 19:44:08 Gateway is running (port 18789)
+2026/03/19 19:44:20 Gateway is running (port 18789)
+2026/03/19 19:44:38 Gateway is running (port 18789)
+2026/03/19 19:44:50 Gateway is running (port 18789)
+2026/03/19 19:45:08 Gateway is running (port 18789)
+2026/03/19 19:45:20 Gateway is running (port 18789)
+2026/03/19 19:45:38 Gateway is running (port 18789)
+2026/03/19 19:45:50 Gateway is running (port 18789)
+2026/03/19 19:46:08 Gateway is running (port 18789)
+2026/03/19 19:46:20 Gateway is running (port 18789)
+2026/03/19 19:46:38 Gateway is running (port 18789)
+2026/03/19 19:46:50 Gateway is running (port 18789)
+2026/03/19 19:47:08 Gateway is running (port 18789)
+2026/03/19 19:47:20 Gateway is running (port 18789)
+2026/03/19 19:47:38 Gateway is running (port 18789)
+2026/03/19 19:47:50 Gateway is running (port 18789)
+2026/03/19 19:48:08 Gateway is running (port 18789)
+2026/03/19 19:48:22 Gateway not responding, attempting restart...
+2026/03/19 19:48:26 Port 18789 is free
+2026/03/19 19:48:26 Starting gateway...
+2026/03/19 19:48:33 Gateway failed to start
+2026/03/19 19:48:41 Gateway not responding, attempting restart...
+2026/03/19 19:48:45 Port 18789 is free
+2026/03/19 19:48:45 Starting gateway...
+2026/03/19 19:48:50 Gateway started successfully
+2026/03/19 19:49:03 Gateway is running (port 18789)
+2026/03/19 19:49:20 Gateway is running (port 18789)
+2026/03/19 19:49:33 Gateway is running (port 18789)
+2026/03/19 19:49:50 Gateway is running (port 18789)
+2026/03/19 19:50:03 Gateway is running (port 18789)
+2026/03/19 19:50:22 Gateway not responding, attempting restart...
+2026/03/19 19:50:26 Port 18789 is free
+2026/03/19 19:50:26 Starting gateway...
+2026/03/19 19:50:33 Gateway failed to start
+2026/03/19 19:50:35 Gateway not responding, attempting restart...
+2026/03/19 19:50:39 Port 18789 is free
+2026/03/19 19:50:39 Starting gateway...
+2026/03/19 19:50:46 Gateway failed to start
+2026/03/19 19:51:05 Gateway not responding, attempting restart...
+2026/03/19 19:51:09 Port 18789 is free
+2026/03/19 19:51:09 Starting gateway...
+2026/03/19 19:51:16 Gateway failed to start
+2026/03/19 19:51:18 Gateway not responding, attempting restart...
+2026/03/19 19:51:22 Port 18789 is free
+2026/03/19 19:51:22 Starting gateway...
+2026/03/19 19:51:30 Gateway failed to start
+2026/03/19 19:51:48 Gateway not responding, attempting restart...
+2026/03/19 19:51:52 Port 18789 is free
+2026/03/19 19:51:52 Starting gateway...
+2026/03/19 19:51:59 Gateway failed to start
+2026/03/19 19:52:02 Gateway not responding, attempting restart...
+2026/03/19 19:52:06 Port 18789 is free
+2026/03/19 19:52:06 Starting gateway...
+2026/03/19 19:52:13 Gateway failed to start
+2026/03/19 19:52:31 Gateway not responding, attempting restart...
+2026/03/19 19:52:36 Port 18789 is free
+2026/03/19 19:52:36 Starting gateway...
+2026/03/19 19:52:43 Gateway failed to start
+2026/03/19 19:52:45 Gateway not responding, attempting restart...
+2026/03/19 19:52:49 Port 18789 is free
+2026/03/19 19:52:49 Starting gateway...
+2026/03/19 19:52:56 Gateway failed to start
+2026/03/19 19:53:13 Gateway is running (port 18789)
+2026/03/19 19:53:26 Gateway is running (port 18789)
+2026/03/19 19:53:43 Gateway is running (port 18789)
+2026/03/19 19:53:56 Gateway is running (port 18789)
+2026/03/19 19:54:13 Gateway is running (port 18789)
+2026/03/19 19:54:26 Gateway is running (port 18789)
+2026/03/19 19:54:43 Gateway is running (port 18789)
+2026/03/19 19:54:56 Gateway is running (port 18789)
+2026/03/19 19:55:13 Gateway is running (port 18789)
+2026/03/19 19:55:26 Gateway is running (port 18789)
+2026/03/19 19:55:43 Gateway is running (port 18789)
+2026/03/19 19:55:56 Gateway is running (port 18789)
+2026/03/19 19:56:13 Gateway is running (port 18789)
+2026/03/19 19:56:26 Gateway is running (port 18789)
+2026/03/19 19:56:43 Gateway is running (port 18789)
+2026/03/19 19:57:13 Gateway is running (port 18789)
+2026/03/19 19:57:45 Gateway not responding, attempting restart...
+2026/03/19 19:57:49 Port 18789 is free
+2026/03/19 19:57:49 Starting gateway...
+2026/03/19 19:57:56 Gateway failed to start
+2026/03/19 19:58:28 Gateway not responding, attempting restart...
+2026/03/19 19:58:32 Port 18789 is free
+2026/03/19 19:58:32 Starting gateway...
+2026/03/19 19:58:39 Gateway failed to start
+2026/03/19 19:59:11 Gateway not responding, attempting restart...
+2026/03/19 19:59:16 Port 18789 is free
+2026/03/19 19:59:16 Starting gateway...
+2026/03/19 19:59:23 Gateway failed to start
+2026/03/19 19:59:53 Gateway is running (port 18789)
+2026/03/19 20:00:23 Gateway is running (port 18789)
+2026/03/19 20:00:53 Gateway is running (port 18789)
+2026/03/19 20:01:23 Gateway is running (port 18789)
+2026/03/19 20:01:53 Gateway is running (port 18789)
+2026/03/19 20:02:23 Gateway is running (port 18789)
+2026/03/19 20:02:53 Gateway is running (port 18789)
+2026/03/19 20:03:23 Gateway is running (port 18789)
+2026/03/19 20:03:53 Gateway is running (port 18789)
+2026/03/19 20:04:23 Gateway is running (port 18789)
+2026/03/19 20:04:53 Gateway is running (port 18789)
+2026/03/19 20:05:23 Gateway is running (port 18789)
+2026/03/19 20:05:55 Gateway not responding, attempting restart...
+2026/03/19 20:05:59 Port 18789 is free
+2026/03/19 20:05:59 Starting gateway...
+2026/03/19 20:06:06 Gateway started successfully
+2026/03/19 20:06:36 Gateway is running (port 18789)
+2026/03/19 20:07:06 Gateway is running (port 18789)
+2026/03/19 20:07:36 Gateway is running (port 18789)
+2026/03/19 20:08:06 Gateway is running (port 18789)
+2026/03/19 20:08:36 Gateway is running (port 18789)
+2026/03/19 20:09:08 Gateway not responding, attempting restart...
+2026/03/19 20:09:12 Port 18789 is free
+2026/03/19 20:09:12 Starting gateway...
+2026/03/19 20:09:19 Gateway failed to start
+2026/03/19 20:09:49 Gateway is running (port 18789)
+2026/03/19 20:10:19 Gateway is running (port 18789)
+2026/03/19 20:10:50 Gateway is running (port 18789)
+2026/03/19 20:11:20 Gateway is running (port 18789)
+2026/03/19 20:11:50 Gateway is running (port 18789)
+2026/03/19 20:12:20 Gateway is running (port 18789)
+2026/03/19 20:12:50 Gateway is running (port 18789)
+2026/03/19 20:13:20 Gateway is running (port 18789)
+2026/03/19 20:13:52 Gateway not responding, attempting restart...
+2026/03/19 20:13:56 Port 18789 is free
+2026/03/19 20:13:56 Starting gateway...
+2026/03/19 20:14:01 Gateway started successfully
+2026/03/19 20:14:31 Gateway is running (port 18789)
+2026/03/19 20:15:01 Gateway is running (port 18789)
+2026/03/19 20:15:31 Gateway is running (port 18789)
+2026/03/19 20:16:01 Gateway is running (port 18789)
+2026/03/19 20:16:31 Gateway is running (port 18789)
+2026/03/19 20:17:01 Gateway is running (port 18789)
+2026/03/19 20:17:31 Gateway is running (port 18789)
+2026/03/19 20:18:01 Gateway is running (port 18789)
+2026/03/19 20:18:31 Gateway is running (port 18789)
+2026/03/19 20:19:01 Gateway is running (port 18789)
+2026/03/19 20:19:31 Gateway is running (port 18789)
+2026/03/19 20:20:01 Gateway is running (port 18789)
+2026/03/19 20:20:31 Gateway is running (port 18789)
+2026/03/19 20:21:04 Gateway not responding, attempting restart...
+2026/03/19 20:21:08 Port 18789 is free
+2026/03/19 20:21:08 Starting gateway...
+2026/03/19 20:21:13 Gateway started successfully
+2026/03/19 20:21:43 Gateway is running (port 18789)
+2026/03/19 20:22:13 Gateway is running (port 18789)
+2026/03/19 20:22:43 Gateway is running (port 18789)
+2026/03/19 20:23:15 Gateway not responding, attempting restart...
+2026/03/19 20:23:19 Port 18789 is free
+2026/03/19 20:23:19 Starting gateway...
+2026/03/19 20:23:24 Gateway started successfully
+2026/03/19 20:23:54 Gateway is running (port 18789)
+2026/03/19 20:24:24 Gateway is running (port 18789)
+2026/03/19 20:24:54 Gateway is running (port 18789)
+2026/03/19 20:25:24 Gateway is running (port 18789)
+2026/03/19 20:25:54 Gateway is running (port 18789)

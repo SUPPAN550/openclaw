@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-03-21 11:44:00",
+  "officials": [
+    {"id": "taizi", "name": "太子", "label": "太子", "role": "储君", "rank": "储君", "duty": "协调各方、传递圣旨、调度任务", "status": "idle"},
+    {"id": "zhongshu", "name": "中书省", "label": "中书省", "role": "中书令", "rank": "正一品", "duty": "起草诏令、政策文件、圣旨拟定", "status": "idle"},
+    {"id": "menxia", "name": "门下省", "label": "门下省", "role": "侍中", "rank": "正一品", "duty": "审核驳回、审议政策、封驳权", "status": "idle"},
+    {"id": "shangshu", "name": "尚书省", "label": "尚书省", "role": "尚书令", "rank": "正一品", "duty": "总辖六部、政策执行、监督落实", "status": "active"},
+    {"id": "hubu", "name": "户部", "label": "户部", "role": "户部尚书", "rank": "正二品", "duty": "财政、人口、赋税、土地", "status": "idle"},
+    {"id": "libu", "name": "礼部", "label": "礼部", "role": "礼部尚书", "rank": "正二品", "duty": "祭祀、外交、科举、教育、文化", "status": "idle"},
+    {"id": "bingbu", "name": "兵部", "label": "兵部", "role": "兵部尚书", "rank": "正二品", "duty": "军政、武官选拔、兵役", "status": "idle"},
+    {"id": "xingbu", "name": "刑部", "label": "刑部", "role": "刑部尚书", "rank": "正二品", "duty": "司法、刑狱、案件审理", "status": "idle"},
+    {"id": "gongbu", "name": "工部", "label": "工部", "role": "工部尚书", "rank": "正二品", "duty": "工程、营造、水利、建筑", "status": "idle"},
+    {"id": "libu_hr", "name": "吏部", "label": "吏部", "role": "吏部尚书", "rank": "正二品", "duty": "人事、官员考核、选拔任命", "status": "idle"},
+    {"id": "zaochao", "name": "钦天监", "label": "钦天监", "role": "朝报官", "rank": "正三品", "duty": "天文、历法、新闻早报、情报采编", "status": "review"}
+  ]
+}

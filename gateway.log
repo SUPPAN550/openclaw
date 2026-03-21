@@ -1,0 +1,8 @@
+2026/03/19 周四 11:46:13.05 Gateway already running on port 18789, skipping start. 
+2026/03/19 周四 11:49:38.47 Gateway already running on port 18789, skipping start. 
+============================================ 
+2026/03/19 周四 11:54:53.44 Starting Gateway... 
+User: Administrator 
+Working Dir: C:\Users\Administrator\.openclaw 
+PATH: C:\Program Files\nodejs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Administrator\.local\bin;C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python311\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Tencent\QQGameTempest\Hall.58195\;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Python\Python312;C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Scripts;D:\longxia\namiclaw\Application\components\Openclaw;C:\Users\Administrator\AppData\Local\Programs\Ollama 
+2026/03/19 周四 11:54:53.47 Gateway already running on port 18789, skipping. 

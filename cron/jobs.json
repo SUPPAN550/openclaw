@@ -104,7 +104,7 @@
       "name": "Context Monitor",
       "enabled": true,
       "createdAtMs": 1773739813625,
-      "updatedAtMs": 1774108523348,
+      "updatedAtMs": 1774173025462,
       "schedule": {
         "kind": "cron",
         "expr": "*/5 * * * *"
@@ -120,15 +120,14 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1774108800000,
-        "lastRunAtMs": 1774108500027,
+        "nextRunAtMs": 1774173300000,
+        "lastRunAtMs": 1774173000043,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23321,
+        "lastDurationMs": 25419,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false,
-        "runningAtMs": 1774108800029
+        "lastDelivered": false
       }
     },
     {
@@ -138,7 +137,7 @@
       "name": "May: 系统健康检查",
       "enabled": true,
       "createdAtMs": 1773760308048,
-      "updatedAtMs": 1774087418964,
+      "updatedAtMs": 1774152196062,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -157,13 +156,13 @@
         "to": "ou_c0acf4e14a9895533f121340f36ca389"
       },
       "state": {
-        "lastRunAtMs": 1774087346942,
+        "lastRunAtMs": 1774152146936,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 72022,
+        "lastDurationMs": 49126,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774108946920,
+        "nextRunAtMs": 1774173746920,
         "lastDelivered": true
       }
     },
@@ -200,48 +199,13 @@
       }
     },
     {
-      "id": "07780d7d-3430-46aa-8819-9030f1c25cb8",
-      "agentId": "main",
-      "sessionKey": "agent:main:main",
-      "name": "Otter: 日程提醒检查",
-      "enabled": true,
-      "createdAtMs": 1773760308101,
-      "updatedAtMs": 1774047779947,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 7 * * *",
-        "tz": "Asia/Shanghai"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "你是 Otter（私人助理），检查今天的飞书日历和任务：\n1. 获取今日日程\n2. 列出待办事项\n3. 发送今日行程概览给用户"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "webchat",
-        "to": "ou_c0acf4e14a9895533f121340f36ca389"
-      },
-      "state": {
-        "lastRunAtMs": 1774047683678,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 96269,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1774134000000,
-        "lastDelivered": true
-      }
-    },
-    {
       "id": "22b11d92-3bbb-442b-b50c-267c1b59104c",
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "name": "Tiger: 安全扫描",
       "enabled": true,
       "createdAtMs": 1773760308124,
-      "updatedAtMs": 1774033416698,
+      "updatedAtMs": 1774119869963,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -259,13 +223,13 @@
         "to": "ou_c0acf4e14a9895533f121340f36ca389"
       },
       "state": {
-        "lastRunAtMs": 1774033299229,
+        "lastRunAtMs": 1774119740263,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 117469,
+        "lastDurationMs": 129700,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774119600000,
+        "nextRunAtMs": 1774206000000,
         "lastDelivered": true
       }
     },
@@ -323,7 +287,7 @@
       "name": "morning-news-push-v2",
       "enabled": true,
       "createdAtMs": 1773934680748,
-      "updatedAtMs": 1774055044011,
+      "updatedAtMs": 1774141395783,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -341,11 +305,11 @@
         "to": "oc_71ff41fed588e906f6fa6b786920c244"
       },
       "state": {
-        "nextRunAtMs": 1774141200000,
-        "lastRunAtMs": 1774054910789,
+        "nextRunAtMs": 1774227600000,
+        "lastRunAtMs": 1774141304745,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 133222,
+        "lastDurationMs": 91038,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -393,7 +357,7 @@
       "name": "OpenClaw 每日备份",
       "enabled": true,
       "createdAtMs": 1773994079903,
-      "updatedAtMs": 1774022630365,
+      "updatedAtMs": 1774109493496,
       "schedule": {
         "expr": "0 0 * * *",
         "kind": "cron",
@@ -412,15 +376,15 @@
         "to": "ou_c0acf4e14a9895533f121340f36ca389"
       },
       "state": {
-        "nextRunAtMs": 1774108800000,
-        "lastRunAtMs": 1774022509868,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 120497,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "runningAtMs": 1774108800029
+        "nextRunAtMs": 1774195200000,
+        "lastRunAtMs": 1774108893484,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 600012,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastErrorReason": "timeout",
+        "runningAtMs": 1774173095444
       }
     }
   ]

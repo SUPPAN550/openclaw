@@ -9,7 +9,7 @@
     "minimax:cn": {
       "type": "api_key",
       "provider": "minimax",
-      "key": "sk-cp-jf-xvaAR8Z2f1Ss3QxhjvxLn8r37dHwajQAdMfyhV1aK21iuvM3mFyR7ZG_Fk4vxZQIqnJwGxhBGMpGulJ_1kziDfqs3Yopv8NahFDHv-CS8GH17corNE74"
+      "key": "sk-cp-3DbmMFernV2KyAZE1VplJoIYb4go7QLbK4cT87pxEa1895zJLiPrF1q--TsrTOLZFfaZzyxizWtBTYTk5169UXjDigmbB9INh24yONHWK-DJAH7Ec8Q5fmA"
     }
   },
   "usageStats": {
@@ -23,7 +23,7 @@
     },
     "minimax:cn": {
       "errorCount": 0,
-      "lastUsed": 1774108893187
+      "lastUsed": 1774173037358
     }
   }
 }

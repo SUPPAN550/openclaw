@@ -2,7 +2,7 @@ import requests
 import time
 
 base_url = "http://localhost:8000"
-token = "ta-sk-tTFWTVGM7TVX-3VOjgDiGw6MexVvra-24RM9yTh5PDjET8QkL7-tscRXbnmi-ptalIw7zSblFoJPffn2oWbaLA"
+token = "ta-sk-yHTFymCDkfEGY1wyUtnHWrICrTimVkFcIwpaaw8t97L6x43R7_xmMp1IIvOyixH9rCyyGvCmhHBAt5h23b6jiw"
 headers = {"Authorization": f"Bearer {token}"}
 
 # Try with more explicit parameters

@@ -1,200 +1,217 @@
-{
-  "providers": {
-    "deepseek": {
-      "baseUrl": "https://api.deepseek.com/v1",
-      "api": "openai-completions",
-      "models": [
-        {
-          "id": "deepseek-chat",
-          "name": "DeepSeek Chat",
-          "reasoning": false,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 64000,
-          "maxTokens": 8192
-        },
-        {
-          "id": "deepseek-coder",
-          "name": "DeepSeek Coder",
-          "reasoning": false,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 64000,
-          "maxTokens": 8192
-        }
-      ],
-      "apiKey": "${DEEPSEEK_API_KEY}"
-    },
-    "moonshot": {
-      "baseUrl": "https://api.moonshot.cn/v1",
-      "api": "openai-completions",
-      "models": [
-        {
-          "id": "kimi-k2.5",
-          "name": "Kimi K2.5",
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
-            "cacheWrite": 0
-          },
-          "contextWindow": 262144,
-          "maxTokens": 8192,
-          "reasoning": false,
-          "api": "openai-completions"
-        }
-      ],
-      "apiKey": "sk-RdbLsz4iBpEjWgxZTCGQSFEcBCPrRScAnfLgIb68ItxY8mBV"
-    },
-    "minimax": {
-      "baseUrl": "https://api.minimaxi.com/anthropic",
-      "api": "anthropic-messages",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "MiniMax-M2.5",
-          "name": "MiniMax M2.5",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192,
-          "api": "anthropic-messages"
-        },
-        {
-          "id": "MiniMax-M2.7",
-          "name": "MiniMax M2.7",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0.4,
-            "output": 1.5,
-            "cacheRead": 0.04,
-            "cacheWrite": 0.15
-          },
-          "contextWindow": 200000,
-          "maxTokens": 16384,
-          "api": "anthropic-messages"
-        },
-        {
-          "id": "MiniMax-VL-01",
-          "name": "MiniMax VL 01",
-          "reasoning": false,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192
-        },
-        {
-          "id": "MiniMax-M2.5-highspeed",
-          "name": "MiniMax M2.5 Highspeed",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192
-        }
-      ],
-      "apiKey": "MINIMAX_API_KEY"
-    },
-    "minimax-portal": {
-      "baseUrl": "https://api.minimax.io/anthropic",
-      "api": "anthropic-messages",
-      "authHeader": true,
-      "models": [
-        {
-          "id": "MiniMax-VL-01",
-          "name": "MiniMax VL 01",
-          "reasoning": false,
-          "input": [
-            "text",
-            "image"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192
-        },
-        {
-          "id": "MiniMax-M2.5",
-          "name": "MiniMax M2.5",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192
-        },
-        {
-          "id": "MiniMax-M2.5-highspeed",
-          "name": "MiniMax M2.5 Highspeed",
-          "reasoning": true,
-          "input": [
-            "text"
-          ],
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cacheRead": 0.03,
-            "cacheWrite": 0.12
-          },
-          "contextWindow": 200000,
-          "maxTokens": 8192
-        }
-      ],
-      "apiKey": "minimax-oauth"
-    }
-  }
+﻿{
+    "providers":  {
+                      "deepseek":  {
+                                       "baseUrl":  "https://api.deepseek.com/v1",
+                                       "api":  "openai-completions",
+                                       "models":  [
+                                                      {
+                                                          "id":  "deepseek-chat",
+                                                          "name":  "DeepSeek Chat",
+                                                          "reasoning":  false,
+                                                          "input":  [
+                                                                        "text"
+                                                                    ],
+                                                          "cost":  {
+                                                                       "input":  0,
+                                                                       "output":  0,
+                                                                       "cacheRead":  0,
+                                                                       "cacheWrite":  0
+                                                                   },
+                                                          "contextWindow":  64000,
+                                                          "maxTokens":  8192
+                                                      },
+                                                      {
+                                                          "id":  "deepseek-coder",
+                                                          "name":  "DeepSeek Coder",
+                                                          "reasoning":  false,
+                                                          "input":  [
+                                                                        "text"
+                                                                    ],
+                                                          "cost":  {
+                                                                       "input":  0,
+                                                                       "output":  0,
+                                                                       "cacheRead":  0,
+                                                                       "cacheWrite":  0
+                                                                   },
+                                                          "contextWindow":  64000,
+                                                          "maxTokens":  8192
+                                                      }
+                                                  ],
+                                       "apiKey":  "${DEEPSEEK_API_KEY}"
+                                   },
+                      "moonshot":  {
+                                       "baseUrl":  "https://api.moonshot.cn/v1",
+                                       "api":  "openai-completions",
+                                       "models":  [
+                                                      {
+                                                          "id":  "kimi-k2.5",
+                                                          "name":  "Kimi K2.5",
+                                                          "input":  [
+                                                                        "text",
+                                                                        "image"
+                                                                    ],
+                                                          "cost":  {
+                                                                       "input":  0,
+                                                                       "output":  0,
+                                                                       "cacheRead":  0,
+                                                                       "cacheWrite":  0
+                                                                   },
+                                                          "contextWindow":  262144,
+                                                          "maxTokens":  8192,
+                                                          "reasoning":  false,
+                                                          "api":  "openai-completions"
+                                                      }
+                                                  ],
+                                       "apiKey":  "sk-RdbLsz4iBpEjWgxZTCGQSFEcBCPrRScAnfLgIb68ItxY8mBV"
+                                   },
+                      "minimax":  {
+                                      "baseUrl":  "https://api.minimaxi.com/anthropic",
+                                      "api":  "anthropic-messages",
+                                      "authHeader":  true,
+                                      "models":  [
+                                                     {
+                                                         "id":  "MiniMax-M2.5",
+                                                         "name":  "MiniMax M2.5",
+                                                         "reasoning":  true,
+                                                         "input":  [
+                                                                       "text"
+                                                                   ],
+                                                         "cost":  {
+                                                                      "input":  0.3,
+                                                                      "output":  1.2,
+                                                                      "cacheRead":  0.03,
+                                                                      "cacheWrite":  0.12
+                                                                  },
+                                                         "contextWindow":  200000,
+                                                         "maxTokens":  8192,
+                                                         "api":  "anthropic-messages"
+                                                     },
+                                                     {
+                                                         "id":  "MiniMax-M2.7",
+                                                         "name":  "MiniMax M2.7",
+                                                         "reasoning":  true,
+                                                         "input":  [
+                                                                       "text"
+                                                                   ],
+                                                         "cost":  {
+                                                                      "input":  0.4,
+                                                                      "output":  1.5,
+                                                                      "cacheRead":  0.04,
+                                                                      "cacheWrite":  0.15
+                                                                  },
+                                                         "contextWindow":  200000,
+                                                         "maxTokens":  16384,
+                                                         "api":  "anthropic-messages"
+                                                     },
+                                                     {
+                                                         "id":  "MiniMax-VL-01",
+                                                         "name":  "MiniMax VL 01",
+                                                         "reasoning":  false,
+                                                         "input":  [
+                                                                       "text",
+                                                                       "image"
+                                                                   ],
+                                                         "cost":  {
+                                                                      "input":  0.3,
+                                                                      "output":  1.2,
+                                                                      "cacheRead":  0.03,
+                                                                      "cacheWrite":  0.12
+                                                                  },
+                                                         "contextWindow":  200000,
+                                                         "maxTokens":  8192
+                                                     },
+                                                     {
+                                                         "id":  "MiniMax-M2.5-highspeed",
+                                                         "name":  "MiniMax M2.5 Highspeed",
+                                                         "reasoning":  true,
+                                                         "input":  [
+                                                                       "text"
+                                                                   ],
+                                                         "cost":  {
+                                                                      "input":  0.3,
+                                                                      "output":  1.2,
+                                                                      "cacheRead":  0.03,
+                                                                      "cacheWrite":  0.12
+                                                                  },
+                                                         "contextWindow":  200000,
+                                                         "maxTokens":  8192
+                                                     },
+                                                     {
+                                                         "id":  "MiniMax-M2.7-highspeed",
+                                                         "cost":  {
+                                                                      "input":  0.5,
+                                                                      "cacheRead":  0.05,
+                                                                      "cacheWrite":  0.2,
+                                                                      "output":  2
+                                                                  },
+                                                         "name":  "MiniMax M2.7 Highspeed",
+                                                         "reasoning":  true,
+                                                         "contextWindow":  200000,
+                                                         "input":  [
+                                                                       "text"
+                                                                   ],
+                                                         "api":  "anthropic-messages",
+                                                         "maxTokens":  16384
+                                                     }
+                                                 ],
+                                      "apiKey":  "sk-cp-3DbmMFernV2KyAZE1VplJoIYb4go7QLbK4cT87pxEa1895zJLiPrF1q--TsrTOLZFfaZzyxizWtBTYTk5169UXjDigmbB9INh24yONHWK-DJAH7Ec8Q5fmA"
+                                  },
+                      "minimax-portal":  {
+                                             "baseUrl":  "https://api.minimax.io/anthropic",
+                                             "api":  "anthropic-messages",
+                                             "authHeader":  true,
+                                             "models":  [
+                                                            {
+                                                                "id":  "MiniMax-VL-01",
+                                                                "name":  "MiniMax VL 01",
+                                                                "reasoning":  false,
+                                                                "input":  [
+                                                                              "text",
+                                                                              "image"
+                                                                          ],
+                                                                "cost":  {
+                                                                             "input":  0.3,
+                                                                             "output":  1.2,
+                                                                             "cacheRead":  0.03,
+                                                                             "cacheWrite":  0.12
+                                                                         },
+                                                                "contextWindow":  200000,
+                                                                "maxTokens":  8192
+                                                            },
+                                                            {
+                                                                "id":  "MiniMax-M2.5",
+                                                                "name":  "MiniMax M2.5",
+                                                                "reasoning":  true,
+                                                                "input":  [
+                                                                              "text"
+                                                                          ],
+                                                                "cost":  {
+                                                                             "input":  0.3,
+                                                                             "output":  1.2,
+                                                                             "cacheRead":  0.03,
+                                                                             "cacheWrite":  0.12
+                                                                         },
+                                                                "contextWindow":  200000,
+                                                                "maxTokens":  8192
+                                                            },
+                                                            {
+                                                                "id":  "MiniMax-M2.5-highspeed",
+                                                                "name":  "MiniMax M2.5 Highspeed",
+                                                                "reasoning":  true,
+                                                                "input":  [
+                                                                              "text"
+                                                                          ],
+                                                                "cost":  {
+                                                                             "input":  0.3,
+                                                                             "output":  1.2,
+                                                                             "cacheRead":  0.03,
+                                                                             "cacheWrite":  0.12
+                                                                         },
+                                                                "contextWindow":  200000,
+                                                                "maxTokens":  8192
+                                                            }
+                                                        ],
+                                             "apiKey":  "minimax-oauth"
+                                         }
+                  }
 }

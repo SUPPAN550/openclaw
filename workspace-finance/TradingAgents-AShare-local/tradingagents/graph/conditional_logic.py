@@ -76,6 +76,62 @@ class ConditionalLogic:
             return "continue"
         return "done"
 
+    def should_continue_industry(self, state: AgentState):
+        """Determine if industry analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_valuation(self, state: AgentState):
+        """Determine if valuation analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_financial_quality(self, state: AgentState):
+        """Determine if financial quality analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_management(self, state: AgentState):
+        """Determine if management analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_risk(self, state: AgentState):
+        """Determine if risk analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_institutional(self, state: AgentState):
+        """Determine if institutional analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
+    def should_continue_flows(self, state: AgentState):
+        """Determine if flows analysis should continue."""
+        messages = state["messages"]
+        last_message = messages[-1]
+        if getattr(last_message, "tool_calls", None):
+            return "continue"
+        return "done"
+
     def should_continue_debate(self, state: AgentState) -> str:
         """Determine if debate should continue."""
 

@@ -1,9 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-19T14:17:31.299Z"
+    "lastTouchedAt": "2026-03-21T06:58:43.296Z"
   },
-  "env": {},
+  "env": {
+    "TRADINGAGENTS_TOKEN": "ta-sk-hHDsjnHSyIci4Ebzis_bIVXloJGKW_IfF1p2HYFki0emVUESW-NbngffYCMKsLsMplmVYn2-xxrzpBuAGT1bZg"
+  },
   "wizard": {
     "lastRunAt": "2026-03-18T02:22:54.141Z",
     "lastRunVersion": "2026.3.13",
@@ -23,6 +25,7 @@
     "providers": {
       "minimax": {
         "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "sk-cp-3DbmMFernV2KyAZE1VplJoIYb4go7QLbK4cT87pxEa1895zJLiPrF1q--TsrTOLZFfaZzyxizWtBTYTk5169UXjDigmbB9INh24yONHWK-DJAH7Ec8Q5fmA",
         "api": "anthropic-messages",
         "authHeader": true,
         "models": [
@@ -59,66 +62,61 @@
             "maxTokens": 16384
           }
         ]
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "sk-RdbLsz4iBpEjWgxZTCGQSFEcBCPrRScAnfLgIb68ItxY8mBV",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          }
+        ]
       }
     }
   },
   "agents": {
     "defaults": {
-      "model": {
-        "primary": "minimax/MiniMax-M2.7",
-        "fallbacks": []
-      },
-      "models": {
-        "MiniMax-M2.5": {
-          "alias": "Minimax"
-        },
-        "MiniMax-M2.7": {
-          "alias": "Minimax"
-        }
-      },
-      "workspace": "C:\\Users\\Administrator\\.openclaw\\workspace",
-      "compaction": {
-        "mode": "safeguard"
-      }
-    },
-    "list": [
-      {
-        "id": "main"
-      },
-      {
-        "id": "coder",
-        "name": "coder",
-        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\workspace",
-        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\coder\\agent",
-        "model": "minimax/MiniMax-M2.5"
-      },
-      {
-        "id": "newsai",
-        "name": "newsai",
-        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\newsai\\workspace",
-        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\newsai\\agent",
-        "model": "minimax/MiniMax-M2.5"
-      },
-      {
-        "id": "pm",
-        "name": "pm",
-        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\pm\\workspace",
-        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\pm\\agent",
-        "model": "minimax/MiniMax-M2.5"
-      },
-      {
-        "id": "finance",
-        "name": "finance",
-        "workspace": "C:\\Users\\Administrator\\.openclaw\\agents\\finance\\workspace",
-        "agentDir": "C:\\Users\\Administrator\\.openclaw\\agents\\finance\\agent",
-        "model": "minimax/MiniMax-M2.5"
-      }
-    ]
+      "imageModel": "moonshot/kimi-k2.5"
+    }
   },
   "tools": {
+    "profile": "full",
+    "sessions": {
+      "visibility": "all"
+    },
     "agentToAgent": {
       "enabled": true,
-      "allow": ["main", "coder", "newsai", "pm", "finance"]
+      "allow": [
+        "main",
+        "coder",
+        "newsai",
+        "pm",
+        "finance",
+        "dacm",
+        "taizi",
+        "shangshu",
+        "zhongshu",
+        "menxia",
+        "hubu",
+        "libu",
+        "bingbu",
+        "xingbu",
+        "gongbu",
+        "libu_hr",
+        "zaochao"
+      ]
     }
   },
   "bindings": [
@@ -161,8 +159,36 @@
         "channel": "feishu",
         "accountId": "finance"
       }
+    },
+    {
+      "type": "route",
+      "agentId": "dacm",
+      "match": {
+        "channel": "feishu",
+        "accountId": "dacm"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "taizi",
+      "match": {
+        "channel": "feishu",
+        "accountId": "taizi"
+      }
     }
   ],
+  "messages": {
+    "tts": {
+      "auto": "always",
+      "provider": "edge",
+      "edge": {
+        "enabled": true,
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "lang": "zh-CN",
+        "outputFormat": "audio-24khz-48kbitrate-mono-mp3"
+      }
+    }
+  },
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
@@ -171,13 +197,7 @@
   },
   "channels": {
     "feishu": {
-      "enabled": true,
-      "domain": "feishu",
-      "connectionMode": "websocket",
-      "capabilities": {
-        "inlineButtons": "all"
-      },
-      "defaultAccount": "main",
+      "groups": {},
       "accounts": {
         "main": {
           "appId": "cli_a9329dd432791bd7",
@@ -187,6 +207,14 @@
           "appId": "cli_a930e5a091badbd7",
           "appSecret": "4R90qgVplc9hEpM8gRXy7c1xO3T16I1a"
         },
+        "dacm": {
+          "appId": "cli_a9366de690795bd3",
+          "appSecret": "ZxcFPlqdTYibgPGCrPNs0ev8VX15DPfd"
+        },
+        "finance": {
+          "appId": "cli_a93109b4a1791bca",
+          "appSecret": "3dUiDrhR43pmnBNZeVC0dbabdwULIqzW"
+        },
         "newsai": {
           "appId": "cli_a9303f8ff2b99bdb",
           "appSecret": "FXXHSIr1lLjqzmyjbr3SugR6sHe4oQQI"
@@ -195,11 +223,18 @@
           "appId": "cli_a9301e0e64f89bd2",
           "appSecret": "uQJ0ozDGBSZ2W3PEnIJ2sgPEm2lyt2hy"
         },
-        "finance": {
-          "appId": "cli_a93109b4a1791bca",
-          "appSecret": "3dUiDrhR43pmnBNZeVC0dbabdwULIqzW"
+        "taizi": {
+          "appId": "cli_a9379ce69ca25bcd",
+          "appSecret": "NfpsTVGU1EkmyVQGZfjemetPKTHjnQOD"
         }
-      }
+      },
+      "capabilities": {
+        "inlineButtons": "all"
+      },
+      "connectionMode": "websocket",
+      "defaultAccount": "main",
+      "domain": "feishu",
+      "enabled": true
     }
   },
   "gateway": {
@@ -211,11 +246,50 @@
   },
   "plugins": {
     "allow": [
-      "openclaw-lark"
+      "openclaw-lark",
+      "memory-lancedb-pro"
     ],
+    "slots": {
+      "memory": "memory-lancedb-pro"
+    },
     "entries": {
       "feishu": {
         "enabled": false
+      },
+      "openclaw-lark": {
+        "enabled": true
+      },
+      "memory-lancedb-pro": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "provider": "openai-compatible",
+            "apiKey": "ollama",
+            "model": "nomic-embed-text",
+            "baseURL": "http://localhost:11434/v1",
+            "dimensions": 768
+          },
+          "autoCapture": true,
+          "autoRecall": true,
+          "smartExtraction": true,
+          "extractMinMessages": 2,
+          "extractMaxChars": 8000,
+          "sessionMemory": {
+            "enabled": false
+          }
+        }
+      }
+    },
+    "installs": {
+      "openclaw-lark": {
+        "source": "path",
+        "installPath": "C:\\Users\\Administrator\\.openclaw\\extensions\\openclaw-lark",
+        "installedAt": "2026-03-20T11:50:50Z"
+      },
+      "memory-lancedb-pro": {
+        "source": "path",
+        "installPath": "C:\\Users\\Administrator\\.openclaw\\workspace\\memory-lancedb-pro",
+        "installedAt": "2026-03-21T03:21:00Z"
       }
     }
   }

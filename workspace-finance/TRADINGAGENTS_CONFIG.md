@@ -3,7 +3,7 @@
 # These are the working configuration values for the local TradingAgents API
 
 TRADINGAGENTS_API_URL=http://localhost:8000
-TRADINGAGENTS_TOKEN=ta-sk-tTFWTVGM7TVX-3VOjgDiGw6MexVvra-24RM9yTh5PDjET8QkL7-tscRXbnmi-ptalIw7zSblFoJPffn2oWbaLA
+TRADINGAGENTS_TOKEN=ta-sk-xdowGc70-xMFt5GfQYZJFnPN313JzOImEaHOgbgAfTfB7-FuWDFdv24FgWOkCg-0gurQqHIvjxVdinbtdbPZKg
 
 # Note: The local API requires authentication via:
 # 1. JWT access token (obtained via email verification code)

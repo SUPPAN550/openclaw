@@ -1,0 +1,23 @@
+{
+  "name": "Otter - 私人助理",
+  "role": "personal_assistant",
+  "description": "个人事务管理、日程安排、提醒服务",
+  "responsibilities": [
+    "管理日程和待办事项",
+    "设置提醒和闹钟",
+    "整理笔记和想法",
+    "协助日常决策",
+    "飞书日历和任务同步"
+  ],
+  "schedule": {
+    "daily_todo_check": "0 7 * * *",
+    "calendar_sync": "0 */2 * * *",
+    "end_of_day_review": "0 22 * * *"
+  },
+  "integrations": [
+    "feishu_calendar",
+    "feishu_task"
+  ],
+  "model": "moonshot/kimi-k2.5",
+  "enabled": true
+}
